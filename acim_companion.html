@@ -1273,11 +1273,11 @@ function renderCard() {
   else if (isReview) { numLabel = 'LESSON ' + l.num + ' — ' + reviewInfo.name.toUpperCase(); }
   else { numLabel = 'LESSON ' + l.num; }
 
-  // Build title HTML — split review lessons onto two lines
+  // Build title HTML — split review lessons onto two lines (same size/colour)
   let titleHtml;
   if (isReview && l.title.includes(' / ')) {
     const parts = l.title.split(' / ');
-    titleHtml = parts[0] + '<br><span style="opacity:0.7;font-size:0.85em">' + parts[1] + '</span>';
+    titleHtml = escHtml(parts[0]) + '<br>' + escHtml(parts[1]);
   } else {
     titleHtml = escHtml(l.title);
   }
