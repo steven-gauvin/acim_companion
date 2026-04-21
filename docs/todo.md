@@ -2,6 +2,42 @@
 
 ## Next Up
 
+### Apple Notes Research — Systematic Review
+*Review each of Steven's 30 Apple Notes topics to identify material for Study Themes or Quotes.*
+
+- [ ] Atonement (15,837 words)
+- [ ] Law(s) (15,414 words)
+- [ ] ! Exclamation Mark ! (11,071 words)
+- [ ] This course (6,089 words)
+- [ ] Redemption (3,626 words)
+- [ ] Lessons 91 - 110 (3,271 words)
+- [ ] The power of decision (2,727 words)
+- [ ] Mission (1,400 words)
+- [ ] Review I ( 1 - 50) (1,276 words)
+- [ ] I am as God created me (1,031 words)
+- [ ] Review III (Lessons 91 – 110) (969 words)
+- [ ] Review II (61 - 80) (881 words)
+- [ ] Angels (873 words)
+- [ ] Never forget (847 words)
+- [ ] A course (842 words)
+- [ ] There is no order of difficulty (774 words)
+- [ ] Brain (733 words)
+- [ ] Ideas leave not their source (680 words)
+- [ ] Lessons 1 - 50 (680 words)
+- [ ] Lessons 61 - 80 (608 words)
+- [ ] Here is the Answer (532 words)
+- [ ] There is no world (520 words)
+- [ ] Happy Dream (454 words)
+- [ ] Always Remember (405 words)
+- [ ] Goal - What is the goal of this course? (332 words)
+- [ ] A healed mind (239 words)
+- [ ] Keynote of ACIM (220 words)
+- [ ] Let us not forget (191 words)
+- [ ] Noteworthy Texts: (88 words)
+- [ ] In progress (69 words)
+
+---
+
 - [ ] **Home Screen button** — Add an "Add to Home Screen" button/prompt in the app so users can easily install it on their phone without needing instructions
 
 - [ ] **Verify all Study Theme quotes** against christmind.info before adding to app — references generated from AI memory, content confident but exact citations need checking
