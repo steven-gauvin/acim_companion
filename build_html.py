@@ -2292,6 +2292,242 @@ function renderThemes() {{
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="ref-section" id="ref-study-holyspirit">
+      <div class="ref-header" onclick="toggleRef('ref-study-holyspirit')">
+        <div>
+          <div class="ref-title">The Holy Spirit</div>
+          <div class="ref-subtitle">God&rsquo;s Answer to the separation</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-section-label">The Teaching</div>
+          <p class="st-framing">The Holy Spirit is not a distant force &mdash; He is the part of your mind that never forgot God. He came into being with the separation as a protection, and He is God&rsquo;s Answer to it. He is the bridge between perception and Knowledge, the Mediator between the ego and the Soul, always speaking for the right choice. His direction is freedom. His goal is God.</p>
+
+          <div class="st-section-label">What it is</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Holy Spirit is nothing more than your right mind.&rdquo;</div>
+            <div class="st-quote-ref">T 5:2:9</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Holy Spirit is the Mind of the Atonement.&rdquo;</div>
+            <div class="st-quote-ref">T 5:3:12</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Holy Spirit remains the bridge between perception and knowledge.&rdquo;</div>
+            <div class="st-quote-ref">T 6:3:31</div>
+          </div>
+
+          <div class="st-section-label">The mechanism</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Holy Spirit is the Mediator between the interpretations of the ego and the knowledge of the Soul.&rdquo;</div>
+            <div class="st-quote-ref">T 5:5:38</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Holy Spirit has the task of translating the useless into the useful, the meaningless into the meaningful and the temporary into the timeless.&rdquo;</div>
+            <div class="st-quote-ref">T 7:2:6</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Holy Spirit is the part of the mind that lies between the ego and the Soul, mediating between them always in favour of the Soul.&rdquo;</div>
+            <div class="st-quote-ref">T 7:10:91</div>
+          </div>
+
+          <div class="st-section-label">The correction</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Holy Spirit&rsquo;s teaching takes only one direction and has only one goal. His direction is freedom and His goal is God.&rdquo;</div>
+            <div class="st-quote-ref">T 8:3:13</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Holy Spirit will always guide you truly because your joy is His.&rdquo;</div>
+            <div class="st-quote-ref">T 7:12:109</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Remember that the Holy Spirit is the communication link between God the Father and His separated Sons.&rdquo;</div>
+            <div class="st-quote-ref">T 6:2:16</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-section" id="ref-study-forgiveness">
+      <div class="ref-header" onclick="toggleRef('ref-study-forgiveness')">
+        <div>
+          <div class="ref-title">Forgiveness</div>
+          <div class="ref-subtitle">The healing of the perception of separation</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-section-label">The Teaching</div>
+          <p class="st-framing">Forgiveness in the Course is not what the world calls forgiveness. It is not excusing, tolerating, or overlooking. It is the recognition that there was never anything real to forgive. Forgiveness looks beyond error from the beginning and keeps it unreal. It is the healing of the perception of separation &mdash; and it is the same as salvation.</p>
+
+          <div class="st-section-label">What it is</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Forgiveness is the healing of the perception of separation.&rdquo;</div>
+            <div class="st-quote-ref">T 3:7:59</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Salvation and forgiveness are the same.&rdquo;</div>
+            <div class="st-quote-ref">W 99:1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Forgiveness is the means by which I will recognise my innocence.&rdquo;</div>
+            <div class="st-quote-ref">W-62.1 &#9733;</div>
+          </div>
+
+          <div class="st-section-label">The mechanism</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;A prayer for forgiveness is a request that we may be able to recognise that we already have.&rdquo;</div>
+            <div class="st-quote-ref">T 3:7:56</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Forgiveness through the Holy Spirit lies simply in looking beyond error from the beginning and thus keeping it unreal for you.&rdquo;</div>
+            <div class="st-quote-ref">T 9:3:14</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The unforgiving mind is full of fear, and offers love no room to be itself; no place where God can enter in and be at home.&rdquo;</div>
+            <div class="st-quote-ref">W-121.2 &#9733;</div>
+          </div>
+
+          <div class="st-section-label">The correction</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Forgiveness is the key to happiness.&rdquo;</div>
+            <div class="st-quote-ref">W-121 &#9733;</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Forgiveness offers everything I want.&rdquo;</div>
+            <div class="st-quote-ref">W-122 &#9733;</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Forgiveness is my function as the light of the world.&rdquo;</div>
+            <div class="st-quote-ref">W-62 &#9733;</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Forgiveness is still, and quietly does nothing. It merely looks, and waits, and judges not.&rdquo;</div>
+            <div class="st-quote-ref">W-pII.1.4 &#9733;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-section" id="ref-study-healing">
+      <div class="ref-header" onclick="toggleRef('ref-study-healing')">
+        <div>
+          <div class="ref-title">Healing</div>
+          <div class="ref-subtitle">The removal of all that stands in the way of knowledge</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-section-label">The Teaching</div>
+          <p class="st-framing">Healing in the Course is not about the body &mdash; it is about the mind. The body can only be sick if the mind has decided it is. Healing is the result of using the body solely for communication, and it happens when the will to wake replaces the will to fear. The Holy Spirit is the healer &mdash; and the invitation must come from you.</p>
+
+          <div class="st-section-label">What it is</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Healing is the result of using the body solely for communication.&rdquo;</div>
+            <div class="st-quote-ref">T 8:7:62</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;What is healing but the removal of all that stands in the way of knowledge?&rdquo;</div>
+            <div class="st-quote-ref">T 10:6:40</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Healing is a sign that he wants to make whole.&rdquo;</div>
+            <div class="st-quote-ref">T 10:3:19</div>
+          </div>
+
+          <div class="st-section-label">The mechanism</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The will to wake is the will to love, since all healing involves replacing fear with love.&rdquo;</div>
+            <div class="st-quote-ref">T 8:9:84</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The unification of purpose, then, is the Holy Spirit&rsquo;s only way of healing.&rdquo;</div>
+            <div class="st-quote-ref">T 8:9:89</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Healing thus becomes a lesson in understanding, and the more you practise it, the better teacher and learner you become.&rdquo;</div>
+            <div class="st-quote-ref">T 10:3:17</div>
+          </div>
+
+          <div class="st-section-label">The correction</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;This willingness opens his own ears to the Voice of the Holy Spirit, whose message is wholeness.&rdquo;</div>
+            <div class="st-quote-ref">T 10:3:19</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Healing is of God.&rdquo;</div>
+            <div class="st-quote-ref">W-137 &#9733;</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;I am not a body. I am free. For I am still as God created me.&rdquo;</div>
+            <div class="st-quote-ref">W-201 &#9733;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-section" id="ref-study-miracle">
+      <div class="ref-header" onclick="toggleRef('ref-study-miracle')">
+        <div>
+          <div class="ref-title">Miracle</div>
+          <div class="ref-subtitle">A shift in perception &mdash; the natural expression of love</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-section-label">The Teaching</div>
+          <p class="st-framing">The miracle is not a supernatural event &mdash; it is a shift in perception. It is the right answer, the natural expression of love, and the sign of your willingness to follow the Holy Spirit&rsquo;s plan. Miracles are not performed by you; they flow through you when you step aside. They do not restore truth &mdash; they lift the veil so truth can shine.</p>
+
+          <div class="st-section-label">What it is</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The miracle is therefore a lesson in what joy is. Being a lesson in sharing, it is a lesson in love, which is joy.&rdquo;</div>
+            <div class="st-quote-ref">T 7:11:106</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Miracles are merely the sign of your willingness to follow the Holy Spirit&rsquo;s plan of salvation in recognition of the fact you do not know what it is.&rdquo;</div>
+            <div class="st-quote-ref">T 9:3:15</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The miracle is the act of a Son of God who has laid aside all false gods and who calls on his brother to do likewise.&rdquo;</div>
+            <div class="st-quote-ref">T 9:10:90</div>
+          </div>
+
+          <div class="st-section-label">The mechanism</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Holy Spirit is the motivation for miracle-mindedness, the will to heal the separation by letting it go.&rdquo;</div>
+            <div class="st-quote-ref">T 5:3:17</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Your miracles are the only witnesses to your reality which you can recognise.&rdquo;</div>
+            <div class="st-quote-ref">T 9:5:36</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Prayer is the medium of miracles.&rdquo;</div>
+            <div class="st-quote-ref">T 3:7:56</div>
+          </div>
+
+          <div class="st-section-label">The correction</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The miracle does not restore the truth, the light the veil has not put out. It merely lifts the veil, and lets the truth shine forth unimpeded.&rdquo;</div>
+            <div class="st-quote-ref">T-28.II.12 &#9733;</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Miracles are natural. When they do not occur something has gone wrong.&rdquo;</div>
+            <div class="st-quote-ref">T-1.I.6 &#9733;</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;A miracle is a correction. It does not create, nor really change at all. It merely looks on devastation, and reminds the mind that what it sees is false.&rdquo;</div>
+            <div class="st-quote-ref">W-pII.13.1 &#9733;</div>
+          </div>
+        </div>
+      </div>
     </div>`;
 }}
 
