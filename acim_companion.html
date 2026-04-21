@@ -1211,7 +1211,7 @@ function initSplash() {
   const splashTitleEl = document.getElementById('splash-lesson-title');
   if (splashReviewInfo && lesson.title.includes(' / ')) {
     const splashParts = lesson.title.split(' / ');
-    splashTitleEl.innerHTML = splashParts[0] + '<br><span style="opacity:0.75;font-size:0.88em">' + splashParts[1] + '</span>';
+    splashTitleEl.innerHTML = splashParts[0] + '<br>' + splashParts[1];
   } else {
     splashTitleEl.textContent = lesson.title;
   }
