@@ -1095,7 +1095,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
     </div>
   </div>
   <div class="app-footer">
-    <em>Years of studying, learning, and making mistakes &mdash; all of it distilled into something I can carry in my pocket. This is my Course in Miracles, made personal.</em>
+    <em>Years of studying, learning, and making mistakes &mdash; all of it distilled into something I can carry in my pocket. This is a Course in Miracles, made personal.</em>
     <span class="app-footer-name">&mdash; Steven Gauvin, Copenhagen</span>
   </div>
 </div>
