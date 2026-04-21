@@ -2590,6 +2590,56 @@ function renderThemes() {{
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="ref-section" id="ref-study-lessons-hs">
+      <div class="ref-header" onclick="toggleRef('ref-study-lessons-hs')">
+        <div>
+          <div class="ref-title">Lessons of the Holy Spirit</div>
+          <div class="ref-subtitle">I am Love &bull; I have Peace &bull; I feel Joy</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-section-label">The Teaching</div>
+          <p class="st-framing">The Holy Spirit teaches three lessons &mdash; not as rules to follow, but as a progression. Each one builds on the last. Together they move the mind from the ego&rsquo;s getting to God&rsquo;s giving, from conflict to peace, from doubt to certainty. I am Love. I have Peace. I feel Joy.</p>
+
+          <div class="st-section-label">What it is</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Hear then the one answer of the Holy Spirit to all the questions which the ego raises. You are a Child of God, a priceless part of His Kingdom, which He created as part of Him. Nothing else exists, and only this is real.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.V.50</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Holy Spirit does not speak first, but He always answers.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.V.47</div>
+          </div>
+
+          <div class="st-section-label">The mechanism &mdash; the three lessons</div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>Lesson A:</strong> &ldquo;To have, give all to all.&rdquo;<br><em>The undoing of the getting concept &mdash; a thought reversal.</em></div>
+            <div class="st-quote-ref">Tx.6.V.67</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>Lesson B:</strong> &ldquo;To have peace, teach peace to learn it.&rdquo;<br><em>A positive affirmation of what you want.</em></div>
+            <div class="st-quote-ref">Tx.6.V.78</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>Lesson C:</strong> &ldquo;Be vigilant only for God and His Kingdom.&rdquo;<br><em>A major step toward fundamental change &mdash; one of protection for your mind.</em></div>
+            <div class="st-quote-ref">Tx.6.V.85</div>
+          </div>
+
+          <div class="st-section-label">The correction</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;You learn first that having rests on giving and not on getting. Next you learn that you learn what you teach and that you want to learn peace.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.V.90</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;If you allow yourselves to have in your minds only what God put there, you are acknowledging your mind as God created it.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.V.89</div>
+          </div>
+        </div>
+      </div>
     </div>`;
 }}
 
