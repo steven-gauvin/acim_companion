@@ -2348,6 +2348,10 @@ function renderThemes() {{
             <div class="st-quote-text">&ldquo;Remember that the Holy Spirit is the communication link between God the Father and His separated Sons.&rdquo;</div>
             <div class="st-quote-ref">T 6:2:16</div>
           </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Teach only love, for that is what you are.&rdquo;</div>
+            <div class="st-quote-ref">T 6:2:18</div>
+          </div>
         </div>
       </div>
     </div>
@@ -2525,6 +2529,64 @@ function renderThemes() {{
           <div class="st-quote">
             <div class="st-quote-text">&ldquo;A miracle is a correction. It does not create, nor really change at all. It merely looks on devastation, and reminds the mind that what it sees is false.&rdquo;</div>
             <div class="st-quote-ref">W-pII.13.1 &#9733;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-section" id="ref-study-crucifixion">
+      <div class="ref-header" onclick="toggleRef('ref-study-crucifixion')">
+        <div>
+          <div class="ref-title">Message of the Crucifixion</div>
+          <div class="ref-subtitle">Teach only love, for that is what you are</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-section-label">The Teaching</div>
+          <p class="st-framing">The crucifixion was not a punishment &mdash; it was a demonstration. Jesus elected to show that the most outrageous assault the ego could devise simply did not matter. The message was not about suffering. It was not about guilt. It was a call to peace &mdash; and its meaning is perfectly clear: teach only love, for that is what you are.</p>
+
+          <div class="st-section-label">What it is</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The crucifixion is nothing more than an extreme example. Its value, like the value of any teaching device, lies solely in the kind of learning it facilitates.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.II.4</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The message which the crucifixion was intended to teach was that it is not necessary to perceive any form of assault in persecution, because you cannot be persecuted.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.II.7</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The message of the crucifixion is perfectly clear: Teach only love, for that is what you are.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.II.17&ndash;18</div>
+          </div>
+
+          <div class="st-section-label">The mechanism</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;I elected both for your sake and mine to demonstrate that the most outrageous assault as judged by the ego did not matter.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.II.13</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The crucifixion cannot be shared, because it is the symbol of projection, but the resurrection is the symbol of sharing.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.II.16</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;I do not call for martyrs but for teachers. No one is &lsquo;punished&rsquo; for sins, and the Sons of God are not sinners.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.II.22</div>
+          </div>
+
+          <div class="st-section-label">The correction</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Teach your own perfect immunity, which is the truth in you, and know that it cannot be assailed.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.II.9</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Your resurrection is your reawakening. I am the model for rebirth, but rebirth itself is merely the dawning on your minds of what is already in them.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.II.10</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;You are not persecuted, nor was I. You are not asked to repeat my experiences.&rdquo;</div>
+            <div class="st-quote-ref">Tx.6.II.14</div>
           </div>
         </div>
       </div>
