@@ -1205,8 +1205,16 @@ function initSplash() {
   }
   const lessonNum = ((day - 1) % 365) + 1;
   const lesson = LESSONS.find(l => l.num === lessonNum) || LESSONS[0];
-  document.getElementById('splash-lesson-num').textContent = 'Lesson ' + lesson.num;
-  document.getElementById('splash-lesson-title').textContent = lesson.title;
+  const splashReviewInfo = REVIEW_MAP[lesson.num];
+  const splashNumLabel = splashReviewInfo ? 'Lesson ' + lesson.num + ' — ' + splashReviewInfo.name : 'Lesson ' + lesson.num;
+  document.getElementById('splash-lesson-num').textContent = splashNumLabel;
+  const splashTitleEl = document.getElementById('splash-lesson-title');
+  if (splashReviewInfo && lesson.title.includes(' / ')) {
+    const splashParts = lesson.title.split(' / ');
+    splashTitleEl.innerHTML = splashParts[0] + '<br><span style="opacity:0.75;font-size:0.88em">' + splashParts[1] + '</span>';
+  } else {
+    splashTitleEl.textContent = lesson.title;
+  }
   // Also populate the daily quote on the Cards tab
   document.getElementById('cards-quote-text').textContent = QUOTES[qIdx].text;
   document.getElementById('cards-quote-source').textContent = QUOTES[qIdx].source;
@@ -1256,14 +1264,30 @@ function renderCard() {
   const notes = saved !== null ? saved : l.notes;
   const isEdited = saved !== null;
   const isSpecial = l.num === 366;
-  const numLabel = isSpecial ? '✦ COMPLETION ✦' : 'LESSON ' + l.num;
+  const reviewInfo = REVIEW_MAP[l.num];
+  const isReview = !!reviewInfo;
+
+  // Build num label
+  let numLabel;
+  if (isSpecial) { numLabel = '✦ COMPLETION ✦'; }
+  else if (isReview) { numLabel = 'LESSON ' + l.num + ' — ' + reviewInfo.name.toUpperCase(); }
+  else { numLabel = 'LESSON ' + l.num; }
+
+  // Build title HTML — split review lessons onto two lines
+  let titleHtml;
+  if (isReview && l.title.includes(' / ')) {
+    const parts = l.title.split(' / ');
+    titleHtml = parts[0] + '<br><span style="opacity:0.7;font-size:0.85em">' + parts[1] + '</span>';
+  } else {
+    titleHtml = escHtml(l.title);
+  }
 
   document.getElementById('cf-num').textContent = numLabel;
-  document.getElementById('cf-title').textContent = l.title;
+  document.getElementById('cf-title').innerHTML = titleHtml;
   document.getElementById('cf-num-card').textContent = numLabel;
-  document.getElementById('cf-title-card').textContent = l.title;
+  document.getElementById('cf-title-card').innerHTML = titleHtml;
   document.getElementById('cb-num').textContent = numLabel;
-  document.getElementById('cb-title').textContent = l.title;
+  document.getElementById('cb-title').innerHTML = titleHtml;
 
   // Special card styling
   const card3d = document.getElementById('card-3d');
