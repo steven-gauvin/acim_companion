@@ -1,0 +1,21 @@
+jumpToLesson Test Results
+========================
+
+Clicked "93. Light and joy and peace abide in me." from lesson 112 (Review III).
+
+Result:
+- Filter switched to 51-100 range (visible: lessons 51-100 with Review I and Review II badges)
+- Lesson 93 is visible and EXPANDED — showing its full text
+- "Light and joy and peace abide in me." text visible
+- Notes, Edit, christmind, BLA, Open as Card, Dee Doyle Commentary all present
+
+ISSUE: The filter switched to 51-100 instead of the correct range. 
+Lesson 93 is in the 51-100 range, so actually this IS correct!
+The filter shows 51-100 and lesson 93 is visible and expanded. 
+
+VERDICT: jumpToLesson is working correctly! It:
+1. Switched to the right filter (51-100 for lesson 93)
+2. Expanded the target lesson
+3. Scrolled to it (it's centered in view)
+
+The gold highlight glow may have already faded by the time the screenshot was taken.

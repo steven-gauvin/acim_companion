@@ -1,0 +1,24 @@
+HEAVEN CHART V2 - REVIEW
+========================
+
+This looks MUCH better! The layout is now:
+
+1. HEAVEN header - gold, centred, looks great
+2. Arrow down ↓ 
+3. DECISION MAKER block with gold border:
+   - "Decision Maker" label centred in a gold pill/badge - CLEAR and visible
+   - Row 1: "← Denial of Innocence" red pill on the LEFT side, right side empty
+   - Row 2: "Denial of denial of Innocence →" green pill on the RIGHT side, left side empty
+   - Thin divider
+   - Row 3: "← Differences are important." red pill on LEFT
+   - Row 4: "Sameness is important. →" green pill on RIGHT
+4. Two equal columns: EGO (left) and HOLY SPIRIT (right)
+   - Both have fan SVGs (filled red boxes vs open green boxes)
+   - Content looks balanced
+
+The arrows are now properly positioned - red on left, green on right, 
+with the Decision Maker clearly in the centre as the pivot point.
+
+The two columns are equal width and the content is well-balanced.
+
+This looks ready to show Steven!

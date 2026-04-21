@@ -1,0 +1,21 @@
+ZOOM ISSUE
+==========
+The zoom is working (shows 130%) but the content is showing as a white bar.
+This is because the photo-chart-wrap CSS has background: #fff (white) and 
+the .photo-chart-img CSS has pointer-events: none.
+
+The problem is that the Heaven chart is a div, not an img. The CSS class 
+.photo-chart-img has:
+- width: 100%
+- display: block
+- transform-origin: 0 0
+- user-select: none
+- pointer-events: none
+
+The white background from .photo-chart-wrap is showing because the chart 
+content (which has dark backgrounds) is being scaled but the container 
+has white background.
+
+FIX:
+1. Override the background on the photo-chart-wrap for hz-wrap to be transparent
+2. The photo-chart-img styles should work fine for a div too

@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACIM Metaphysics — The Map of the Mind</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --gold: #c9a84c;
+    --gold-light: #e8cc7a;
+    --gold-dim: #7a6230;
+    --deep: #0a0a14;
+    --dark: #0f0f1e;
+    --panel: #13132a;
+    --panel2: #1a1a35;
+    --border: #2a2a50;
+    --text: #e8e4d8;
+    --text-dim: #a09880;
+    --white: #f5f0e8;
+    --blue-light: #7eb8d4;
+    --blue-mid: #4a90b8;
+    --blue-dark: #1e4a6e;
+    --purple: #6b5b9e;
+    --purple-light: #9b8bce;
+    --red-dim: #8b3a3a;
+    --red-light: #c47070;
+    --green-dim: #2a5a3a;
+    --green-light: #5aaa7a;
+    --teal: #3a8a7a;
+    --teal-light: #6abcaa;
+    --orange: #c87a30;
+    --orange-light: #e8a860;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--deep);
+    color: var(--text);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 15px;
+    line-height: 1.5;
+    min-width: 1400px;
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    text-align: center;
+    padding: 40px 60px 20px;
+    border-bottom: 1px solid var(--gold-dim);
+  }
+  .page-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+  }
+  .page-header .subtitle {
+    font-style: italic;
+    color: var(--text-dim);
+    font-size: 1rem;
+  }
+  .credit {
+    font-size: 0.78rem;
+    color: var(--gold-dim);
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── TOP BANNER: NON-DUALITY ── */
+  .nonduality-banner {
+    background: linear-gradient(135deg, #0d0d20 0%, #1a1040 50%, #0d0d20 100%);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    margin: 30px 40px 0;
+    padding: 20px 30px;
+    text-align: center;
+    position: relative;
+  }
+  .nonduality-banner .label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .nonduality-banner .equation {
+    font-size: 1.05rem;
+    color: var(--white);
+    font-style: italic;
+    line-height: 1.8;
+  }
+  .nonduality-banner .equation span {
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+  .nonduality-banner .quote {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  /* ── MAIN GRID ── */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr 280px;
+    gap: 24px;
+    padding: 24px 40px;
+  }
+
+  /* ── SECTION CARDS ── */
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+  }
+  .card.gold-border { border-color: var(--gold-dim); }
+  .card.blue-border { border-color: var(--blue-mid); }
+  .card.red-border { border-color: var(--red-dim); }
+  .card.green-border { border-color: var(--green-dim); }
+  .card.teal-border { border-color: var(--teal); }
+  .card.purple-border { border-color: var(--purple); }
+
+  .card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .card-title.gold { color: var(--gold); border-color: var(--gold-dim); }
+  .card-title.blue { color: var(--blue-light); border-color: var(--blue-dark); }
+  .card-title.red { color: var(--red-light); border-color: var(--red-dim); }
+  .card-title.green { color: var(--green-light); border-color: var(--green-dim); }
+  .card-title.teal { color: var(--teal-light); border-color: var(--teal); }
+  .card-title.purple { color: var(--purple-light); border-color: var(--purple); }
+  .card-title.white { color: var(--white); }
+
+  .cite {
+    font-size: 0.72rem;
+    color: var(--gold-dim);
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+  }
+
+  p { margin-bottom: 8px; }
+  p:last-child { margin-bottom: 0; }
+
+  .em { color: var(--gold-light); font-style: italic; }
+  .em-red { color: var(--red-light); }
+  .em-green { color: var(--green-light); }
+  .em-blue { color: var(--blue-light); }
+  .em-teal { color: var(--teal-light); }
+  .em-white { color: var(--white); font-weight: 600; }
+
+  /* ── LEFT COLUMN ── */
+  .left-col { display: flex; flex-direction: column; gap: 20px; }
+
+  /* Duality strip */
+  .duality-strip {
+    background: linear-gradient(90deg, #1a0a0a, #1a1a2a);
+    border: 1px solid #4a2a2a;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+  }
+  .duality-strip strong { color: var(--red-light); font-style: italic; }
+
+  /* Four splits */
+  .split-item {
+    padding: 10px 14px;
+    border-left: 3px solid var(--red-dim);
+    margin-bottom: 10px;
+    background: rgba(139,58,58,0.08);
+    border-radius: 0 6px 6px 0;
+  }
+  .split-item:last-child { margin-bottom: 0; }
+  .split-num {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    color: var(--red-light);
+    letter-spacing: 0.15em;
+    margin-bottom: 4px;
+  }
+
+  /* Projection */
+  .projection-card {
+    background: linear-gradient(135deg, var(--panel) 0%, #1a1030 100%);
+    border: 1px solid var(--purple);
+  }
+
+  /* ── CENTER COLUMN ── */
+  .center-col { display: flex; flex-direction: column; gap: 20px; }
+
+  /* Son of God header */
+  .son-of-god {
+    background: linear-gradient(135deg, #0a1428 0%, #1a2848 50%, #0a1428 100%);
+    border: 2px solid var(--blue-mid);
+    border-radius: 12px;
+    padding: 20px 24px;
+    text-align: center;
+  }
+  .son-of-god h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    color: var(--blue-light);
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .son-of-god .decision-maker {
+    font-size: 1rem;
+    color: var(--white);
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  .son-of-god .you-text {
+    font-size: 0.9rem;
+    color: var(--gold-light);
+    font-style: italic;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid var(--gold-dim);
+    border-radius: 6px;
+    padding: 8px 14px;
+    margin-bottom: 8px;
+  }
+  .son-of-god .facim-note {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    font-style: italic;
+  }
+
+  /* Mind circle area */
+  .mind-circle-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .wrong-mind {
+    background: linear-gradient(135deg, #1a0a0a 0%, #2a1010 100%);
+    border: 2px solid var(--red-dim);
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .wrong-mind .mind-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    color: var(--red-light);
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--red-dim);
+  }
+
+  .right-mind {
+    background: linear-gradient(135deg, #0a1a0a 0%, #102a18 100%);
+    border: 2px solid var(--green-dim);
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .right-mind .mind-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    color: var(--green-light);
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--green-dim);
+  }
+
+  .only-problem {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    padding: 6px 12px;
+    border: 1px solid var(--gold-dim);
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0 auto 12px;
+    background: rgba(201,168,76,0.08);
+  }
+
+  .sin-guilt-fear {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  .sgf-item {
+    background: rgba(139,58,58,0.3);
+    border: 1px solid var(--red-dim);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 0.78rem;
+    color: var(--red-light);
+    font-style: italic;
+  }
+
+  .atonement-box {
+    background: rgba(90,170,122,0.12);
+    border: 1px solid var(--green-dim);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin: 10px 0;
+    font-size: 0.85rem;
+  }
+
+  /* Hologram boxes */
+  .hologram-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .hologram-box {
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.82rem;
+  }
+  .hologram-box.dark {
+    background: rgba(139,58,58,0.15);
+    border: 1px solid var(--red-dim);
+  }
+  .hologram-box.light {
+    background: rgba(90,170,122,0.12);
+    border: 1px solid var(--green-dim);
+  }
+  .hologram-box .holo-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .hologram-box.dark .holo-title { color: var(--red-light); }
+  .hologram-box.light .holo-title { color: var(--green-light); }
+
+  /* Cause/Effect */
+  .cause-effect {
+    background: linear-gradient(135deg, #0a1428 0%, #1a2848 100%);
+    border: 1px solid var(--blue-dark);
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .cause-effect h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    color: var(--blue-light);
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  /* Miracle box */
+  .miracle-box {
+    background: linear-gradient(135deg, #0a1a28 0%, #1a3040 100%);
+    border: 2px solid var(--teal);
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+  }
+  .miracle-box h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    color: var(--teal-light);
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+  }
+
+  /* Mindfulness/Mindlessness */
+  .mind-axis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .mindfulness-box {
+    background: linear-gradient(135deg, #0a1a14 0%, #142a1e 100%);
+    border: 1px solid var(--teal);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  .mindfulness-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    color: var(--teal-light);
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+  }
+  .mindlessness-box {
+    background: linear-gradient(135deg, #1a1008 0%, #2a1a08 100%);
+    border: 1px solid var(--orange);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  .mindlessness-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    color: var(--orange-light);
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+  }
+
+  /* Bottom world */
+  .world-box {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1010 100%);
+    border: 1px solid #3a2a1a;
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .world-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    color: var(--orange-light);
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  /* Prison/Classroom */
+  .prison-classroom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .prison-box {
+    background: rgba(139,58,58,0.15);
+    border: 1px solid var(--red-dim);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+  }
+  .prison-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: var(--red-light);
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+  }
+  .classroom-box {
+    background: rgba(90,170,122,0.12);
+    border: 1px solid var(--green-dim);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+  }
+  .classroom-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: var(--green-light);
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+  }
+
+  /* ── RIGHT COLUMN ── */
+  .right-col { display: flex; flex-direction: column; gap: 20px; }
+
+  /* Ladder */
+  .ladder-box {
+    background: linear-gradient(180deg, #0a1428 0%, #0f1e3a 100%);
+    border: 2px solid var(--gold-dim);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .ladder-box h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gold-dim);
+  }
+  .ladder-rung {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(42,42,80,0.5);
+  }
+  .ladder-rung:last-child { border-bottom: none; }
+  .rung-left {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    font-style: italic;
+    min-width: 80px;
+    text-align: right;
+    padding-top: 2px;
+  }
+  .rung-bar {
+    width: 3px;
+    min-height: 40px;
+    background: linear-gradient(180deg, var(--gold) 0%, var(--gold-dim) 100%);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .rung-right {
+    font-size: 0.78rem;
+    color: var(--text);
+  }
+  .rung-period {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    color: var(--gold-light);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .rung-cite {
+    font-size: 0.68rem;
+    color: var(--gold-dim);
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Ascending note */
+  .ascending-note {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid var(--gold-dim);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--text-dim);
+    margin-top: 14px;
+  }
+  .ascending-note ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 8px;
+  }
+  .ascending-note li {
+    padding: 3px 0 3px 14px;
+    position: relative;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    font-style: normal;
+  }
+  .ascending-note li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold-dim);
+    font-size: 0.6rem;
+    top: 5px;
+  }
+
+  /* ── BOTTOM SECTION ── */
+  .bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    padding: 0 40px 40px;
+  }
+
+  /* Three Steps */
+  .steps-box {
+    background: var(--panel);
+    border: 1px solid var(--teal);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .steps-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    color: var(--teal-light);
+    letter-spacing: 0.2em;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--teal);
+  }
+  .step-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 24px;
+    height: 24px;
+    background: var(--teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    color: var(--deep);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* True Forgiveness */
+  .forgiveness-box {
+    background: var(--panel);
+    border: 1px solid var(--purple);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .forgiveness-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    color: var(--purple-light);
+    letter-spacing: 0.2em;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--purple);
+  }
+
+  /* Specialness */
+  .specialness-box {
+    background: var(--panel);
+    border: 1px solid var(--orange);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .specialness-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    color: var(--orange-light);
+    letter-spacing: 0.2em;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--orange);
+  }
+  .spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .spec-item {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--red-light);
+    font-style: italic;
+    padding: 6px;
+    background: rgba(139,58,58,0.1);
+    border-radius: 6px;
+    border: 1px solid rgba(139,58,58,0.3);
+  }
+
+  /* Divider arrows */
+  .arrow-divider {
+    text-align: center;
+    color: var(--gold-dim);
+    font-size: 1.2rem;
+    padding: 4px 0;
+  }
+
+  /* Tag pills */
+  .pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-family: 'Inter', sans-serif;
+    margin: 2px;
+  }
+  .pill-red { background: rgba(139,58,58,0.25); border: 1px solid var(--red-dim); color: var(--red-light); }
+  .pill-green { background: rgba(42,90,58,0.25); border: 1px solid var(--green-dim); color: var(--green-light); }
+  .pill-blue { background: rgba(30,74,110,0.25); border: 1px solid var(--blue-dark); color: var(--blue-light); }
+  .pill-gold { background: rgba(201,168,76,0.15); border: 1px solid var(--gold-dim); color: var(--gold-light); }
+  .pill-teal { background: rgba(58,138,122,0.2); border: 1px solid var(--teal); color: var(--teal-light); }
+
+  /* Innocent victim / figure */
+  .victim-figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .victim-box {
+    background: rgba(139,58,58,0.1);
+    border: 1px solid var(--red-dim);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.82rem;
+  }
+  .figure-box {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid var(--gold-dim);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.82rem;
+  }
+
+  /* Page footer */
+  .page-footer {
+    text-align: center;
+    padding: 20px 40px 30px;
+    border-top: 1px solid var(--border);
+    font-size: 0.75rem;
+    color: var(--gold-dim);
+    font-style: italic;
+  }
+
+  .section-quote {
+    font-style: italic;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    border-left: 3px solid var(--gold-dim);
+    padding-left: 12px;
+    margin: 10px 0;
+  }
+
+  .big-label {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  hr.subtle {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 12px 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <h1>The Map of the Mind</h1>
+  <div class="subtitle">A Course in Miracles — Metaphysics &amp; Structure of the Thought System</div>
+  <div class="credit">Based on the teachings of Ken Wapnick · Foundation for A Course in Miracles (FACIM) · © MKM 08/24/14 · Personal use only</div>
+</div>
+
+<!-- NON-DUALITY BANNER -->
+<div class="nonduality-banner">
+  <div class="label">Non-Duality — The Only Reality</div>
+  <div class="equation">
+    <span>Mind = God (Cause)</span> = Heaven = Oneness = Spirit = Christ (Effect) = Perfect Love = Knowledge = Truth = Life = Reality = Will = Creation = Light = Changelessness = Timeless = <span>Eternity</span>
+  </div>
+  <div class="quote">"We say 'God is,' and then we cease to speak." <span class="cite">(W-pl.169:5:4)</span> &nbsp;·&nbsp; "Oneness joined as One." <span class="cite">(T-25.I.7:1)</span></div>
+  <div class="quote" style="margin-top:4px;">"And then your Father will lean down to you and take the last step for you, by raising you unto Himself." <span class="cite">(T-11.VIII.15:5)</span></div>
+</div>
+
+<!-- MAIN GRID -->
+<div class="main-grid">
+
+  <!-- ══ LEFT COLUMN ══ -->
+  <div class="left-col">
+
+    <!-- Duality strip -->
+    <div class="duality-strip">
+      <strong>Duality</strong> — the realm of mind &amp; separation<br>
+      <span style="font-size:0.78rem; color: var(--text-dim);">"tiny, mad idea" <span class="cite">(T-27.VIII.6:2)</span> = dream / thought of separation = original sin = the fall of man</span>
+    </div>
+
+    <!-- Four Splits -->
+    <div class="card red-border">
+      <div class="card-title red">The Four Splits — "The Mythology" (KW)</div>
+
+      <div class="split-item">
+        <div class="split-num">Split 1 (S1)</div>
+        <p style="font-size:0.82rem;">The "tiny mad idea" = <span class="em">consciousness</span> (mind) <span class="cite">(T-3.IV.2:1-2)</span></p>
+      </div>
+
+      <div class="split-item">
+        <div class="split-num">Split 2 (S2)</div>
+        <p style="font-size:0.82rem;">Mind splits into <span class="em">right mind</span>, <span class="em-red">wrong mind</span>, and the <span class="em-white">decision maker</span></p>
+      </div>
+
+      <div class="split-item" style="border-left-color: var(--gold);">
+        <div class="split-num" style="color: var(--gold);">Split 3 (S3) — The Core Choice</div>
+        <p style="font-size:0.82rem;"><span class="em-white">Decision maker chooses the wrong mind</span> &amp; the ego purposely makes up a story about sin, guilt &amp; fear to motivate the Son of God to want to leave the mind</p>
+      </div>
+
+      <div class="split-item">
+        <div class="split-num">Split 4 (S4)</div>
+        <p style="font-size:0.82rem;">Sin, guilt &amp; fear seemingly <em>projected outside the mind</em>, resulting in the illusory world of <span class="em">time</span> (past=sin, present=guilt, future=fear) and <span class="em">space</span> (separation)</p>
+        <p style="font-size:0.78rem; color: var(--text-dim); margin-top:4px;">Effect and cause are first split off [denial], then reversed [projection], so that effect becomes a cause; the cause effect. <span class="cite">(T-28.II.8:8-9:1)</span></p>
+      </div>
+    </div>
+
+    <!-- Projection -->
+    <div class="card projection-card purple-border">
+      <div class="card-title purple">Projection Makes Perception</div>
+      <div class="section-quote">"The world you see is the outside picture of an inward condition… seek not to change the world, but choose to change your mind about the world." <span class="cite">(T-21.in.1:5,7)</span></div>
+      <p style="font-size:0.82rem; margin-top:8px;"><span class="em">Ideas leave their source</span>, and their effects but seem to be apart from them. Ideas are of mind. What is projected out, and seems to be external to the mind, is not outside at all, but an effect of what is in, and has not left its source. <span class="cite">(T-26.VII.4:7-8)</span></p>
+
+      <hr class="subtle">
+      <p style="font-size:0.82rem;"><strong style="color:var(--gold-light);">The idea for today</strong> introduced the thought that you are not trapped in the world you see, because its cause can be changed. This requires, first, <em>that the cause be identified and then let go</em>, so that it can be replaced. <span class="cite">(W-pl.23.5:1-4)</span></p>
+    </div>
+
+    <!-- True Forgiveness Example -->
+    <div class="card purple-border" style="background: linear-gradient(135deg, #0f0a1e 0%, #1a1030 100%);">
+      <div class="card-title purple">True Forgiveness: A Thought Process Example</div>
+      <p style="font-size:0.82rem; font-style:italic; color: var(--text-dim);">"You're not really there. If I think you are guilty or the cause of the problem, and if I made you up, then the imagined guilt and fear must be in me. Since the separation from God never occurred, I forgive 'both' of us for what we haven't really done. Now there is only innocence, and I join with the Holy Spirit in peace."</p>
+      <p style="font-size:0.72rem; color: var(--gold-dim); margin-top:8px;">— TDOTU p. 256</p>
+    </div>
+
+  </div>
+
+  <!-- ══ CENTER COLUMN ══ -->
+  <div class="center-col">
+
+    <!-- Son of God -->
+    <div class="son-of-god">
+      <h2>Son of God — Decision Maker — Observer</h2>
+      <div class="decision-maker">the part of the mind that chooses between the wrong mind (ego) and the right mind (Holy Spirit)</div>
+      <div class="you-text">"This is the 'you' that Jesus is referring to in the Course"</div>
+      <div class="facim-note">The phrase "decision maker" appears only once in ACIM (M-5.II.1:7). It was a term introduced by FACIM for teaching purposes.</div>
+    </div>
+
+    <!-- Wrong Mind / Right Mind -->
+    <div class="mind-circle-area">
+
+      <!-- Wrong Mind -->
+      <div class="wrong-mind">
+        <div class="mind-title">Wrong Mind = Ego</div>
+        <div style="text-align:center; margin-bottom:10px;">
+          <span class="only-problem">the only 'problem'</span>
+        </div>
+        <p style="font-size:0.82rem; text-align:center; margin-bottom:8px;"><span class="em-red">separation is real</span><br><span style="font-size:0.75rem; color:var(--text-dim);">ideas leave their source<br>error is real (serious)</span></p>
+
+        <div class="sin-guilt-fear">
+          <span class="sgf-item">sin</span>
+          <span class="sgf-item">guilt</span>
+          <span class="sgf-item">fear</span>
+        </div>
+
+        <hr class="subtle">
+        <div style="text-align:center; margin: 8px 0; font-size:0.78rem; color: var(--text-dim);">
+          son &nbsp;·&nbsp; innocent victim (fear) &nbsp;·&nbsp; god &nbsp;·&nbsp; victimizer (sin-guilt)
+        </div>
+        <hr class="subtle">
+
+        <p style="font-size:0.8rem; margin-bottom:6px;">The <strong style="color:var(--red-light);">secret dream</strong> <span class="cite">(T-27.VII.11:7)</span> = the original special relationship = projection of guilt = battleground of victimization</p>
+        <p style="font-size:0.8rem; margin-bottom:6px;"><span class="em-red">separate interests</span> = one or the other kill or be killed <span class="cite">(M-17.7:11)</span></p>
+
+        <div class="spec-grid">
+          <div class="spec-item">specialness</div>
+          <div class="spec-item">individuality</div>
+          <div class="spec-item">death</div>
+          <div class="spec-item">selfishness</div>
+          <div class="spec-item">sacrifice</div>
+          <div class="spec-item">differences</div>
+          <div class="spec-item">scarcity, lack</div>
+          <div class="spec-item">murder</div>
+          <div class="spec-item">judgment attack</div>
+        </div>
+      </div>
+
+      <!-- Right Mind -->
+      <div class="right-mind">
+        <div class="mind-title">Right Mind = Holy Spirit</div>
+        <p style="font-size:0.82rem; text-align:center; margin-bottom:8px;"><span class="em-green">separation never happened</span></p>
+
+        <div class="atonement-box">
+          <strong style="color:var(--green-light);">Atonement Principle</strong> <span class="cite">(T-6.II.10:7)</span><br>
+          <span style="font-size:0.8rem;">Ideas leave not their source — error is not real (silly dream met with <em>gentle laughter</em>)</span>
+        </div>
+
+        <div class="hologram-grid">
+          <div class="hologram-box dark">
+            <div class="holo-title">Hologram of Hatred</div>
+            <span style="font-size:0.75rem; color:var(--text-dim);">(darkness)</span>
+          </div>
+          <div class="hologram-box light">
+            <div class="holo-title">Hologram of Correction</div>
+            <span style="font-size:0.75rem; color:var(--text-dim);">(light)</span>
+          </div>
+        </div>
+
+        <hr class="subtle">
+        <p style="font-size:0.85rem; text-align:center; color:var(--green-light); font-style:italic; margin:8px 0;"><strong>forgiveness</strong> · true perception<br>holy instant · Christ Vision<br>salvation · happy dream · <strong>Jesus</strong><br>healing · real world · reason</p>
+
+        <hr class="subtle">
+        <p style="font-size:0.8rem; margin-bottom:6px;"><span class="em-green">holy relationship</span> = extension of love = above the battleground <span class="cite">(T-23.IV)</span></p>
+        <p style="font-size:0.8rem; margin-bottom:6px;"><span class="em-green">shared interests</span> = together or not at all <span class="cite">(T-19.IV-D.12:8)</span></p>
+        <p style="font-size:0.8rem; margin-bottom:6px;"><strong style="color:var(--green-light);">The memory of God</strong> <span class="cite">(T-19.IV-D.12:8)</span></p>
+        <p style="font-size:0.8rem;"><strong style="color:var(--green-light);">The Voice for God</strong> <span class="cite">(T-5.II)</span><br>stately calm within <span class="cite">(T-18.I.8:3)</span><br>quiet center <span class="cite">(T-18.VII.8:2)</span></p>
+      </div>
+    </div>
+
+    <!-- All inclusive Love -->
+    <div class="card" style="background: linear-gradient(135deg, #0a1a14 0%, #142a1e 100%); border-color: var(--green-dim); text-align:center;">
+      <p style="font-size:1.1rem; color:var(--green-light); font-style:italic; font-weight:600;">All inclusive, abstract, non-specific Love</p>
+    </div>
+
+    <!-- Cause / Effect -->
+    <div class="cause-effect">
+      <h3>Cause = Content = Split Mind = Source</h3>
+      <p style="font-size:0.85rem; text-align:center; margin-bottom:10px;"><span class="em-blue">the dreamer of the dream</span> <span class="cite">(T-27.VII)</span> = puppeteer<br>trans-temporal, non-spatial = <span class="em-white">outside of time and space</span></p>
+      <p style="font-size:0.8rem; color:var(--text-dim); text-align:center;">levels of mind (DH): desire → belief → thought → emotion → perception</p>
+      <hr class="subtle">
+      <p style="font-size:0.82rem; margin-bottom:6px;">This is a course in <strong>cause</strong> and not effect. <span class="cite">(T-21.VII.6:8)</span></p>
+      <p style="font-size:0.82rem; margin-bottom:6px;">The <strong>miracle</strong> is the first step in giving back to cause the function of causation, not effect. <span class="cite">(T-28.II.9:3)</span></p>
+      <p style="font-size:0.82rem;">The miracle establishes you dream a dream, and that its content is not true. <span class="cite">(T-28.II.7:1)</span></p>
+    </div>
+
+    <!-- Miracle -->
+    <div class="miracle-box">
+      <h2>miracle</h2>
+      <p style="font-size:0.85rem; margin-bottom:8px;">The miracle does not awaken you, but merely shows you who the dreamer is. <span class="cite">(T-28.II.4:2)</span></p>
+      <p style="font-size:0.85rem; margin-bottom:8px;">The task of the miracle worker thus becomes to <strong style="color:var(--teal-light);">deny the denial of truth</strong>. <span class="cite">(T-12.II.1)</span> For you have answered "yes" without perceiving that <strong>"yes" must mean "not no."</strong> <span class="cite">(T-12.VII.12)</span></p>
+      <div class="section-quote" style="border-color: var(--teal); margin-top:10px;">"The Course can be summarized as a journey from mindlessness to mindfulness through the process of forgiveness." — KW</div>
+    </div>
+
+    <!-- Mindfulness / Mindlessness axis -->
+    <div class="mind-axis">
+      <div class="mindfulness-box">
+        <h3>Mindfulness</h3>
+        <p style="font-size:0.82rem; color:var(--text-dim);">Awareness of the mind as cause — watching the ego without judgment</p>
+      </div>
+      <div class="mindlessness-box">
+        <h3>Mindlessness</h3>
+        <p style="font-size:0.82rem; color:var(--text-dim);">Denial (veil of forgetfulness) — believing the world is cause</p>
+      </div>
+    </div>
+
+    <!-- Illusory World -->
+    <div class="world-box">
+      <h3>The Illusory World of Time &amp; Space</h3>
+      <p style="font-size:0.82rem; text-align:center; margin-bottom:10px; font-style:italic; color:var(--orange-light);">past = sin &nbsp;·&nbsp; present = guilt &nbsp;·&nbsp; future = fear &nbsp;·&nbsp; separation</p>
+      <p style="font-size:0.8rem; margin-bottom:6px;">big bang = shattered pane of glass = world of multiplicity, hiding place, distraction, smokescreen</p>
+      <p style="font-size:0.8rem; margin-bottom:6px;">lack/scarcity = deprivation</p>
+      <p style="font-size:0.8rem; margin-bottom:6px;">dreaming of the world <span class="cite">(T-27.VII.11:6)</span> = body (brain, psyche)</p>
+      <p style="font-size:0.8rem; margin-bottom:12px;">problems (pleasure/pain, sickness) &amp; solutions (magic) = battleground = one or the other = kill or be killed</p>
+      <div class="section-quote" style="border-color:var(--orange); font-size:0.85rem;">"There is no world! This is the central thought the course attempts to teach." <span class="cite">(W-pl.132:6:2-3)</span></div>
+
+      <!-- Innocent victim / figure -->
+      <div class="victim-figure">
+        <div class="victim-box">
+          <strong style="color:var(--red-light);">innocent victim</strong><br>
+          <span style="font-size:0.78rem; color:var(--text-dim);">I exist but it's not my fault (KW)</span><br>
+          <span class="cite">cause ← projection ← effect</span>
+        </div>
+        <div class="figure-box">
+          <strong style="color:var(--gold-light);">figure in the dream = puppet</strong><br>
+          <span style="font-size:0.78rem; color:var(--text-dim);">the "hero" of the dream</span><br>
+          <span class="cite">(T-27.VIII)</span>
+        </div>
+      </div>
+
+      <!-- Prison / Classroom -->
+      <div class="prison-classroom">
+        <div class="prison-box">
+          <h3>prison</h3>
+          <p style="font-size:0.8rem; color:var(--text-dim);">battleground</p>
+          <p style="font-size:0.78rem; color:var(--text-dim); margin-top:6px;">We believe we are bodies living in the world and that we have physical and psychological needs that have to be met, otherwise we cannot exist</p>
+        </div>
+        <div class="classroom-box">
+          <h3>classroom</h3>
+          <p style="font-size:0.8rem; color:var(--text-dim);">We experience Jesus or the Holy Spirit as being separate from us</p>
+          <p style="font-size:0.78rem; color:var(--text-dim); margin-top:6px;">We no longer see the world as a prison but rather as a classroom in which we learn the Holy Spirit's lessons of undoing guilt through forgiveness</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ RIGHT COLUMN ══ -->
+  <div class="right-col">
+
+    <!-- Ladder of Prayer -->
+    <div class="ladder-box">
+      <h2>The Ladder of Prayer</h2>
+      <p style="font-size:0.78rem; color:var(--text-dim); text-align:center; margin-bottom:14px; font-style:italic;">(S-1.II) — The Voice for God is your voice, because you are Christ</p>
+
+      <div class="ladder-rung">
+        <div class="rung-left" style="color:var(--gold-light);">Atonement</div>
+        <div class="rung-bar" style="background: var(--gold);"></div>
+        <div class="rung-right">
+          <span class="rung-period">A Period of Achievement</span>
+          <span class="cite">(M-4.I.A:8:1)</span>
+        </div>
+      </div>
+
+      <div class="ladder-rung">
+        <div class="rung-left">real world / borderland</div>
+        <div class="rung-bar"></div>
+        <div class="rung-right">
+          <span style="font-size:0.78rem;">happy dreams</span>
+        </div>
+      </div>
+
+      <div class="ladder-rung">
+        <div class="rung-left">"dark night of the soul"</div>
+        <div class="rung-bar"></div>
+        <div class="rung-right">
+          <span class="rung-period">A Period of Unsettling</span>
+          <span class="cite">(M-4.I.A:7:1)</span>
+        </div>
+      </div>
+
+      <div class="ladder-rung">
+        <div class="rung-left">forgiveness of oneself</div>
+        <div class="rung-bar"></div>
+        <div class="rung-right">
+          <span style="font-size:0.78rem;">specifics → abstract</span>
+        </div>
+      </div>
+
+      <div class="ladder-rung">
+        <div class="rung-left">forgiveness to destroy</div>
+        <div class="rung-bar"></div>
+        <div class="rung-right">
+          <span class="rung-period">A Period of Settling Down</span>
+          <span class="cite">(M-4.I.A:6:1)</span>
+        </div>
+      </div>
+
+      <div class="ladder-rung">
+        <div class="rung-left">forgiveness of others</div>
+        <div class="rung-bar"></div>
+        <div class="rung-right">
+          <span style="font-size:0.78rem;">shared purpose</span>
+        </div>
+      </div>
+
+      <div class="ladder-rung">
+        <div class="rung-left">separate interests</div>
+        <div class="rung-bar"></div>
+        <div class="rung-right">
+          <span class="rung-period">A Period of Relinquishment</span>
+          <span class="cite">(M-4.I.A:5:1)</span>
+        </div>
+      </div>
+
+      <div class="ladder-rung">
+        <div class="rung-left">exclusive</div>
+        <div class="rung-bar"></div>
+        <div class="rung-right">
+          <span style="font-size:0.78rem;">inclusive → shared interests</span><br>
+          <span class="rung-period">A Period of Sorting Out</span>
+          <span class="cite">(M-4.I.A:4:1)</span>
+        </div>
+      </div>
+
+      <div class="ladder-rung">
+        <div class="rung-left">differences</div>
+        <div class="rung-bar"></div>
+        <div class="rung-right">
+          <span style="font-size:0.78rem;">same</span>
+        </div>
+      </div>
+
+      <div class="ladder-rung">
+        <div class="rung-left" style="color:var(--red-light);">battleground / prison</div>
+        <div class="rung-bar" style="background: var(--red-dim);"></div>
+        <div class="rung-right">
+          <span style="font-size:0.78rem;">classroom</span><br>
+          <span class="rung-period">A Period of Undoing</span>
+          <span class="cite">(M-4.I.A:3:1)</span>
+        </div>
+      </div>
+
+      <div class="ascending-note">
+        <p style="font-size:0.78rem; color:var(--text-dim);">At the bottom of the ladder, we believe we are bodies with physical and psychological needs. As we ascend:</p>
+        <ul>
+          <li>We spend more time <strong style="color:var(--gold-light);">forgiving (watching the ego)</strong> and less time judging</li>
+          <li>We become acutely aware of the price we are paying by identifying with the ego</li>
+          <li>We also become <strong style="color:var(--gold-light);">aware of our resistance</strong> to letting go of the ego thought system</li>
+          <li>We become <strong style="color:var(--gold-light);">less identified as a body</strong> and more identified as a mind</li>
+          <li>It becomes clearer that all of our problems are the same (i.e. generalization)</li>
+          <li>We finally realize there are only two choices and that only one of them is real</li>
+        </ul>
+        <p style="font-size:0.75rem; color:var(--gold-dim); margin-top:8px; font-style:italic;">"For you have barely started to allow your first, uncertain steps to be directed up the ladder separation led you down." <span class="cite">(T-28.III.1:2)</span></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BOTTOM SECTION -->
+<div class="bottom-section">
+
+  <!-- Three Steps of Forgiveness -->
+  <div class="steps-box">
+    <h3>Three Steps of Forgiveness (KW)</h3>
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <p style="font-size:0.82rem;">Reverse the projection, realizing that the guilt is not in another but in your own mind</p>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <p style="font-size:0.82rem;">Gently look at the guilt in your mind with the Love of Jesus or the Holy Spirit beside you</p>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <p style="font-size:0.82rem;">Let Jesus or the Holy Spirit remove the guilt from your mind once you have released it to them</p>
+    </div>
+    <hr class="subtle">
+    <p style="font-size:0.75rem; color:var(--text-dim); margin-bottom:8px; font-style:italic;">Three Steps of Forgiveness (TDOTU pp. 235-238):</p>
+    <div class="step-item">
+      <div class="step-num" style="background:var(--purple);">1</div>
+      <p style="font-size:0.82rem;">Remember that you're dreaming</p>
+    </div>
+    <div class="step-item">
+      <div class="step-num" style="background:var(--purple);">2</div>
+      <p style="font-size:0.82rem;">Forgive both your projected images and yourself for dreaming them</p>
+    </div>
+    <div class="step-item">
+      <div class="step-num" style="background:var(--purple);">3</div>
+      <p style="font-size:0.82rem;">Trust the Holy Spirit and choose His strength</p>
+    </div>
+    <hr class="subtle">
+    <div class="section-quote" style="font-size:0.8rem;">Forgiveness…is still, and quietly does nothing…It merely looks, and waits, and judges not. <span class="cite">(W-pII.1:4:1,3)</span></div>
+    <p style="font-size:0.8rem; margin-top:8px; font-style:italic; color:var(--text-dim);">I am immortal spirit. The body is just an image. It has nothing to do with what I am. <span class="cite">(YIR p. 78)</span></p>
+    <p style="font-size:0.8rem; margin-top:6px; font-style:italic; color:var(--text-dim);">You are spirit. Whole and innocent. All is forgiven and released. <span class="cite">(YIR p. 80)</span></p>
+  </div>
+
+  <!-- Specialness / Wrong Mind detail -->
+  <div class="specialness-box">
+    <h3>The Special Relationship &amp; Specialness</h3>
+    <p style="font-size:0.82rem; margin-bottom:10px;">The <strong style="color:var(--orange-light);">special relationship</strong> is a ritual of form, aimed at raising the form to take the place of God at the expense of content. There is no meaning in the form, and there never will be. <span class="cite">(T-16.V.10:1)</span></p>
+    <p style="font-size:0.82rem; margin-bottom:10px;">The special relationship must be recognized for what it is: a senseless ritual in which strength is extracted from the death of God, and invested in His killer as the sign that form has triumphed over content, and love has lost its meaning. <span class="cite">(T-16.V.10:1)</span></p>
+    <hr class="subtle">
+    <p style="font-size:0.82rem; margin-bottom:8px;"><strong style="color:var(--orange-light);">Sickness is a decision.</strong> It is not a thing that happens to you, quite unsought, which makes you weak and brings you suffering. It is a <strong>choice you make</strong>. <span class="cite">(S-3.I.1:1-3)</span></p>
+    <hr class="subtle">
+    <p style="font-size:0.82rem; margin-bottom:8px;"><strong style="color:var(--orange-light);">The ego believes</strong> that by punishing itself it will mitigate the punishment of God. <span class="cite">(T-5.6:8)</span></p>
+    <hr class="subtle">
+    <div class="section-quote" style="border-color:var(--orange); font-size:0.82rem;">All that is needed is you <strong>look upon the problem as it is, and not the way that you have set it up.</strong> <span class="cite">(T-27.VII.2:1-2)</span></div>
+    <hr class="subtle">
+    <p style="font-size:0.82rem; margin-bottom:6px;"><strong style="color:var(--orange-light);">Since you believe that you are separate</strong>, Heaven presents itself to you as a Teacher too. Not in the form, but in the link that has been given you to join the truth may reach to you through what you understand. <span class="cite">(T-25.I.5:1-2)</span></p>
+    <p style="font-size:0.82rem; margin-top:8px;"><strong style="color:var(--orange-light);">A miracle</strong>…merely looks on devastation, and reminds the mind that what it sees is false. <span class="cite">(W-pII.13:1,3)</span></p>
+  </div>
+
+  <!-- Forgiveness / Nouk / YIR -->
+  <div class="forgiveness-box">
+    <h3>Forgiveness &amp; The Holy Instant</h3>
+    <p style="font-size:0.82rem; margin-bottom:10px; font-style:italic; color:var(--text-dim);">"I am innocent, and nothing has happened. The Holy Spirit knows What I am. I am awakening in God." <span class="cite">(LHFNO p.138)</span></p>
+    <hr class="subtle">
+    <p style="font-size:0.82rem; margin-bottom:8px;"><strong style="color:var(--purple-light);">Each day, and every minute in each day</strong>, and every instant that each minute holds, you but <strong>relive the single instant</strong> when the time of terror took the place of love. <span class="cite">(T-26.V.13:1)</span></p>
+    <p style="font-size:0.82rem; margin-bottom:8px;">Of one thing you were sure: Of all the many causes that seemed to bring you pain and suffering to you, your guilt was not among them. <span class="cite">(T-27.VII.4:7-8)</span></p>
+    <hr class="subtle">
+    <p style="font-size:0.82rem; margin-bottom:8px;"><strong style="color:var(--purple-light);">The meaning of the crucifixion</strong> is perfectly clear: Teach only love, for that is what you are. <span class="cite">(T-6.I.13:1-2)</span> Teach not that I died in vain. Teach rather that I did not die by demonstrating that I live in you. <span class="cite">(T-11.VI.7:3-4)</span></p>
+    <hr class="subtle">
+    <div class="section-quote" style="border-color:var(--purple); font-size:0.82rem;">But the <strong>only meaningful prayer is for forgiveness</strong>, because those who have been forgiven have everything. <span class="cite">(T-3.V.6:2)</span></div>
+    <hr class="subtle">
+    <p style="font-size:0.82rem; margin-bottom:6px;"><strong style="color:var(--purple-light);">Forgive your Father</strong> it was not His Will that you be crucified. Your real terror is of redemption. <span class="cite">(T-13.III.1:10-11)</span></p>
+    <p style="font-size:0.82rem; margin-top:6px;">Son of God, you have not sinned, but you have been much mistaken. <span class="cite">(T-10.V.6:1)</span> Call it not sin but madness, for such it was and so it still remains. Invest it not with guilt, for guilt implies it was accomplished in reality. <span class="cite">(T-18.I.6:7-9)</span></p>
+  </div>
+
+</div>
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+  <strong>KW</strong> = Ken Wapnick &nbsp;·&nbsp; <strong>NS</strong> = Nouk Sanchez &nbsp;·&nbsp; <strong>DH</strong> = David Hoffmeister &nbsp;·&nbsp; <strong>TDOTU</strong> = Gary Renard <em>The Disappearance of the Universe</em> &nbsp;·&nbsp; <strong>YIR</strong> = Gary Renard <em>Your Immortal Reality</em> &nbsp;·&nbsp; <strong>LHFNO</strong> = Gary Renard <em>Love Has Forgotten No One</em><br>
+  <span style="margin-top:6px; display:block;">© MKM 08/24/14 · http://acim.mkmtrading.net · For personal study use only · All ACIM references are to the Foundation for Inner Peace (FIP) edition</span>
+</div>
+
+</body>
+</html>

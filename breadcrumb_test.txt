@@ -1,0 +1,16 @@
+Breadcrumb & Commentary Test Results - April 20, 2026
+=====================================================
+
+1. COMMENTARY LABEL: ✅ Working
+   - Shows "COMMENTARY BY DEE DOYLE & ALLEN WATSON" on lesson 112
+   - Properly renamed from "DEE DOYLE COMMENTARY"
+
+2. BREADCRUMB: ✅ Working!
+   - Clicked lesson 112 (Review III) → clicked "93. Light and joy and peace abide in me."
+   - Jumped to 51-100 filter, scrolled to lesson 93, expanded it
+   - Shows green breadcrumb button: "← Back to Lesson 112 (Review III)"
+   - Gold highlight glow on the lesson
+
+3. STILL TO VERIFY:
+   - Click the breadcrumb button to jump back to lesson 112
+   - Circle of Atonement credit at bottom of commentary

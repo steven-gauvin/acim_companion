@@ -1,0 +1,36 @@
+SPECIAL CARD IMPLEMENTATION PLAN
+=================================
+
+Approach: Add a lesson 366 as a special "Where Do I Go From Here?" card.
+This is the simplest approach - add it as lesson num:366 in the LESSONS array.
+
+The card system works like this:
+- LESSONS is an array of objects with {num, title, notes, url, bla_url}
+- deck = LESSONS.map((_, i) => i) gives indices [0..364]
+- renderCard() reads getCurrentLesson() which is LESSONS[deck[currentIdx]]
+- The card front shows "LESSON {num}" and the title
+- The card back shows "LESSON {num}", title, and notes
+- Navigation: prevCard/nextCard, gotoLesson (1-365 range check)
+
+For the special card:
+- num: 366
+- title: "Where Do I Go From Here?"
+- notes: The full text content from the appendix
+- url: could link to the Circle of Atonement or leave as '#'
+- bla_url: '#'
+
+Changes needed:
+1. Add lesson 366 to the data (in build_html.py, append to LESSONS after loading)
+2. Update renderCard() to show special styling for lesson 366
+   - Instead of "LESSON 366", show something like "✦ COMPLETION ✦"
+   - The front could say "Where Do I Go From Here?" with a congratulations feel
+3. Update gotoLesson() range check from 365 to 366
+4. Update the goto input max from 365 to 366
+
+Actually, the cleanest approach is:
+- Add it to the data file as lesson 366
+- In renderCard(), detect num===366 and show special label instead of "LESSON 366"
+- The notes will be the full text, which is long - the card back scrolls already
+
+The notes text needs to be well-formatted for the card. Since it's plain text on the 
+card back, I should structure it with clear sections using line breaks and headers.

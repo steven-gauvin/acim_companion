@@ -1,0 +1,36 @@
+Review Integration Plan
+========================
+
+CURRENT STATE:
+- Separate "Reviews" tab with 6 review sections (I-VI)
+- Each has: name, subtitle, instructions (intro text), entries (day-by-day schedule)
+- Review lessons in Library show as regular lessons with notes like "Review of Lessons 1-5"
+- Review lessons 141-150 all titled "My mind holds only what I think with God"
+- Review lessons 171-180 all titled "God is but Love, and therefore so am I"  
+- Review lessons 201-220 all titled "I am not a body. I am free..."
+
+REVIEW MAPPING:
+- Review I:   Lessons 51-60   review Lessons 1-50   (5 per day)
+- Review II:  Lessons 81-90   review Lessons 61-80  (2 per day)
+- Review III: Lessons 111-120 review Lessons 91-110 (2 per day)
+- Review IV:  Lessons 141-150 review Lessons 121-140 (2 per day)
+- Review V:   Lessons 171-180 review Lessons 151-170 (2 per day)
+- Review VI:  Lessons 201-220 review Lessons 181-200 (1 per day)
+
+CHANGES NEEDED:
+
+1. REMOVE the Reviews tab from the tab bar
+2. REMOVE the Reviews panel HTML and renderReviews function
+3. ADD a REVIEW_MAP JS object: lesson_num -> { reviewName, reviewNum (I-VI), instructions, reviewedLessons: [nums] }
+4. In renderLibrary(), for review lessons:
+   - Show a colored badge "Review I" / "Review II" etc. next to the lesson number
+   - Add a collapsible "Review Introduction" block inside the lesson body (before notes)
+   - Show which lessons are being reviewed with clickable links to those lessons
+5. In renderCard() (flashcard view), also show review badge and intro access
+6. Keep the REVIEWS data but transform it into REVIEW_MAP for easy lookup
+
+CSS additions:
+- .review-badge { small pill, gold/amber background }
+- .review-intro-toggle { button to show/hide the review intro }
+- .review-intro-content { the intro text block }
+- .review-refs { list of reviewed lesson links }

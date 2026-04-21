@@ -1,0 +1,43 @@
+ZOOM ISSUE 2
+============
+The zoom shows "130%" text but the chart content is not visible. 
+The container shows just the percentage text.
+
+The problem is that the photo zoom system applies transform to the 
+.photo-chart-img element. For photos, this is an <img> tag. For the 
+Heaven chart, I wrapped the content in a <div class="photo-chart-img">.
+
+The .photo-chart-img CSS has:
+- pointer-events: none  <-- this might cause issues with nested interactive elements
+- user-select: none
+- transform-origin: 0 0
+- width: 100%
+
+The issue might be that the chart content inside the div is not rendering 
+because the container has overflow:hidden and the transform is moving 
+content out of view, or the max-height:600px is too restrictive when 
+the inner div has no explicit height.
+
+Actually looking at the screenshot more carefully - the container at the 
+bottom just shows "130%" text. The chart content seems to have disappeared.
+This could be because the transform is being applied and the content is 
+being pushed out of the visible area.
+
+The real issue: the photo zoom system uses transform-origin: 0 0 (top-left).
+When you scale from the top-left, the content expands to the right and down.
+But the container has overflow:hidden and max-height:600px, so the content 
+gets clipped.
+
+BETTER APPROACH:
+Instead of reusing the photo zoom system (designed for images), create a 
+simpler CSS-only zoom using transform: scale() with transform-origin: center.
+Or better yet, just use the dawsonZoom pattern which is much simpler - 
+it just scales a wrapper div.
+
+The dawsonZoom function:
+- Has a dawsonZoomScale variable
+- dawsonZoom(factor) multiplies the scale
+- Applies transform: scale() to the wrap element
+- Updates a label
+
+This is simpler and better suited for HTML content (not images).

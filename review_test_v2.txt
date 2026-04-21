@@ -1,0 +1,15 @@
+Review Integration Test v2 - April 20
+======================================
+
+Lesson 112 expanded successfully:
+- REVIEW III gold badge visible
+- "Review III Introduction" button (collapsible, showing ▶)
+- REVIEWING section shows: "93. Light and joy..." and "94. I am as God created me."
+- Full lesson text visible
+- Edit Notes, christmind, BLA, Open as Card buttons present
+- Dee Doyle Commentary section present
+
+Need to test: clicking a review-ref-link (e.g. "93. Light and joy...") 
+to see if jumpToLesson now switches filter and scrolls to lesson 93.
+
+The element indices for the review ref links are 244 and 245 based on screenshot.

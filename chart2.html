@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACIM — Key Teachings &amp; Text References</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --gold: #c9a84c;
+    --gold-light: #e8cc7a;
+    --gold-dim: #7a6230;
+    --deep: #0a0a14;
+    --dark: #0f0f1e;
+    --panel: #13132a;
+    --panel2: #1a1a35;
+    --border: #2a2a50;
+    --text: #e8e4d8;
+    --text-dim: #a09880;
+    --white: #f5f0e8;
+    --blue-light: #7eb8d4;
+    --blue-mid: #4a90b8;
+    --blue-dark: #1e4a6e;
+    --purple: #6b5b9e;
+    --purple-light: #9b8bce;
+    --red-dim: #8b3a3a;
+    --red-light: #c47070;
+    --green-dim: #2a5a3a;
+    --green-light: #5aaa7a;
+    --teal: #3a8a7a;
+    --teal-light: #6abcaa;
+    --orange: #c87a30;
+    --orange-light: #e8a860;
+    --rose: #a85a7a;
+    --rose-light: #d88aaa;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--deep);
+    color: var(--text);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 15px;
+    line-height: 1.6;
+    min-width: 1400px;
+  }
+
+  .page-header {
+    text-align: center;
+    padding: 40px 60px 20px;
+    border-bottom: 1px solid var(--gold-dim);
+  }
+  .page-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+  }
+  .page-header .subtitle {
+    font-style: italic;
+    color: var(--text-dim);
+    font-size: 1rem;
+  }
+  .credit {
+    font-size: 0.78rem;
+    color: var(--gold-dim);
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Opening quote banner */
+  .opening-banner {
+    background: linear-gradient(135deg, #0d0d20 0%, #1a1040 50%, #0d0d20 100%);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    margin: 30px 40px;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .opening-banner .quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.8;
+  }
+  .opening-banner .cite {
+    font-size: 0.8rem;
+    color: var(--gold);
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    margin-top: 8px;
+    display: block;
+  }
+
+  /* Main layout */
+  .main-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    padding: 0 40px 40px;
+  }
+
+  /* Cards */
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 20px;
+  }
+  .card:last-child { margin-bottom: 0; }
+
+  .card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .card-title.gold { color: var(--gold); border-color: var(--gold-dim); }
+  .card-title.blue { color: var(--blue-light); border-color: var(--blue-dark); }
+  .card-title.red { color: var(--red-light); border-color: var(--red-dim); }
+  .card-title.green { color: var(--green-light); border-color: var(--green-dim); }
+  .card-title.teal { color: var(--teal-light); border-color: var(--teal); }
+  .card-title.purple { color: var(--purple-light); border-color: var(--purple); }
+  .card-title.orange { color: var(--orange-light); border-color: var(--orange); }
+  .card-title.rose { color: var(--rose-light); border-color: var(--rose); }
+  .card-title.white { color: var(--white); }
+
+  .cite {
+    font-size: 0.72rem;
+    color: var(--gold-dim);
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+  }
+
+  p { margin-bottom: 10px; }
+  p:last-child { margin-bottom: 0; }
+
+  .em { color: var(--gold-light); font-style: italic; }
+  .em-red { color: var(--red-light); }
+  .em-green { color: var(--green-light); }
+  .em-blue { color: var(--blue-light); }
+  .em-teal { color: var(--teal-light); }
+  .em-white { color: var(--white); font-weight: 600; }
+  .em-orange { color: var(--orange-light); }
+  .em-purple { color: var(--purple-light); }
+  .em-rose { color: var(--rose-light); }
+
+  .section-quote {
+    font-style: italic;
+    color: var(--text-dim);
+    font-size: 0.88rem;
+    border-left: 3px solid var(--gold-dim);
+    padding: 8px 14px;
+    margin: 12px 0;
+    background: rgba(201,168,76,0.05);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .section-quote.blue { border-color: var(--blue-mid); background: rgba(74,144,184,0.05); }
+  .section-quote.green { border-color: var(--green-dim); background: rgba(42,90,58,0.05); }
+  .section-quote.red { border-color: var(--red-dim); background: rgba(139,58,58,0.05); }
+  .section-quote.teal { border-color: var(--teal); background: rgba(58,138,122,0.05); }
+  .section-quote.purple { border-color: var(--purple); background: rgba(107,91,158,0.05); }
+  .section-quote.orange { border-color: var(--orange); background: rgba(200,122,48,0.05); }
+
+  hr.subtle {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 14px 0;
+  }
+
+  .numbered-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: item;
+  }
+  .numbered-list li {
+    counter-increment: item;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+    font-size: 0.88rem;
+  }
+  .numbered-list li::before {
+    content: counter(item);
+    width: 22px;
+    height: 22px;
+    background: var(--gold-dim);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    color: var(--deep);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .bullet-list {
+    list-style: none;
+    padding: 0;
+  }
+  .bullet-list li {
+    padding: 4px 0 4px 18px;
+    position: relative;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+  .bullet-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold-dim);
+    font-size: 0.6rem;
+    top: 7px;
+  }
+
+  .highlight-box {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 10px 0;
+    font-size: 0.85rem;
+  }
+  .highlight-box.gold { background: rgba(201,168,76,0.1); border: 1px solid var(--gold-dim); }
+  .highlight-box.red { background: rgba(139,58,58,0.12); border: 1px solid var(--red-dim); }
+  .highlight-box.green { background: rgba(42,90,58,0.12); border: 1px solid var(--green-dim); }
+  .highlight-box.blue { background: rgba(30,74,110,0.15); border: 1px solid var(--blue-dark); }
+  .highlight-box.purple { background: rgba(107,91,158,0.12); border: 1px solid var(--purple); }
+  .highlight-box.teal { background: rgba(58,138,122,0.12); border: 1px solid var(--teal); }
+  .highlight-box.orange { background: rgba(200,122,48,0.12); border: 1px solid var(--orange); }
+
+  .col { display: flex; flex-direction: column; }
+
+  /* Obstacles sub-items */
+  .obstacle-item {
+    padding: 10px 14px;
+    border-left: 3px solid var(--red-dim);
+    margin-bottom: 10px;
+    background: rgba(139,58,58,0.08);
+    border-radius: 0 8px 8px 0;
+  }
+  .obstacle-item .ob-title {
+    font-size: 0.72rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--red-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .obstacle-item p { font-size: 0.82rem; margin-bottom: 0; }
+
+  /* Time section */
+  .time-item {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+  }
+  .time-item:last-child { border-bottom: none; }
+  .time-item strong { color: var(--gold-light); }
+
+  /* Page footer */
+  .page-footer {
+    text-align: center;
+    padding: 20px 40px 30px;
+    border-top: 1px solid var(--border);
+    font-size: 0.75rem;
+    color: var(--gold-dim);
+    font-style: italic;
+  }
+
+  /* Span-2 for wider cards */
+  .span-full {
+    grid-column: 1 / -1;
+  }
+
+  /* Two-col sub-grid */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 12px;
+  }
+
+  .sub-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 0.85rem;
+  }
+  .sub-card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  /* KW extended quote */
+  .kw-quote {
+    background: linear-gradient(135deg, #0f0a1e 0%, #1a1030 100%);
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+  .kw-quote .kw-source {
+    font-style: normal;
+    font-size: 0.72rem;
+    color: var(--purple-light);
+    margin-top: 8px;
+    display: block;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Three-step items */
+  .step-block {
+    background: rgba(58,138,122,0.08);
+    border: 1px solid var(--teal);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+  }
+  .step-block .step-header {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    color: var(--teal-light);
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .step-block p { font-size: 0.85rem; margin-bottom: 6px; }
+  .step-block p:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <h1>Key Teachings &amp; Text References</h1>
+  <div class="subtitle">A Course in Miracles — Companion Study Guide</div>
+  <div class="credit">Based on the teachings of Ken Wapnick · Foundation for A Course in Miracles (FACIM) · © MKM 08/24/14 · Personal use only</div>
+</div>
+
+<!-- OPENING BANNER -->
+<div class="opening-banner">
+  <div class="quote">"I am innocent, and nothing has happened. The Holy Spirit knows What I am. I am awakening in God."</div>
+  <span class="cite">— LHFNO p. 138 (Gary Renard, Love Has Forgotten No One)</span>
+</div>
+
+<!-- MAIN THREE-COLUMN LAYOUT -->
+<div class="main-layout">
+
+  <!-- ══ COLUMN 1 ══ -->
+  <div class="col">
+
+    <!-- Laws of Chaos -->
+    <div class="card" style="border-color: var(--red-dim); background: linear-gradient(135deg, #1a0808 0%, #1a1020 100%);">
+      <div class="card-title red">The Laws of Chaos</div>
+      <ol class="numbered-list" style="counter-reset: item;">
+        <li style="counter-increment: item;">The truth is different for everyone <span class="cite">(T-23.II.2:1)</span></li>
+        <li style="counter-increment: item;">Each one must sin, and therefore deserves attack and death <span class="cite">(T-23.II.4:1)</span></li>
+        <li style="counter-increment: item;">God must accept His Son's belief in what he is, and hate him for it <span class="cite">(T-23.II.6:5-6)</span></li>
+        <li style="counter-increment: item;">The belief that you have what you have taken <span class="cite">(T-23.II.9:2-3)</span></li>
+        <li style="counter-increment: item;">There is a substitute for love <span class="cite">(T-23.II.12:3-4)</span></li>
+      </ol>
+    </div>
+
+    <!-- Obstacles to Peace -->
+    <div class="card" style="border-color: var(--red-dim);">
+      <div class="card-title red">The Obstacles to Peace <span class="cite">(T-19.IV)</span></div>
+
+      <div class="obstacle-item">
+        <div class="ob-title">T-19.IV.A — First Obstacle</div>
+        <p>The Desire to Get Rid of It</p>
+      </div>
+      <div class="obstacle-item">
+        <div class="ob-title">T-19.IV.A.i — The Attraction of Guilt</div>
+        <p style="font-size:0.8rem; color:var(--text-dim);">What do I want to come of this? What is it for? The clarification of the goal belongs at the beginning, for it is this which will determine the outcome. <span class="cite">(T-17.VI.2:1-3)</span></p>
+      </div>
+      <div class="obstacle-item">
+        <div class="ob-title">T-19.IV.A.ii — The Body is Valuable</div>
+        <p style="font-size:0.8rem; color:var(--text-dim);">What It Offers</p>
+      </div>
+      <div class="obstacle-item">
+        <div class="ob-title">T-19.IV.B — Second Obstacle</div>
+        <p>The Attraction of Pain</p>
+      </div>
+      <div class="obstacle-item">
+        <div class="ob-title">T-19.IV.C — Third Obstacle</div>
+        <p>The Attraction of Death</p>
+      </div>
+      <div class="obstacle-item" style="border-left-color: var(--gold-dim);">
+        <div class="ob-title" style="color:var(--gold);">T-19.IV.C.i — The Incorruptible Body</div>
+        <p style="font-size:0.8rem; color:var(--text-dim);">T-19.IV.C.ii · T-19.IV.C.iii · T-19.IV.C.iv · T-19.IV.D</p>
+      </div>
+      <div class="obstacle-item">
+        <div class="ob-title">T-19.IV.D — Fourth Obstacle</div>
+        <p>The Fear of God</p>
+        <p style="font-size:0.78rem; color:var(--text-dim); margin-top:4px;">T-19.IV.D.i — The Lifting of the Veil</p>
+      </div>
+
+      <hr class="subtle">
+      <div class="section-quote red">"The secret of salvation is but this: That you are doing this unto yourself…For you would not react at all to figures in a dream you knew you were dreaming. Let them be as hateful and as vicious as they may, they could have no effect on you unless you failed to recognize it is your dream." <span class="cite">(T-27.VIII.10:1,5-7)</span></div>
+    </div>
+
+    <!-- Temptation / Time -->
+    <div class="card" style="border-color: var(--orange);">
+      <div class="card-title orange">Time, Temptation &amp; The Script</div>
+
+      <div class="highlight-box orange">
+        <p><strong class="em-orange">Temptation</strong> has one lesson it would teach, in all its forms, wherever it occurs. It would persuade the holy Son of God he is a body, born in what must die, unable to escape its frailty, and bound by what it orders him to feel. <span class="cite">(T-31.VIII.1:1-2)</span></p>
+      </div>
+
+      <div class="time-item">
+        <strong>Into eternity</strong>, where all is one, there crept a <em>tiny, mad idea</em>, at which the Son of God remembered not to laugh. <span class="cite">(T-27.VIII.6:2-5)</span>
+      </div>
+      <div class="time-item">
+        <strong>The tiny tick of time</strong> in which the first mistake was made, and all of them that came within the first. And in that tiny instant of time was all time born. <span class="cite">(T-26.V.3:5-7)</span>
+      </div>
+      <div class="time-item">
+        <strong>Time</strong> seems to go in one direction, but when you reach its end it will roll up like a long carpet spread along the path behind you, and will disappear. <span class="cite">(T-13.I.3:5)</span>
+      </div>
+      <div class="time-item">
+        <strong>The revelation</strong> that the Father and the Son are one will come to every mind. Yet is that time determined by the mind itself, not taught.
+      </div>
+      <div class="time-item">
+        <strong>The time is set already.</strong> It appears to be quite arbitrary. Yet there is no step along the road that anyone takes but by chance. It has already been taken by him, although he has not yet embarked on it. For time but seems to go in one direction. We but undertake a journey that is over. <span class="cite">(T-26.V.13:1)</span>
+      </div>
+
+      <hr class="subtle">
+      <div class="section-quote orange"><strong>If this were the real world, God would be cruel.</strong> For no Father could subject His children to this as the price of salvation and be loving. <span class="cite">(T-13.in.3:1-2)</span> If God is real, there is no pain. If pain is real, there is no God. <span class="cite">(W-pl.190.3:3-4)</span></div>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;"><strong class="em-orange">Resign now as your own teacher</strong>…for you were badly taught. <span class="cite">(T-12.V.8:3; T-28.I.7:1)</span></p>
+      <p style="font-size:0.82rem; color:var(--text-dim);">To learn this course requires willingness to question every value that you hold. <span class="cite">(T-24.in.2:1)</span> This course requires almost nothing of you. It is impossible to imagine one that asks so little, or could offer more. <span class="cite">(T-20.VII.1:7-8)</span></p>
+    </div>
+
+    <!-- Anger / Beware -->
+    <div class="card" style="border-color: var(--red-dim);">
+      <div class="card-title red">Anger, Judgment &amp; The Veil</div>
+      <div class="highlight-box red">
+        <p><strong class="em-red">Beware of the temptation to perceive yourself unfairly treated.</strong> <span class="cite">(T-26.X.4:1)</span> …a slight twinge of annoyance is nothing but a veil drawn over intense fury. <span class="cite">(W-pl.21.2:5)</span></p>
+      </div>
+      <p style="font-size:0.85rem;"><strong class="em-red">Anger</strong> is never justified. <span class="cite">(T-30.VI.1:1)</span> All anger is nothing more than an attempt to make someone feel guilty… <span class="cite">(T-15.VII.10:3)</span></p>
+      <hr class="subtle">
+      <div class="section-quote red">…everyone who wanders in the world <strong>uncertain, lonely, and in constant fear</strong>. <span class="cite">(T-31.VIII.7:1)</span> …a dry and dusty world, <strong>where starved and thirsty creatures come to die</strong>. <span class="cite">(W-pII.13:5:1)</span></div>
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">The world you see is the delusional system of those made mad by guilt. <span class="cite">(T-13.in.2:2)</span> And who could weep for but his innocence? <span class="cite">(P-2.IV.1:7)</span></p>
+    </div>
+
+  </div>
+
+  <!-- ══ COLUMN 2 ══ -->
+  <div class="col">
+
+    <!-- Three Steps of Forgiveness - KW Extended -->
+    <div class="card" style="border-color: var(--teal); background: linear-gradient(135deg, #080f0a 0%, #0f1e14 100%);">
+      <div class="card-title teal">Three Steps of Forgiveness — Extended (KW)</div>
+
+      <div class="step-block">
+        <div class="step-header">Step 1 — Recognize the Darkness is Not in Another</div>
+        <p>I recognize that the darkness is not in another, but in myself. This does not deny the darkened spots of sin in someone, but only that they are irrelevant to my perception. I understand that the darkness I made real in you by my reaction, originated in me, and thus I recall the projection and remove the wall I had placed between us. This is a painful step, for in the instant of recognition the pain of my guilt returns to awareness. I realize (from Lesson 190) the gun pointed at me is not held by your hand, but my own. I am the secret murderer.</p>
+      </div>
+
+      <div class="step-block">
+        <div class="step-header">Step 2 — Now I Understand Jesus' Love Beside Me</div>
+        <p>Now I understand, with Jesus' love beside me, that not only is it an illusion that you were the killer, the fact that I am a killer is an illusion, too. I made up the guilt in you because I made it up in me. Heaven's Love was only believed to be destroyed. It truth, not one note in its joyous song of oneness was lost. <span class="cite">(T-26.V.5:4)</span> Recognizing this happy fact completes my part in the Atonement, and the wall between my self and Self dissolves into nothingness.</p>
+      </div>
+
+      <div class="step-block">
+        <div class="step-header">Step 3 — We Are Taught This Step is Not Our Responsibility</div>
+        <p>We are taught this step is not our responsibility. Once I look at the guilt in you and in me and recall it, realizing it was only my dark fantasy, I have fulfilled my part. I looked at guilt without judgment, and remembered to laugh at the tiny, mad idea of separation, which allowed it to dissolve into the Holy Spirit's gentle laughter. <span class="cite">(T-27.VIII.6:2-9:1)</span> If I become afraid of love again, I need but let the tender hand of Jesus touch another's pain, and immediately his light of truth abolishes the darkness of illusion, as we together return to the place of truth we believed we had abandoned for the ego's home of separation and guilt. The secret walls of defense are no longer needed, and so have disappeared. In their place is the light of forgiveness, which shines the way to the home we never left. And thus it is no secret we are healed. <span class="cite">(T-27.VIII.13:9)</span></p>
+      </div>
+
+      <div class="kw-quote">
+        "Therefore, the first step in the undoing is to recognize that you actively decided wrongly; but can as actively decide otherwise. Be very firm with yourself in this, and keep yourself fully aware that the undoing process, which does not come from you, is nevertheless within you because God placed it there. <strong>Your part is merely to return your thinking to the point at which the error was made</strong>, and give it over to the Atonement in peace."
+        <span class="kw-source">— Ken Wapnick, Ending Our Resistance to Love: From Dissociation to Acceptance of A Course in Miracles, p 137-138</span>
+      </div>
+
+      <div class="highlight-box teal">
+        <p style="font-style:italic; font-size:0.88rem;">I must have decided wrongly because I am not at peace. I made the decision myself, but I can also decide otherwise. I want to decide otherwise, because I want to be at peace. I do not feel guilty, because the Holy Spirit will undo all the consequences of my wrong decision if I will let Him. I choose to let Him, by allowing Him to decide for God for me. <span class="cite">(T-5.VII.6:3-11)</span></p>
+      </div>
+    </div>
+
+    <!-- Forgiveness -->
+    <div class="card" style="border-color: var(--green-dim);">
+      <div class="card-title green">Forgiveness — Looking at the Ego</div>
+
+      <div class="section-quote green"><strong>forgiveness</strong> looking at our specialness with the Holy Spirit or Jesus, without guilt or judgment: our special function that shifts perception of another as "enemy" (special hate) or "savior-idol" (special love) to brother or friend, removing all projections of guilt from him; the expression of the miracle or vision of Christ, that sees all people united in the Sonship of God, looking beyond the seeming differences that reflect separation: thus, perceiving sin as real makes true forgiveness impossible; the recognition that what we thought was done to us we did to ourselves, since we are responsible for our scripts, and therefore only we can deprive ourselves of the peace of God: thus, we forgive others for what they have done to us, not for what they have done.</div>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;"><strong class="em-green">looking at our ego</strong> — the essence of forgiveness: looking with the Holy Spirit's or Jesus' nonjudgmental gentleness and patience at our ego thought system; since it is guilt that prevents us from looking at our specialness, thus sustaining the ego and keeping its true nature hidden, it is looking without judgment at our attack thoughts that undoes the ego: thus, looking at the ego without guilt and fear is the essence of the Atonement.</p>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;"><strong class="em-green">bringing darkness (illusions) to the light (truth)</strong> — the process of undoing denial and dissociation, expressing the decision to bring our guilt to the light of the Holy Spirit to be looked at and forgiven, rather than fearfully keeping it in the darkness of our unconscious minds where it could never be seen and undone; living in illusions brings sickness and pain, bringing them to truth is healing and salvation.</p>
+
+      <hr class="subtle">
+      <div class="section-quote green" style="font-size:0.82rem;">— Ken Wapnick, <em>Glossary-Index for A Course in Miracles, Sixth Edition</em>, copyright FACIM, Temecula, CA</div>
+    </div>
+
+  </div>
+
+  <!-- ══ COLUMN 3 ══ -->
+  <div class="col">
+
+    <!-- Sickness / Defenses -->
+    <div class="card" style="border-color: var(--blue-dark); background: linear-gradient(135deg, #080a14 0%, #0f1428 100%);">
+      <div class="card-title blue">Sickness, Defenses &amp; The Body</div>
+
+      <div class="highlight-box blue">
+        <p>There is no statement that the world is more afraid to hear than this: I do not know the thing I am, and therefore do not know what I am doing, where I am, or how to look upon the world or myself. <span class="cite">(T-31.V.17:6-9)</span></p>
+        <p style="margin-top:8px; font-style:italic; color:var(--text-dim);">Yet in this learning is salvation born. And What you are will tell you of Itself. <span class="cite">(T-31.V.17:6-9)</span></p>
+      </div>
+
+      <hr class="subtle">
+      <div class="section-quote blue"><strong>Sickness is a decision.</strong> It is not a thing that happens to you, quite unsought, which makes you weak and brings you suffering. It is a <strong>choice you make</strong>, a plan you lay, when for an instant truth arises in your own deluded mind, and all your world appears to totter and prepare to fall. Now are you sick, that truth may go away and threaten your establishments no more. <span class="cite">(W-pII.136:7)</span></div>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">It is essential to realize that all <strong class="em-blue">defenses do what they would defend</strong>. The underlying basis for their effectiveness is that they offer what they defend. <span class="cite">(T-17.VII.1-2)</span></p>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">You who believe that God is fear made but one substitution. It has taken many forms, because it was the substitution of illusion for truth; of fragmentation for wholeness. It has become so splintered and subdivided and divided again, over and over, that it is now almost impossible to perceive it once was one, and still is what it was. That one error, which brought truth to illusion, infinity to time, and life to death, was all you ever made. <strong>Your whole world rests upon it. Everything you see reflects it, and every special relationship that you have ever made is part of it…. You do not realize the magnitude of that one error.</strong> <span class="cite">(T-18.I.4:1-5:5;6)</span></p>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">Trials are but lessons that you failed to learn presented once again, so where you made a faulty choice before you now can make a better one, and thus escape all pain that what you chose before has brought you. <span class="cite">(T-31.VIII.3:1)</span></p>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">Who with the Love of God beside him would find the choice between miracles and murder hard to make? <span class="cite">(T-23.IV.9:8)</span> What is not love is murder. <span class="cite">(T-23.IV.1:10)</span></p>
+    </div>
+
+    <!-- Ego / Guilt / Punishment -->
+    <div class="card" style="border-color: var(--red-dim);">
+      <div class="card-title red">The Ego, Guilt &amp; Punishment</div>
+
+      <div class="highlight-box red">
+        <p><strong class="em-red">The ego believes that by punishing itself it will mitigate the punishment of God.</strong> <span class="cite">(T-5.6:8)</span> Yet you can indeed afford to laugh at fear thoughts, remembering that God does not want you to suffer. <span class="cite">(T-5.6:8)</span></p>
+      </div>
+
+      <p style="font-size:0.85rem; margin-top:12px;">You who believe that God is fear made but one substitution. <span class="cite">(T-18.I.4:1)</span></p>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">All that is needed is you <strong class="em-red">look upon the problem as it is, and not the way that you have set it up.</strong> <span class="cite">(T-27.VII.2:1-2)</span></p>
+
+      <hr class="subtle">
+      <div class="section-quote red">The <strong>special relationship</strong> is a triumph over God, would you want it? <span class="cite">(T-16.V.10:1)</span> Whenever any form of special relationship tempts you to seek for love in ritual, remember love is content, and not form of any kind. The special relationship is a ritual of form, aimed at raising the form to take the place of God at the expense of content. There is no meaning in the form, and there never will be. The special relationship must be recognized for what it is: a senseless ritual in which strength is extracted from the death of God, and invested in His killer as the sign that form has triumphed over content, and love has lost its meaning. <span class="cite">(T-16.V.10:1)</span></div>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">Yet it [perception] but witnesses to what you taught. It is <strong class="em-red">the outward picture of a wish</strong>, an image that you wanted to be true. <span class="cite">(T-24.VII.8:9-10)</span></p>
+    </div>
+
+    <!-- Since you believe / Heaven / Miracle -->
+    <div class="card" style="border-color: var(--gold-dim);">
+      <div class="card-title gold">Heaven, the Miracle &amp; The Special Relationship</div>
+
+      <div class="section-quote">
+        <strong>Since you believe that you are separate</strong>, Heaven presents itself to you as a Teacher too. Not in the form, but in the link that has been given you to join the truth may reach to you through what you understand. <span class="cite">(T-25.I.5:1-2)</span>
+      </div>
+
+      <hr class="subtle">
+      <div class="section-quote">
+        <strong>A miracle</strong>…merely looks on devastation, and reminds the mind that what it sees is false. <span class="cite">(W-pII.13:1,3)</span>
+      </div>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">The <strong class="em">meaning of the crucifixion</strong> is perfectly clear: Teach only love, for that is what you are. <span class="cite">(T-6.I.13:1-2)</span> Teach not that I died in vain. Teach rather that I did not die by demonstrating that I live in you. <span class="cite">(T-11.VI.7:3-4)</span></p>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">You were at peace until you asked for special favor. And God did not give it for the request was alien to Him…Therefore you made of him an unloving father. <span class="cite">(T-13.III.10:2-4)</span></p>
+
+      <hr class="subtle">
+      <div class="highlight-box gold">
+        <p>But the <strong>only meaningful prayer is for forgiveness</strong>, because those who have been forgiven have everything. <span class="cite">(T-3.V.6:2)</span></p>
+      </div>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;"><strong class="em">Forgive your Father</strong> it was not His Will that you be crucified. Your real terror is of redemption. <span class="cite">(T-13.III.1:10-11)</span></p>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">Son of God, you have not sinned, but you have been much mistaken. <span class="cite">(T-10.V.6:1)</span> Call it not sin but madness, for such it was and so it still remains. Invest it not with guilt, for guilt implies it was accomplished in reality. And above all, be not afraid of it. <span class="cite">(T-18.I.6:7-9)</span></p>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">The necessary condition for the holy instant does not require that you have no thoughts that are not pure. But it does require that you have none that you would keep. <span class="cite">(T-15.IV.9:1-2)</span></p>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">I do not call for martyrs but for teachers. <span class="cite">(T-6.I.16:3)</span> <strong>To teach is to demonstrate.</strong> <span class="cite">(M-in.2:1)</span></p>
+    </div>
+
+    <!-- Salvation / Resignation -->
+    <div class="card" style="border-color: var(--purple);">
+      <div class="card-title purple">Salvation, Resignation &amp; The Holy Instant</div>
+
+      <div class="section-quote purple">In any situation in which you are unsure, the first thing to consider, very simply, is <strong>"What do I want to come of this? What is it for?"</strong> The clarification of the goal belongs at the beginning, for it is this which will determine the outcome. <span class="cite">(T-17.VI.2:1-3)</span></div>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;"><strong class="em-purple">The secret of salvation</strong> is but this: That you are doing this unto yourself…For you would not react at all to figures in a dream you knew you were dreaming. Let them be as hateful and as vicious as they may, they could have no effect on you unless you failed to recognize it is your dream. <span class="cite">(T-27.VIII.10:1,5-7)</span></p>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">Each day, and every minute in each day, and every instant that each minute holds, you but <strong class="em-purple">relive the single instant</strong> when the time of terror took the place of love. <span class="cite">(T-26.V.13:1)</span></p>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">Of one thing you were sure: Of all the many causes that seemed to bring you pain and suffering to you, your guilt was not among them. <span class="cite">(T-27.VII.4:7-8)</span></p>
+
+      <hr class="subtle">
+      <div class="highlight-box purple">
+        <p>You were at peace until you asked for special favor. And God did not give it for the request was alien to Him…Therefore you made of him an unloving father. <span class="cite">(T-13.III.10:2-4)</span></p>
+      </div>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;"><strong class="em-purple">Resign now as your own teacher</strong>…for you were badly taught. <span class="cite">(T-12.V.8:3; T-28.I.7:1)</span> To learn this course requires willingness to question every value that you hold. <span class="cite">(T-24.in.2:1)</span></p>
+
+      <hr class="subtle">
+      <p style="font-size:0.85rem;">I do not call for martyrs but for teachers. <span class="cite">(T-6.I.16:3)</span> <strong>To teach is to demonstrate.</strong> <span class="cite">(M-in.2:1)</span></p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+  <strong>KW</strong> = Ken Wapnick &nbsp;·&nbsp; <strong>NS</strong> = Nouk Sanchez &nbsp;·&nbsp; <strong>DH</strong> = David Hoffmeister &nbsp;·&nbsp; <strong>TDOTU</strong> = Gary Renard <em>The Disappearance of the Universe</em> &nbsp;·&nbsp; <strong>YIR</strong> = Gary Renard <em>Your Immortal Reality</em> &nbsp;·&nbsp; <strong>LHFNO</strong> = Gary Renard <em>Love Has Forgotten No One</em><br>
+  <span style="margin-top:6px; display:block;">© MKM 08/24/14 · http://acim.mkmtrading.net · For personal study use only · All ACIM references are to the Foundation for Inner Peace (FIP) edition</span>
+</div>
+
+</body>
+</html>

@@ -530,6 +530,29 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
   font-size: 11px; color: var(--gold-dim); letter-spacing: 1px;
 }
 
+/* Study Themes */
+.study-theme { padding: 4px 0 8px; }
+.st-section-label {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--gold); opacity: 0.7; margin: 20px 0 10px; padding-bottom: 6px;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+}
+.st-framing {
+  font-size: 14px; color: var(--text); line-height: 1.7;
+  margin: 0 0 8px; font-style: italic; opacity: 0.9;
+}
+.st-quote {
+  margin-bottom: 14px; padding: 12px 14px;
+  background: rgba(201,168,76,0.04); border-left: 2px solid rgba(201,168,76,0.3);
+  border-radius: 0 6px 6px 0;
+}
+.st-quote-text {
+  font-size: 14px; color: var(--text); line-height: 1.65; font-style: italic;
+  margin-bottom: 6px;
+}
+.st-quote-ref {
+  font-size: 11px; color: var(--gold-dim); letter-spacing: 0.5px;
+}
 /* Principles */
 .principle-item {
   padding: 12px 0; border-bottom: 1px solid var(--border);
@@ -2066,6 +2089,122 @@ function renderReference() {
         </div>
         <div id="hz-scroll" style="overflow:auto;-webkit-overflow-scrolling:touch">
           <div id="hz-wrap" style="transform-origin:top left;transition:transform 0.15s ease">${heavenHtml}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-section" id="ref-study-header" style="background:transparent;border:none;margin-bottom:4px">
+      <div style="padding:18px 4px 6px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);opacity:0.7">&#10022; Study Themes</div>
+    </div>
+
+    <div class="ref-section" id="ref-study-atonement">
+      <div class="ref-header" onclick="toggleRef('ref-study-atonement')">
+        <div>
+          <div class="ref-title">Atonement</div>
+          <div class="ref-subtitle">The correction at the heart of the Course</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-section-label">The Teaching</div>
+          <p class="st-framing">The Atonement is the Course&rsquo;s central act &mdash; not punishment, but correction. It is the undoing of the belief that separation from God ever happened. To accept the Atonement is not a sacrifice; it is the recognition that the Kingdom was never lost. It is a lesson in sharing, offered because we forgot how.</p>
+
+          <div class="st-section-label">What it is</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The full awareness of the Atonement, then, is the recognition that the separation never occurred.&rdquo;</div>
+            <div class="st-quote-ref">T 6:3:34</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Kingdom of Heaven is you. What else but you did the Creator create, and what else but you is His Kingdom? This is the whole message of the Atonement, a message which in its totality transcends the sum of its parts.&rdquo;</div>
+            <div class="st-quote-ref">T 4:4:41</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Atonement was an act based on true perception.&rdquo;</div>
+            <div class="st-quote-ref">T 3:6:49</div>
+          </div>
+
+          <div class="st-section-label">The mechanism</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Voice of the Holy Spirit is the call to Atonement, or the restoration of the integrity of the mind.&rdquo;</div>
+            <div class="st-quote-ref">T 5:4:20</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Atonement cannot be understood except as a pure act of sharing.&rdquo;</div>
+            <div class="st-quote-ref">T 5:6:50</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Atonement is for all because it is the way to undo the belief that anything is for you alone.&rdquo;</div>
+            <div class="st-quote-ref">T 9:3:9</div>
+          </div>
+
+          <div class="st-section-label">The correction</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;If the sole responsibility of the miracle-worker is to accept the Atonement for himself, and I assure you that it is, then the responsibility for what is atoned for cannot be yours.&rdquo;</div>
+            <div class="st-quote-ref">T 5:7:6&ndash;8</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Atonement is a lesson in sharing, which is given you because you have forgotten how to do it.&rdquo;</div>
+            <div class="st-quote-ref">T 9:3:11</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-section" id="ref-study-perception">
+      <div class="ref-header" onclick="toggleRef('ref-study-perception')">
+        <div>
+          <div class="ref-title">Perception</div>
+          <div class="ref-subtitle">The world the separated mind made</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-section-label">The Teaching</div>
+          <p class="st-framing">Perception is the world the separated mind made &mdash; a substitute for Knowledge. Unlike Knowledge, which is certain and timeless, perception varies, and that variation is its limitation. The Course does not ask us to destroy perception but to correct it &mdash; moving from misperception (fear) to true perception (love), until perception itself dissolves back into Knowledge.</p>
+
+          <div class="st-section-label">What it is</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Perception is a result of learning. In fact, it is the outcome of learning, and if it reflects false teaching, it reflects errors.&rdquo;</div>
+            <div class="st-quote-ref">T-3.III.1 &#9733;</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Perception did not exist until the separation introduced degrees, aspects and intervals.&rdquo;</div>
+            <div class="st-quote-ref">T 3:6:38</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;To perceive is not to know.&rdquo;</div>
+            <div class="st-quote-ref">T 3:6:34</div>
+          </div>
+
+          <div class="st-section-label">The mechanism</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Perception always involves some misuse of will because it involves the mind in areas of uncertainty.&rdquo;</div>
+            <div class="st-quote-ref">T 3:6:44</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The world you see is an outside picture of an inward condition.&rdquo;</div>
+            <div class="st-quote-ref">T-21.in.1 &#9733;</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;You see what you believe is there, and you believe it there because you want it there.&rdquo;</div>
+            <div class="st-quote-ref">T-25.III.1 &#9733;</div>
+          </div>
+
+          <div class="st-section-label">The correction</div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Innocent, or true, perception means that you never misperceive and always see truly.&rdquo;</div>
+            <div class="st-quote-ref">T 3:4:27</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Forgiveness is the healing of the perception of separation.&rdquo;</div>
+            <div class="st-quote-ref">T 3:7:59</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Perception is a mirror, not a fact. And what I look on is my state of mind, reflected outward.&rdquo;</div>
+            <div class="st-quote-ref">W-304.1 &#9733;</div>
+          </div>
         </div>
       </div>
     </div>`;

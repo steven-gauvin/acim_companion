@@ -1,0 +1,43 @@
+HEAVEN CHART LAYOUT ISSUES (from Steven's screenshot)
+=====================================================
+
+What's wrong:
+1. The arrow rows use flex with flex:1 on each side, but the red "Denial of Innocence" 
+   arrow takes up the ENTIRE left half + centre, pushing way past the Decision Maker.
+   It looks like a solid red bar from left edge to centre with text at the far left.
+   
+2. The green "Denial of denial of Innocence" arrow is squished to the far right side only.
+
+3. Same issue with "Differences are important" / "Sameness is important" — the red one 
+   dominates the left, the green one is tiny on the right.
+
+4. The Decision Maker centre column is barely visible — tiny text squeezed between the 
+   oversized arrows.
+
+5. The two-column body (EGO left, HOLY SPIRIT right) looks OK but the columns aren't 
+   equal width — EGO is wider.
+
+ROOT CAUSE:
+The flex layout with flex:1 doesn't work well because on a wide screen, the "active" 
+arrow side (with background color) takes flex:1 and the "inactive" side also takes flex:1,
+but the active side has content that pushes it wider.
+
+The CSS triangle arrowheads (border trick) add extra width outside the flex items.
+
+FIX APPROACH:
+Use a proper 3-column grid: grid-template-columns: 1fr auto 1fr
+- Left column: always the same width as right column
+- Centre: fixed width for Decision Maker (e.g. 100px)
+- Right column: mirrors left
+
+For each arrow row, use the FULL grid width:
+- Row 1: Red arrow fills LEFT column ← | Decision Maker | empty RIGHT
+- Row 2: empty LEFT | Decision Maker | Green arrow fills RIGHT →
+- Row 3: Red "Differences" fills LEFT ← | spacer | empty RIGHT  
+- Row 4: empty LEFT | spacer | Green "Sameness" fills RIGHT →
+
+The arrows should be WITHIN their column, not overflowing.
+Use CSS triangles at the OUTER edge of each arrow (left edge for red, right edge for green).
+
+For the two-column body, use the same grid but merge left+centre for EGO, 
+or use a separate 2-column grid with a gap.

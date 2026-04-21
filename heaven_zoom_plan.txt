@@ -1,0 +1,37 @@
+HEAVEN CHART ZOOM PLAN
+======================
+
+The photo zoom system works by:
+1. A container div with class "photo-chart-wrap" and an ID like "pz-0"
+2. An inner element (img) with class "photo-chart-img" that gets transform applied
+3. Zoom controls (+, %, -, reset) above the container
+4. initPhotoZoom() sets up mouse/touch drag and pinch-to-zoom
+5. The zoom state is stored in photoZoomState[id]
+
+For the Heaven chart, I need to:
+1. Wrap the entire chart content in a container div with overflow:hidden and an ID
+2. Put the chart content inside an inner div that will receive the transform
+3. Add zoom controls above the container
+4. Initialize the zoom state and call initPhotoZoom()
+
+The trick is that initPhotoZoom looks for .photo-chart-img inside the wrap.
+I need to either:
+a) Give the inner div class "photo-chart-img" (it's not an img but the CSS just does transform)
+b) Or create a separate heavenZoom function
+
+Option (a) is simpler - the CSS class just applies transform-origin and transition.
+The JS just does wrap.querySelector('.photo-chart-img') and applies transform to it.
+
+PLAN:
+1. In buildHeavenChart(), wrap the content:
+   - Add zoom controls div at the top
+   - Add a container div id="heaven-zoom-wrap" class="photo-chart-wrap" 
+   - Inside, wrap all chart content in a div class="photo-chart-img" (with display:block instead of width:100%)
+
+2. In the ref-body section where heavenHtml is inserted, it's already inside ref-body
+
+3. After PHOTO_CHARTS.forEach, add:
+   photoZoomState['heaven-zoom-wrap'] = { scale:1, tx:0, ty:0, ... };
+   initPhotoZoom('heaven-zoom-wrap');
+
+4. Add zoom control buttons that call photoZoomIn/Out/Reset('heaven-zoom-wrap', event)
