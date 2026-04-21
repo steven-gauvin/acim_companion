@@ -2,6 +2,20 @@
 
 ## Next Up
 
+### Part II Workbook Integration (Lessons 221-365)
+*Based on the Dee Doyle & Allen Watson commentary PDF.*
+
+- [ ] **Extract Part II Content** — Pull the following from the PDF:
+  - "The Introduction to Part II" (pages 9-10)
+  - "Practice Instructions Part II" (pages 11-12)
+  - The 14 "Commentary on What Is...?" sections (starting page 13)
+  - Practice instructions for lessons 361-365 (page 263)
+- [ ] **Design Part II UI** — Figure out how to display this content in the app:
+  - A dedicated "Part II Introduction" card/entry
+  - Clickable links for the general practice instructions (replacing "See complete instructions on page 19")
+  - Section headers or links for the "What Is...?" commentaries
+- [ ] **Implement Part II Links** — Update `build_html.py` to render the new Part II structure and clickable links.
+
 ### Apple Notes Research — Systematic Review
 *Review each of Steven's 30 Apple Notes topics to identify material for Study Themes or Quotes.*
 
