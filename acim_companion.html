@@ -917,7 +917,7 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
   <button class="splash-enter" onclick="closeSplash()">Enter ✦</button>
   <div class="splash-dedication">
     <div class="splash-dedication-text">To the One Self we all share.<br>To each and every soul that I have met along my journey.<br>To those in every corner of the world who have touched my life.<br>And to those who have not yet crossed paths.</div>
-    <div class="splash-dedication-names" style="margin-top:12px">To my brother JP, my grandparents P.P. &amp; Jens (two real life angels), my friends at On Purpose<br>Sandy Levey-Lund&eacute;n, Clearmind, Duane O&rsquo;Kane, and also Sharon.</div>
+    <div class="splash-dedication-names" style="margin-top:12px">To my brother JP, my grandparents, P.P. &amp; Jens (two real life angels), my friends at On Purpose<br>Sandy Levey-Lund&eacute;n, Clearmind, Duane O&rsquo;Kane, and also Sharon.</div>
     <div class="splash-dedication-names" style="margin-top:12px">To the Circle of Atonement, the Foundation for Inner Peace,<br>and to Helen Schucman and Bill Thetford.</div>
     <div class="splash-dedication-names" style="margin-top:16px;font-style:italic;color:var(--gold)">To Him Who sent me.</div>
     <div class="splash-dedication-names" style="margin-top:12px">I say thank you.</div>
@@ -942,11 +942,7 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
     <div class="tab" onclick="switchTab('quotes')">Quotes</div>
     <div class="tab" onclick="switchTab('meditations')">Meditations</div>
     <div class="tab" onclick="switchTab('reference')">Reference</div>
-    <div class="tab charts-tab-trigger" onclick="toggleChartsDropdown()" id="charts-tab-trigger">Charts &#9660;</div>
-  </div>
-  <div id="charts-dropdown" class="charts-dropdown" style="display:none">
-    <div class="charts-dropdown-item" onclick="openChartsTab(0)">Map of the Mind</div>
-    <div class="charts-dropdown-item" onclick="openChartsTab(1)">Key Teachings</div>
+    <div class="tab" onclick="switchTab('themes')">Study Themes</div>
   </div>
 
   <div class="panels">
@@ -1058,6 +1054,11 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
      <div id="panel-reference" class="panel reference-panel">
       <div id="reference-list"></div>
     </div>
+
+    <!-- STUDY THEMES PANEL -->
+    <div id="panel-themes" class="panel reference-panel">
+      <div id="themes-list"></div>
+    </div>
   </div>
   <div class="app-footer">
     <em>Years of studying, learning, and making mistakes &mdash; all of it distilled into something I can carry in my pocket. This is my Course in Miracles, made personal.</em>
@@ -1167,17 +1168,17 @@ function isStarred(num) {
 // TABS
 // ============================================================
 function switchTab(name) {
-  const names = ['cards','library','quotes','meditations','reference'];
+  const names = ['cards','library','quotes','meditations','reference','themes'];
   document.querySelectorAll('.tab').forEach((t,i) => {
     t.classList.toggle('active', names[i] === name);
   });
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
   document.getElementById('panel-' + name).classList.add('active');
   if (name === 'library') { renderLibrary(); scrollToTodayLesson(); }
-  
   if (name === 'quotes') renderQuotes();
   if (name === 'meditations') renderMeditations();
   if (name === 'reference') renderReference();
+  if (name === 'themes') renderThemes();
 }
 
 // ============================================================
@@ -2126,10 +2127,27 @@ function renderReference() {
       </div>
     </div>
 
-    <div class="ref-section" id="ref-study-header" style="background:transparent;border:none;margin-bottom:4px">
-      <div style="padding:18px 4px 6px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);opacity:0.7">&#10022; Study Themes</div>
-    </div>
+    <div class="ref-section" id="ref-charts-link" style="cursor:pointer" onclick="openCharts()">
+      <div class="ref-header" style="pointer-events:none">
+        <div>
+          <div class="ref-title">&#9635; Reference Charts</div>
+          <div class="ref-subtitle">Map of the Mind &middot; Key Teachings</div>
+        </div>
+        <span class="lesson-expand-icon" style="font-size:16px">&#8599;</span>
+      </div>
+    </div>`;  // end renderReference
 
+  // Init photo zoom state
+  PHOTO_CHARTS.forEach((_, i) => {
+    photoZoomState['pz-' + i] = { scale: 1, tx: 0, ty: 0, dragging: false, startX: 0, startY: 0, startTx: 0, startTy: 0 };
+    initPhotoZoom('pz-' + i);
+  });
+}
+
+function renderThemes() {
+  const list = document.getElementById('themes-list');
+  if (list.innerHTML) return;
+  list.innerHTML = `
     <div class="ref-section" id="ref-study-atonement">
       <div class="ref-header" onclick="toggleRef('ref-study-atonement')">
         <div>
@@ -2241,14 +2259,6 @@ function renderReference() {
         </div>
       </div>
     </div>`;
-
-  // Init photo zoom state
-  PHOTO_CHARTS.forEach((_, i) => {
-    photoZoomState['pz-' + i] = { scale: 1, tx: 0, ty: 0, dragging: false, startX: 0, startY: 0, startTx: 0, startTy: 0 };
-    initPhotoZoom('pz-' + i);
-  });
-
-
 }
 
 function buildCEDiagram() {
