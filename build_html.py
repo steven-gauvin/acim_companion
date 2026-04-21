@@ -1508,11 +1508,28 @@ function renderLibrary() {{
     const sgData = SG_DATA[l.num];
     let sgHtml = '';
     if (sgData && sgData.parts && sgData.parts.length > 0) {{
-      const partsHtml = sgData.parts.map(p => `
+      const partsHtml = sgData.parts.map(p => {{
+        let rendered = escHtml(p.text);
+        // Replace "See review X practice instructions on page Y" with clickable link
+        rendered = rendered.replace(
+          /See (review \w+) practice instructions on page \d+[-.]?/i,
+          (match, revName) => {{
+            return `<a href="#" class="sg-review-link" onclick="event.preventDefault();event.stopPropagation();toggleReviewIntro(${{l.num}}, event)" style="color:var(--gold);text-decoration:underline;cursor:pointer">\u25b6 See ${{revName.charAt(0).toUpperCase() + revName.slice(1)}} Practice Instructions</a>`;
+          }}
+        );
+        // Replace "See complete instructions on page X" with note about Part II format
+        rendered = rendered.replace(
+          /See complete instructions on page (\d+)\./i,
+          (match, pg) => {{
+            return `<span style="color:var(--gold-dim);font-style:italic">Part II instructions (commentary p.${{pg}}):</span>`;
+          }}
+        );
+        return `
         <div class="sg-section">
           ${{p.label ? '<div class="sg-section-label">' + escHtml(p.label) + '</div>' : ''}}
-          <div class="sg-section-text">${{escHtml(p.text)}}</div>
-        </div>`).join('');
+          <div class="sg-section-text">${{rendered}}</div>
+        </div>`;
+      }}).join('');
       const blaLink = sgData.bla_url ? `<a class="btn-action btn-link-secondary" href="${{escHtml(sgData.bla_url)}}" target="_blank" style="font-size:10px;margin-bottom:12px;display:inline-block">Read on BLA (FIP) ↗</a>` : '';
       sgHtml = `
         <button class="sg-toggle-btn" id="${{sgId}}" onclick="toggleSG(${{l.num}}, event)">
