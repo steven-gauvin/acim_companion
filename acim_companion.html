@@ -101,6 +101,30 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
   white-space: nowrap; transition: all 0.2s;
 }
 .header-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+/* App Footer */
+.app-footer {
+  flex-shrink: 0; padding: 14px 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px; color: var(--text-dim); font-style: italic;
+  line-height: 1.6; text-align: center;
+}
+.app-footer-name {
+  display: block; margin-top: 6px;
+  font-size: 11px; color: var(--gold-dim); letter-spacing: 0.5px; font-style: normal;
+}
+/* Charts dropdown */
+.charts-dropdown {
+  position: absolute; top: calc(var(--header-h) + var(--tab-h)); right: 0;
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 0 0 8px 8px;
+  z-index: 200; min-width: 160px; box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+.charts-dropdown-item {
+  padding: 12px 16px; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--text-dim); cursor: pointer; border-bottom: 1px solid var(--border);
+  transition: all 0.15s;
+}
+.charts-dropdown-item:last-child { border-bottom: none; }
+.charts-dropdown-item:hover { color: var(--gold); background: var(--bg3); }
 
 .tab-bar {
   height: var(--tab-h); background: var(--bg2);
@@ -893,7 +917,7 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
   <button class="splash-enter" onclick="closeSplash()">Enter ✦</button>
   <div class="splash-dedication">
     <div class="splash-dedication-text">To the One Self we all share.<br>To each and every soul that I have met along my journey.<br>To those in every corner of the world who have touched my life.<br>And to those who have not yet crossed paths.</div>
-    <div class="splash-dedication-names" style="margin-top:12px">To my brother JP, my grandparents, my friends at On Purpose<br>Sandy Levey-Lund&eacute;n, Clearmind, Duane O&rsquo;Kane, and also Sharon.</div>
+    <div class="splash-dedication-names" style="margin-top:12px">To my brother JP, my grandparents P.P. &amp; Jens (two real life angels), my friends at On Purpose<br>Sandy Levey-Lund&eacute;n, Clearmind, Duane O&rsquo;Kane, and also Sharon.</div>
     <div class="splash-dedication-names" style="margin-top:12px">To the Circle of Atonement, the Foundation for Inner Peace,<br>and to Helen Schucman and Bill Thetford.</div>
     <div class="splash-dedication-names" style="margin-top:16px;font-style:italic;color:var(--gold)">To Him Who sent me.</div>
     <div class="splash-dedication-names" style="margin-top:12px">I say thank you.</div>
@@ -904,24 +928,25 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 <!-- APP -->
 <div id="app">
   <div class="app-header">
-    <div style="width:70px"></div>
+    <button class="header-btn" onclick="showSplash()" title="Home" style="font-size:16px;padding:6px 12px">⌂</button>
     <div class="header-title">
       <div class="header-title-main">A Course in Miracles</div>
       <div class="header-title-sub">Personal Companion</div>
     </div>
-    <div style="display:flex;gap:6px;align-items:center">
-      <button class="header-btn" onclick="document.getElementById('splash').style.display='flex'">⌂ Home</button>
-      <button class="header-btn" onclick="openCharts()">⊞ Charts</button>
-    </div>
+    <div style="width:44px"></div>
   </div>
 
   <div class="tab-bar">
     <div class="tab active" onclick="switchTab('cards')">Cards</div>
     <div class="tab" onclick="switchTab('library')">WB Library</div>
-
     <div class="tab" onclick="switchTab('quotes')">Quotes</div>
     <div class="tab" onclick="switchTab('meditations')">Meditations</div>
     <div class="tab" onclick="switchTab('reference')">Reference</div>
+    <div class="tab charts-tab-trigger" onclick="toggleChartsDropdown()" id="charts-tab-trigger">Charts &#9660;</div>
+  </div>
+  <div id="charts-dropdown" class="charts-dropdown" style="display:none">
+    <div class="charts-dropdown-item" onclick="openChartsTab(0)">Map of the Mind</div>
+    <div class="charts-dropdown-item" onclick="openChartsTab(1)">Key Teachings</div>
   </div>
 
   <div class="panels">
@@ -1030,10 +1055,13 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
     </div>
 
     <!-- REFERENCE PANEL -->
-    <div id="panel-reference" class="panel reference-panel">
+     <div id="panel-reference" class="panel reference-panel">
       <div id="reference-list"></div>
     </div>
-
+  </div>
+  <div class="app-footer">
+    <em>Years of studying, learning, and making mistakes &mdash; all of it distilled into something I can carry in my pocket. This is my Course in Miracles, made personal.</em>
+    <span class="app-footer-name">&mdash; Steven Gauvin, Copenhagen</span>
   </div>
 </div>
 
@@ -1199,6 +1227,11 @@ function splashGoToRef() {
   }, 900);
 }
 
+function showSplash() {
+  const splash = document.getElementById('splash');
+  splash.style.display = 'flex';
+  splash.classList.remove('hidden');
+}
 function closeSplash() {
   const splash = document.getElementById('splash');
   splash.classList.add('hidden');
@@ -2973,6 +3006,29 @@ function openCharts() {
   chartZoom = 1.0;
 }
 function closeCharts() { document.getElementById('charts-modal').classList.remove('open'); }
+function toggleChartsDropdown() {
+  const dd = document.getElementById('charts-dropdown');
+  const isOpen = dd.style.display !== 'none';
+  dd.style.display = isOpen ? 'none' : 'block';
+  // close on outside click
+  if (!isOpen) {
+    setTimeout(() => document.addEventListener('click', function closeDD(e) {
+      if (!document.getElementById('charts-tab-trigger').contains(e.target)) {
+        dd.style.display = 'none';
+        document.removeEventListener('click', closeDD);
+      }
+    }), 10);
+  }
+}
+function openChartsTab(idx) {
+  document.getElementById('charts-dropdown').style.display = 'none';
+  openCharts();
+  // switch to the correct tab
+  const tabs = document.querySelectorAll('.charts-tab');
+  tabs.forEach((t, i) => t.classList.toggle('active', i === idx));
+  const frames = document.querySelectorAll('.charts-frame');
+  frames.forEach((f, i) => f.classList.toggle('active', i === idx));
+}
 
 function switchChartTab(idx, el) {
   activeChartIdx = idx;
