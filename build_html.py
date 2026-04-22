@@ -36,7 +36,7 @@ html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
 <title>A Course in Miracles — Personal Companion</title>
 <style>
 /* ============================================================
@@ -75,23 +75,17 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   position: fixed; inset: 0; z-index: 1000;
   background: var(--bg);
   display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
-  padding: 24px 32px;
-  overflow-y: auto; -webkit-overflow-scrolling: touch;
+  padding: 24px 32px calc(60px + env(safe-area-inset-bottom, 0px));
+  overflow-y: auto; overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   transition: opacity 0.8s ease;
 }}
-#splash::before {{
-  content: ''; flex-shrink: 0;
-  min-height: 20px;
-}}
-@media (min-height: 700px) {{
-  #splash {{ justify-content: center; }}
-  #splash::before {{ display: none; }}
-}}
+#splash > * {{ flex-shrink: 0; }}
 #splash.hidden {{ opacity: 0; pointer-events: none; }}
-.splash-diamonds {{ color: var(--gold); font-size: 18px; letter-spacing: 12px; margin-bottom: 32px; }}
+.splash-diamonds {{ color: var(--gold); font-size: 18px; letter-spacing: 12px; margin-bottom: 20px; }}
 .splash-title {{ font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }}
-.splash-subtitle {{ font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 28px; }}
-.splash-quote-wrap {{ max-width: 480px; text-align: center; margin-bottom: 32px; }}
+.splash-subtitle {{ font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 20px; }}
+.splash-quote-wrap {{ max-width: 480px; text-align: center; margin-bottom: 24px; }}
 .splash-quote-label {{ font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 12px; }}
 #splash-quote {{
   font-size: 18px; line-height: 1.8; color: var(--text-bright);
@@ -103,7 +97,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   background: var(--bg3); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 16px 24px;
   text-align: center; max-width: 380px; width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   border-left: 3px solid var(--gold-dim);
 }}
 .splash-today-label {{ font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }}
@@ -118,8 +112,8 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
 }}
 .splash-enter:hover {{ background: var(--gold); color: var(--bg); border-color: var(--gold); }}
 .splash-dedication {{
-  max-width: 420px; text-align: center; margin-top: 32px;
-  padding-top: 24px; border-top: 1px solid var(--border);
+  max-width: 420px; text-align: center; margin-top: 20px;
+  padding-top: 16px; border-top: 1px solid var(--border);
 }}
 .splash-dedication-text {{ font-size: 13px; color: var(--text-dim); font-style: italic; line-height: 1.7; margin-bottom: 8px; }}
 .splash-dedication-names {{ font-size: 11px; color: var(--gold-dim); letter-spacing: 1px; line-height: 1.6; }}
@@ -248,7 +242,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
 .card-back {{ background: var(--bg3); transform: rotateY(180deg); display: flex; flex-direction: column; overflow: hidden; }}
 .card-face-num {{ font-size: 10px; letter-spacing: 3px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 8px; }}
 .card-face-title {{ font-size: 24px; color: var(--text-bright); line-height: 1.5; font-style: italic; margin-bottom: 24px; }}
-.card-face-hint {{ font-size: 11px; color: var(--text-dim); letter-spacing: 1px; text-align: center; margin-top: auto; position: absolute; bottom: 24px; left: 0; right: 0; }}
+.card-face-hint {{ font-size: 11px; color: var(--text-dim); letter-spacing: 1px; text-align: center; margin-top: auto; padding-top: 20px; }}
 .card-back-num {{ font-size: 10px; letter-spacing: 3px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 4px; flex-shrink: 0; }}
 .card-back-title {{ font-size: 13px; color: var(--text-dim); font-style: italic; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 16px; flex-shrink: 0; }}
 .card-notes {{ font-size: 14px; color: var(--text); line-height: 1.7; white-space: pre-wrap; overflow-y: auto; flex: 1; padding-right: 4px; margin-bottom: 12px; }}
@@ -1338,13 +1332,18 @@ function showSplash() {{
 function closeSplash() {{
   const splash = document.getElementById('splash');
   splash.classList.add('hidden');
-  setTimeout(() => splash.style.display = 'none', 800);
   // Navigate to today's lesson
   const day = getDayOfYear();
   const lessonNum = ((day - 1) % 365) + 1;
   const idx = deck.indexOf(LESSONS.findIndex(l => l.num === lessonNum));
   if (idx >= 0) {{ currentIdx = idx; }}
-  renderCard();
+  // Wait for splash fade to finish before rendering card so layout is computed correctly
+  setTimeout(() => {{
+    splash.style.display = 'none';
+    renderCard();
+    // Force a second render after a brief delay to fix iOS layout quirks
+    requestAnimationFrame(() => renderCard());
+  }}, 850);
 }}
 
 // ============================================================
