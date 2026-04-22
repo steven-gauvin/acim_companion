@@ -74,9 +74,18 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
 #splash {{
   position: fixed; inset: 0; z-index: 1000;
   background: var(--bg);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 40px 32px;
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+  padding: 24px 32px;
+  overflow-y: auto; -webkit-overflow-scrolling: touch;
   transition: opacity 0.8s ease;
+}}
+#splash::before {{
+  content: ''; flex-shrink: 0;
+  min-height: 20px;
+}}
+@media (min-height: 700px) {{
+  #splash {{ justify-content: center; }}
+  #splash::before {{ display: none; }}
 }}
 #splash.hidden {{ opacity: 0; pointer-events: none; }}
 .splash-diamonds {{ color: var(--gold); font-size: 18px; letter-spacing: 12px; margin-bottom: 32px; }}
@@ -148,7 +157,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
 }}
 /* Charts dropdown */
 .charts-dropdown {{
-  position: absolute; top: calc(var(--header-h) + var(--tab-h)); right: 0;
+  position: absolute; top: calc(var(--header-h) + var(--tab-h)); right: 0; /* tab-h now used by companion-nav */
   background: var(--bg2); border: 1px solid var(--border); border-radius: 0 0 8px 8px;
   z-index: 200; min-width: 160px; box-shadow: 0 4px 16px rgba(0,0,0,0.4);
 }}
@@ -160,21 +169,47 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
 .charts-dropdown-item:last-child {{ border-bottom: none; }}
 .charts-dropdown-item:hover {{ color: var(--gold); background: var(--bg3); }}
 
-.tab-bar {{
+/* Companion dropdown nav */
+.companion-nav {{
   height: var(--tab-h); background: var(--bg2);
   border-bottom: 1px solid var(--border);
-  display: flex; flex-shrink: 0; overflow-x: auto;
-  scrollbar-width: none;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; position: relative;
 }}
-.tab-bar::-webkit-scrollbar {{ display: none; }}
-.tab {{
-  flex: 1; min-width: 70px; display: flex; align-items: center; justify-content: center;
-  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--text-dim); cursor: pointer; border-bottom: 2px solid transparent;
-  transition: all 0.2s; white-space: nowrap; padding: 0 8px;
+.companion-btn {{
+  background: transparent; border: none;
+  color: var(--gold); font-family: Georgia, 'Times New Roman', serif;
+  font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+  cursor: pointer; padding: 8px 16px;
+  display: flex; align-items: center; gap: 8px;
+  transition: all 0.2s;
 }}
-.tab.active {{ color: var(--gold); border-bottom-color: var(--gold); }}
-.tab:hover:not(.active) {{ color: var(--text); }}
+.companion-btn:hover {{ color: var(--gold-light); }}
+.companion-btn .companion-arrow {{
+  font-size: 8px; transition: transform 0.2s;
+}}
+.companion-btn.open .companion-arrow {{ transform: rotate(180deg); }}
+.companion-menu {{
+  display: none; position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 0 0 10px 10px;
+  z-index: 300; min-width: 220px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}}
+.companion-menu.open {{ display: block; }}
+.companion-menu-item {{
+  padding: 14px 20px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-dim); cursor: pointer; border-bottom: 1px solid var(--border);
+  transition: all 0.15s; text-align: center; font-family: Georgia, 'Times New Roman', serif;
+}}
+.companion-menu-item:last-child {{ border-bottom: none; border-radius: 0 0 10px 10px; }}
+.companion-menu-item:hover {{ color: var(--gold); background: var(--bg3); }}
+.companion-menu-item.active {{ color: var(--gold); }}
+.companion-overlay {{
+  display: none; position: fixed; inset: 0; z-index: 250;
+}}
+.companion-overlay.open {{ display: block; }}
 
 .panels {{ flex: 1; overflow: hidden; position: relative; }}
 .panel {{ position: absolute; inset: 0; overflow-y: auto; display: none; }}
@@ -209,7 +244,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   border: 1px solid var(--border);
   min-height: 520px;
 }}
-.card-face {{ background: var(--bg2); }}
+.card-face {{ background: var(--bg2); display: flex; flex-direction: column; }}
 .card-back {{ background: var(--bg3); transform: rotateY(180deg); display: flex; flex-direction: column; overflow: hidden; }}
 .card-face-num {{ font-size: 10px; letter-spacing: 3px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 8px; }}
 .card-face-title {{ font-size: 24px; color: var(--text-bright); line-height: 1.5; font-style: italic; margin-bottom: 24px; }}
@@ -970,13 +1005,20 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
     <div style="width:44px"></div>
   </div>
 
-  <div class="tab-bar">
-    <div class="tab active" onclick="switchTab('cards')">Cards</div>
-    <div class="tab" onclick="switchTab('library')">WB Library</div>
-    <div class="tab" onclick="switchTab('quotes')">Quotes</div>
-    <div class="tab" onclick="switchTab('meditations')">Meditations</div>
-    <div class="tab" onclick="switchTab('reference')">Reference</div>
-    <div class="tab" onclick="switchTab('themes')">Study Themes</div>
+  <div class="companion-nav">
+    <button class="companion-btn" onclick="toggleCompanionMenu()">
+      <span id="companion-current">Cards</span>
+      <span class="companion-arrow">&#9660;</span>
+    </button>
+    <div class="companion-overlay" id="companion-overlay" onclick="toggleCompanionMenu()"></div>
+    <div class="companion-menu" id="companion-menu">
+      <div class="companion-menu-item active" onclick="selectCompanion('cards','Cards')">Cards</div>
+      <div class="companion-menu-item" onclick="selectCompanion('library','WB Library')">WB Library</div>
+      <div class="companion-menu-item" onclick="selectCompanion('quotes','Quotes')">Quotes</div>
+      <div class="companion-menu-item" onclick="selectCompanion('meditations','Meditations')">Meditations</div>
+      <div class="companion-menu-item" onclick="selectCompanion('reference','Reference')">Reference</div>
+      <div class="companion-menu-item" onclick="selectCompanion('themes','Study Themes')">Study Themes</div>
+    </div>
   </div>
 
   <div class="panels">
@@ -1202,17 +1244,34 @@ function isStarred(num) {{
 // TABS
 // ============================================================
 function switchTab(name) {{
-  const names = ['cards','library','quotes','meditations','reference','themes'];
-  document.querySelectorAll('.tab').forEach((t,i) => {{
-    t.classList.toggle('active', names[i] === name);
-  }});
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
   document.getElementById('panel-' + name).classList.add('active');
+  // Update companion menu active state
+  document.querySelectorAll('.companion-menu-item').forEach(item => {{
+    const itemName = item.getAttribute('onclick').match(/selectCompanion\('([^']+)'/)?.[1];
+    item.classList.toggle('active', itemName === name);
+  }});
   if (name === 'library') {{ renderLibrary(); scrollToTodayLesson(); }}
   if (name === 'quotes') renderQuotes();
   if (name === 'meditations') renderMeditations();
   if (name === 'reference') renderReference();
   if (name === 'themes') renderThemes();
+}}
+
+function toggleCompanionMenu() {{
+  const btn = document.querySelector('.companion-btn');
+  const menu = document.getElementById('companion-menu');
+  const overlay = document.getElementById('companion-overlay');
+  const isOpen = menu.classList.contains('open');
+  btn.classList.toggle('open', !isOpen);
+  menu.classList.toggle('open', !isOpen);
+  overlay.classList.toggle('open', !isOpen);
+}}
+
+function selectCompanion(name, label) {{
+  document.getElementById('companion-current').textContent = label;
+  toggleCompanionMenu();
+  switchTab(name);
 }}
 
 // ============================================================
@@ -1259,6 +1318,7 @@ function splashGoToRef() {{
   const target = el.dataset.target;
   closeSplash();
   setTimeout(() => {{
+    document.getElementById('companion-current').textContent = 'Reference';
     switchTab('reference');
     setTimeout(() => {{
       const sec = document.getElementById(target);
@@ -1648,12 +1708,15 @@ function openAsCard(num) {{
   if (idx === -1) return;
   deck = LESSONS.map((_, i) => i);
   currentIdx = idx; isFlipped = false;
-  renderCard(); switchTab('cards');
+  renderCard();
+  document.getElementById('companion-current').textContent = 'Cards';
+  switchTab('cards');
 }}
 
 function openCurrentInLibrary() {{
   const l = getCurrentLesson();
   deck = LESSONS.map((_, i) => i);
+  document.getElementById('companion-current').textContent = 'WB Library';
   switchTab('library');
   setTimeout(() => {{
     const el = document.getElementById('lib-' + l.num);
