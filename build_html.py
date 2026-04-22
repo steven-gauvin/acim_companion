@@ -1046,10 +1046,10 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   <button class="splash-enter" onclick="closeSplash()">Enter ✦</button>
   <div class="splash-dedication">
     <div class="splash-dedication-text">To the One Self we all share.<br>To each and every soul that I have met along my journey.<br>To those in every corner of the world who have touched my life.<br>And to those who have not yet crossed paths.</div>
-    <div class="splash-dedication-names" style="margin-top:12px">To my brother JP, my grandparents, P.P. &amp; Jens (two real life angels), my friends at On Purpose<br>Sandy Levey-Lund&eacute;n, Clearmind, Duane O&rsquo;Kane, and also Sharon.</div>
+    <div class="splash-dedication-names" style="margin-top:12px">To my brother JP, my grandparents, P.P. &amp; Jens (two angels), my friends at On Purpose, Sandy Levey-Lund&eacute;n, Clearmind, Duane O&rsquo;Kane, and Sharon.</div>
     <div class="splash-dedication-names" style="margin-top:12px">To the Circle of Atonement, the Foundation for Inner Peace,<br>and to Helen Schucman and Bill Thetford.</div>
     <div class="splash-dedication-names" style="margin-top:16px;font-style:italic;color:var(--gold)">To Him Who sent me.</div>
-    <div class="splash-dedication-names" style="margin-top:12px">I say thank you.</div>
+    <div class="splash-dedication-names" style="margin-top:12px">Thank you.</div>
     <div class="splash-dedication-names" style="margin-top:24px;font-size:10px;letter-spacing:1.5px;color:var(--text-dim)">Compiled with love by Steven Gauvin</div>
   </div>
 </div>
@@ -1197,7 +1197,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
     </div>
   </div>
   <div class="app-footer">
-    <em>Years of studying, learning, and making mistakes &mdash; all of it distilled into something I can carry in my pocket. This is a Course in Miracles, made personal.</em>
+    <em>This is for you. Through my darkest days, this material helped me find my way. When I lost faith, it restored it. When I was strong, it made me stronger. When I thought I was alone &mdash; it reminded me that we are not. Years of studying, learning, forgetting, and remembering, distilled into something we can carry in our pocket.</em><br><br><em>I dedicate this to you.</em>
     <span class="app-footer-name">&mdash; Steven Gauvin, Copenhagen</span>
   </div>
 </div>
