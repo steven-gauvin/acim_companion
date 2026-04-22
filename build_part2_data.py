@@ -39,22 +39,31 @@ with open('/home/ubuntu/acim_flashcards/data/part2_intro_commentary.txt') as f:
 with open('/home/ubuntu/acim_flashcards/data/part2_practice_instructions.txt') as f:
     practice_text = f.read().strip()
 
-# Read all What Is commentaries
+# Read all What Is commentaries and Workbook texts
 whatis_data = {}
 for section in WHATIS_MAPPING:
-    filepath = f"/home/ubuntu/acim_flashcards/data/whatis_commentaries/{section['key']}.txt"
-    if os.path.exists(filepath):
-        with open(filepath) as f:
-            text = clean_text(f.read())
-        whatis_data[section['key']] = {
-            'title': section['title'],
-            'text': text,
-            'lessons': section['lessons'],
-            'word_count': len(text.split())
-        }
-        print(f"  {section['title']}: {len(text.split())} words")
+    commentary_path = f"/home/ubuntu/acim_flashcards/data/whatis_commentaries/{section['key']}.txt"
+    workbook_path = f"/home/ubuntu/acim_flashcards/data/whatis_workbook/{section['key']}.txt"
+    commentary_text = ''
+    workbook_text = ''
+    if os.path.exists(commentary_path):
+        with open(commentary_path) as f:
+            commentary_text = clean_text(f.read())
     else:
-        print(f"  WARNING: Missing file for {section['key']}")
+        print(f"  WARNING: Missing commentary for {section['key']}")
+    if os.path.exists(workbook_path):
+        with open(workbook_path) as f:
+            workbook_text = clean_text(f.read())
+    else:
+        print(f"  WARNING: Missing workbook text for {section['key']}")
+    whatis_data[section['key']] = {
+        'title': section['title'],
+        'text': commentary_text,
+        'workbook_text': workbook_text,
+        'lessons': section['lessons'],
+        'word_count': len(commentary_text.split())
+    }
+    print(f"  {section['title']}: {len(commentary_text.split())} words commentary, {len(workbook_text.split())} words workbook")
 
 # Build the lesson -> What Is mapping
 lesson_to_whatis = {}

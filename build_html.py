@@ -544,6 +544,18 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   padding: 6px 10px; background: rgba(74,143,196,0.1);
   border-radius: 4px; border-left: 3px solid var(--blue-dim);
 }}
+/* Part II section divider */
+.part2-divider {{
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 0 8px; margin-bottom: 4px;
+}}
+.part2-divider::before, .part2-divider::after {{
+  content: ''; flex: 1; height: 1px; background: var(--blue-dim);
+}}
+.part2-divider-label {{
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--blue-light); white-space: nowrap;
+}}
 /* Part II intro card in library */
 .part2-intro-card {{
   background: var(--bg2); border: 1px solid var(--blue-dim);
@@ -1611,11 +1623,8 @@ function renderLibrary() {{
 
   document.getElementById('results-count').textContent = filtered.length + ' lesson' + (filtered.length !== 1 ? 's' : '');
 
-  // Part II intro card — shown when filter includes lesson 221
-  let part2IntroHtml = '';
-  const showPart2Intro = filtered.some(l => l.num === 221);
-  if (showPart2Intro) {{
-    part2IntroHtml = `
+   // Part II intro card HTML — injected inline before lesson 221
+  const part2IntroCardHtml = `
     <div class="part2-intro-card" id="part2-intro-card">
       <div class="part2-intro-card-title">✦ Part II — Lessons 221–365</div>
       <div class="part2-intro-card-subtitle">"What Is" sections and general practice instructions</div>
@@ -1626,13 +1635,19 @@ function renderLibrary() {{
       <div class="part2-intro-content" id="part2-section-intro">${{escHtml(PART2.intro.text)}}</div>
       <div class="part2-intro-content" id="part2-section-practice">${{escHtml(PART2.practice_instructions.text)}}</div>
     </div>`;
-  }}
-
-  list.innerHTML = part2IntroHtml + filtered.map(l => {{
+  list.innerHTML = filtered.map((l, idx) => {{
     const {{ text: notes, isEdited }} = getDisplayNotes(l);
     const starred = isStarred(l.num);
     const escRe = (s) => s.replace(/[.*+?^$|()[\\]\\\\]/g, '\\\\$&');
     const hl = (str) => query ? str.replace(new RegExp(escRe(query), 'gi'), m => '<mark class="highlight">' + m + '</mark>') : str;
+    // Inject Part II divider + intro card before lesson 221
+    const prevLesson = idx > 0 ? filtered[idx - 1] : null;
+    const injectPart2Header = l.num === 221 || (l.num > 221 && l.num <= 365 && (!prevLesson || prevLesson.num < 221));
+    const part2HeaderHtml = injectPart2Header ? `
+      <div class="part2-divider">
+        <span class="part2-divider-label">PART II — LESSONS 221–365</span>
+      </div>
+      ${{part2IntroCardHtml}}` : '';
     const notesHtml = notes ? '<div class="lesson-notes-text' + (isEdited ? ' edited' : '') + '">' + hl(escHtml(notes)) + '</div>' : '';
     const sgId = 'sg-' + l.num;
     const sgBodyId = 'sgb-' + l.num;
@@ -1676,11 +1691,10 @@ function renderLibrary() {{
     const isPart2 = l.num >= 221 && l.num <= 365;
     const whatIsKey = isPart2 ? PART2.lesson_to_whatis[l.num] : null;
     const whatIsSection = whatIsKey ? PART2.whatis_sections[whatIsKey] : null;
-    return `<div class="lesson-item${{isEdited ? ' has-edit' : ''}}${{starred ? ' starred' : ''}}${{isSpecialLib ? ' special-lesson' : ''}}" id="lib-${{l.num}}">
+    return part2HeaderHtml + `<div class="lesson-item${{isEdited ? ' has-edit' : ''}}${{starred ? ' starred' : ''}}${{isSpecialLib ? ' special-lesson' : ''}}" id="lib-${{l.num}}">
       <div class="lesson-header" onclick="toggleLesson(${{l.num}})">
         <span class="lesson-num-badge">${{isSpecialLib ? '\u2726' : l.num}}</span>
         ${{REVIEW_MAP[l.num] ? '<span class="review-badge">' + REVIEW_MAP[l.num].name + '</span>' : ''}}
-        ${{isPart2 && !REVIEW_MAP[l.num] ? '<span class="part2-badge">Part II</span>' : ''}}
         <span class="lesson-title-text">${{hl(escHtml(l.title))}}</span>
         <span style="color:var(--gold);font-size:14px;margin-right:4px;cursor:pointer" onclick="starLesson(${{l.num}},event)">${{starred ? '★' : '☆'}}</span>
         <span class="lesson-expand-icon">▼</span>
@@ -1699,9 +1713,11 @@ function renderLibrary() {{
         ${{isPart2 && whatIsSection ? `
           <div class="part2-section-header">✦ ${{escHtml(whatIsSection.title)}}</div>
           <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px">
+            <button class="part2-intro-btn" onclick="togglePart2WhatIsText(${{l.num}}, event)">▶ Workbook Text</button>
             <button class="part2-intro-btn" onclick="togglePart2WhatIs(${{l.num}}, event)">▶ Read Commentary</button>
             <button class="part2-intro-btn" onclick="scrollToPart2Intro('practice', event)">▶ Practice Instructions</button>
           </div>
+          <div class="part2-intro-content" id="whatis-wb-${{l.num}}">${{escHtml(whatIsSection.workbook_text || '')}}</div>
           <div class="part2-intro-content" id="whatis-${{l.num}}">${{escHtml(whatIsSection.text)}}</div>` : ''}}
         ${{notesHtml}}
         <textarea class="lesson-edit-area" id="lib-edit-${{l.num}}" placeholder="Write your notes here…"></textarea>
@@ -1855,6 +1871,15 @@ function togglePart2WhatIs(num, e) {{
   const isOpen = el.classList.contains('open');
   el.classList.toggle('open', !isOpen);
   if (btn) btn.textContent = isOpen ? '▶ Read Commentary' : '▼ Read Commentary';
+}}
+function togglePart2WhatIsText(num, e) {{
+  if (e) e.stopPropagation();
+  const el = document.getElementById('whatis-wb-' + num);
+  if (!el) return;
+  const btn = e && e.target ? e.target : null;
+  const isOpen = el.classList.contains('open');
+  el.classList.toggle('open', !isOpen);
+  if (btn) btn.textContent = isOpen ? '▶ Workbook Text' : '▼ Workbook Text';
 }}
 
 function scrollToPart2Intro(section, e) {{
