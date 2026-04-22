@@ -1715,10 +1715,11 @@ function renderLibrary() {{
           <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px">
             <button class="part2-intro-btn" onclick="togglePart2WhatIsText(${{l.num}}, event)">▶ Workbook Text</button>
             <button class="part2-intro-btn" onclick="togglePart2WhatIs(${{l.num}}, event)">▶ Read Commentary</button>
-            <button class="part2-intro-btn" onclick="scrollToPart2Intro('practice', event)">▶ Practice Instructions</button>
+            <button class="part2-intro-btn" id="pi-btn-${{l.num}}" onclick="togglePart2PI(${{l.num}}, event)">▶ Practice Instructions</button>
           </div>
           <div class="part2-intro-content" id="whatis-wb-${{l.num}}">${{escHtml(whatIsSection.workbook_text || '')}}</div>
-          <div class="part2-intro-content" id="whatis-${{l.num}}">${{escHtml(whatIsSection.text)}}</div>` : ''}}
+          <div class="part2-intro-content" id="whatis-${{l.num}}">${{escHtml(whatIsSection.text)}}</div>
+          <div class="part2-intro-content" id="pi-${{l.num}}"></div>` : ''}}
         ${{notesHtml}}
         <textarea class="lesson-edit-area" id="lib-edit-${{l.num}}" placeholder="Write your notes here…"></textarea>
         <div class="lesson-actions">
@@ -1880,6 +1881,20 @@ function togglePart2WhatIsText(num, e) {{
   const isOpen = el.classList.contains('open');
   el.classList.toggle('open', !isOpen);
   if (btn) btn.textContent = isOpen ? '▶ Workbook Text' : '▼ Workbook Text';
+}}
+
+function togglePart2PI(num, e) {{
+  if (e) e.stopPropagation();
+  const el = document.getElementById('pi-' + num);
+  if (!el) return;
+  const btn = document.getElementById('pi-btn-' + num);
+  const isOpen = el.classList.contains('open');
+  if (!isOpen && !el.dataset.loaded) {{
+    el.textContent = PART2.practice_instructions.text;
+    el.dataset.loaded = '1';
+  }}
+  el.classList.toggle('open', !isOpen);
+  if (btn) btn.textContent = isOpen ? '▶ Practice Instructions' : '▼ Practice Instructions';
 }}
 
 function scrollToPart2Intro(section, e) {{
