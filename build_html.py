@@ -17,6 +17,11 @@ cause_effect_json = json.dumps(data['cause_effect'], ensure_ascii=False)
 with open('/tmp/review_map.json', 'r', encoding='utf-8') as _rf:
     review_map_json = _rf.read()
 
+# Part II data: intro, practice instructions, What Is commentaries
+with open('/tmp/part2_data.json', 'r', encoding='utf-8') as _p2:
+    part2_data_raw = json.load(_p2)
+part2_json = json.dumps(part2_data_raw, ensure_ascii=False)
+
 # Load reviews raw from original HTML
 with open('/home/ubuntu/upload/flashcards_original.html', 'r', encoding='utf-8') as f:
     orig = f.read()
@@ -508,6 +513,55 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
 .review-ref-link:hover {{ background: var(--gold); color: var(--bg); }}
 
 .back-to-review-breadcrumb {{ margin-bottom: 10px; }}
+
+/* Part II styles */
+.part2-badge {{
+  font-size: 9px; font-weight: bold; letter-spacing: 1px;
+  background: rgba(74,143,196,0.2); color: var(--blue-light);
+  border: 1px solid var(--blue-dim);
+  padding: 2px 6px; border-radius: 3px;
+  margin-left: 6px; vertical-align: middle; text-transform: uppercase;
+}}
+.part2-intro-btn {{
+  display: inline-block; background: transparent;
+  border: 1px solid var(--gold-dim); color: var(--gold);
+  font-size: 11px; padding: 4px 10px; border-radius: 4px;
+  cursor: pointer; margin: 6px 4px 6px 0;
+}}
+.part2-intro-btn:hover {{ background: var(--bg3); }}
+.part2-intro-content {{
+  display: none; background: var(--bg2);
+  border-left: 3px solid var(--blue-dim);
+  padding: 12px 14px; margin: 8px 0;
+  font-size: 12px; color: var(--text-dim);
+  line-height: 1.7; white-space: pre-wrap;
+  border-radius: 0 4px 4px 0; max-height: 400px; overflow-y: auto;
+}}
+.part2-intro-content.open {{ display: block; }}
+.part2-section-header {{
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--blue-light); margin: 12px 0 6px;
+  padding: 6px 10px; background: rgba(74,143,196,0.1);
+  border-radius: 4px; border-left: 3px solid var(--blue-dim);
+}}
+/* Part II intro card in library */
+.part2-intro-card {{
+  background: var(--bg2); border: 1px solid var(--blue-dim);
+  border-radius: 10px; padding: 16px; margin-bottom: 12px;
+}}
+.part2-intro-card-title {{
+  font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--blue-light); margin-bottom: 8px;
+}}
+.part2-intro-card-subtitle {{
+  font-size: 13px; color: var(--text-dim); font-style: italic; margin-bottom: 12px;
+}}
+.part2-intro-card-body {{
+  display: none; font-size: 12px; color: var(--text-dim);
+  line-height: 1.7; white-space: pre-wrap; margin-top: 10px;
+  max-height: 500px; overflow-y: auto;
+}}
+.part2-intro-card-body.open {{ display: block; }}
 .back-to-review-btn {{
   background: rgba(201,168,76,0.15); border: 1px solid var(--gold);
   color: var(--gold); font-size: 12px; padding: 8px 16px;
@@ -1171,6 +1225,7 @@ const LESSONS = {lessons_json};
 const QUOTES = {quotes_json};
 const REVIEW_MAP = {review_map_json};
 const SG_DATA = {sg_json};
+const PART2 = {part2_json};
 const MEDITATIONS = {meditations_json};
 const PRINCIPLES = {principles_json};
 const RULES = {rules_json};
@@ -1556,7 +1611,24 @@ function renderLibrary() {{
 
   document.getElementById('results-count').textContent = filtered.length + ' lesson' + (filtered.length !== 1 ? 's' : '');
 
-  list.innerHTML = filtered.map(l => {{
+  // Part II intro card — shown when filter includes lesson 221
+  let part2IntroHtml = '';
+  const showPart2Intro = filtered.some(l => l.num === 221);
+  if (showPart2Intro) {{
+    part2IntroHtml = `
+    <div class="part2-intro-card" id="part2-intro-card">
+      <div class="part2-intro-card-title">✦ Part II — Lessons 221–365</div>
+      <div class="part2-intro-card-subtitle">"What Is" sections and general practice instructions</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px">
+        <button class="part2-intro-btn" onclick="togglePart2Section('intro', event)">▶ Introduction to Part II</button>
+        <button class="part2-intro-btn" onclick="togglePart2Section('practice', event)">▶ Practice Instructions</button>
+      </div>
+      <div class="part2-intro-content" id="part2-section-intro">${{escHtml(PART2.intro.text)}}</div>
+      <div class="part2-intro-content" id="part2-section-practice">${{escHtml(PART2.practice_instructions.text)}}</div>
+    </div>`;
+  }}
+
+  list.innerHTML = part2IntroHtml + filtered.map(l => {{
     const {{ text: notes, isEdited }} = getDisplayNotes(l);
     const starred = isStarred(l.num);
     const escRe = (s) => s.replace(/[.*+?^$|()[\\]\\\\]/g, '\\\\$&');
@@ -1576,11 +1648,11 @@ function renderLibrary() {{
             return `<a href="#" class="sg-review-link" onclick="event.preventDefault();event.stopPropagation();toggleReviewIntro(${{l.num}}, event)" style="color:var(--gold);text-decoration:underline;cursor:pointer">\u25b6 See ${{revName.charAt(0).toUpperCase() + revName.slice(1)}} Practice Instructions</a>`;
           }}
         );
-        // Replace "See complete instructions on page X" with note about Part II format
+        // Replace "See complete instructions on page X" with clickable Part II link
         rendered = rendered.replace(
           /See complete instructions on page (\d+)\./i,
           (match, pg) => {{
-            return `<span style="color:var(--gold-dim);font-style:italic">Part II instructions (commentary p.${{pg}}):</span>`;
+            return `<a href="#" class="sg-review-link" onclick="event.preventDefault();event.stopPropagation();scrollToPart2Intro('practice', event)" style="color:var(--gold);text-decoration:underline;cursor:pointer">▶ See Part II Practice Instructions</a>`;
           }}
         );
         return `
@@ -1601,10 +1673,14 @@ function renderLibrary() {{
         </div>`;
     }}
     const isSpecialLib = l.num === 366;
+    const isPart2 = l.num >= 221 && l.num <= 365;
+    const whatIsKey = isPart2 ? PART2.lesson_to_whatis[l.num] : null;
+    const whatIsSection = whatIsKey ? PART2.whatis_sections[whatIsKey] : null;
     return `<div class="lesson-item${{isEdited ? ' has-edit' : ''}}${{starred ? ' starred' : ''}}${{isSpecialLib ? ' special-lesson' : ''}}" id="lib-${{l.num}}">
       <div class="lesson-header" onclick="toggleLesson(${{l.num}})">
         <span class="lesson-num-badge">${{isSpecialLib ? '\u2726' : l.num}}</span>
         ${{REVIEW_MAP[l.num] ? '<span class="review-badge">' + REVIEW_MAP[l.num].name + '</span>' : ''}}
+        ${{isPart2 && !REVIEW_MAP[l.num] ? '<span class="part2-badge">Part II</span>' : ''}}
         <span class="lesson-title-text">${{hl(escHtml(l.title))}}</span>
         <span style="color:var(--gold);font-size:14px;margin-right:4px;cursor:pointer" onclick="starLesson(${{l.num}},event)">${{starred ? '★' : '☆'}}</span>
         <span class="lesson-expand-icon">▼</span>
@@ -1620,6 +1696,13 @@ function renderLibrary() {{
             <div class="review-refs-title">Reviewing Lessons</div>
             ${{REVIEW_MAP[l.num].reviewed.map(n => '<span class="review-ref-link" onclick="jumpToLesson(' + n + ', event, ' + l.num + ')">' + n + '. ' + escHtml((LESSONS.find(x => x.num === n) || {{}}).title || '') + '</span>').join('')}}
           </div>` : ''}}
+        ${{isPart2 && whatIsSection ? `
+          <div class="part2-section-header">✦ ${{escHtml(whatIsSection.title)}}</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px">
+            <button class="part2-intro-btn" onclick="togglePart2WhatIs(${{l.num}}, event)">▶ Read Commentary</button>
+            <button class="part2-intro-btn" onclick="scrollToPart2Intro('practice', event)">▶ Practice Instructions</button>
+          </div>
+          <div class="part2-intro-content" id="whatis-${{l.num}}">${{escHtml(whatIsSection.text)}}</div>` : ''}}
         ${{notesHtml}}
         <textarea class="lesson-edit-area" id="lib-edit-${{l.num}}" placeholder="Write your notes here…"></textarea>
         <div class="lesson-actions">
@@ -1749,6 +1832,53 @@ function toggleReviewIntro(num, e) {{
   btn.textContent = el.classList.contains('open')
     ? '▼ ' + REVIEW_MAP[num].name + ' Introduction'
     : '▶ ' + REVIEW_MAP[num].name + ' Introduction';
+}}
+
+function togglePart2Section(section, e) {{
+  if (e) e.stopPropagation();
+  const el = document.getElementById('part2-section-' + section);
+  if (!el) return;
+  const btn = e && e.target ? e.target : null;
+  const isOpen = el.classList.contains('open');
+  el.classList.toggle('open', !isOpen);
+  if (btn) {{
+    const label = section === 'intro' ? 'Introduction to Part II' : 'Practice Instructions';
+    btn.textContent = (isOpen ? '▶ ' : '▼ ') + label;
+  }}
+}}
+
+function togglePart2WhatIs(num, e) {{
+  if (e) e.stopPropagation();
+  const el = document.getElementById('whatis-' + num);
+  if (!el) return;
+  const btn = e && e.target ? e.target : null;
+  const isOpen = el.classList.contains('open');
+  el.classList.toggle('open', !isOpen);
+  if (btn) btn.textContent = isOpen ? '▶ Read Commentary' : '▼ Read Commentary';
+}}
+
+function scrollToPart2Intro(section, e) {{
+  if (e) e.stopPropagation();
+  // Switch to library tab if not already there
+  switchTab('library');
+  // Scroll to the Part II intro card and open the section
+  setTimeout(() => {{
+    const card = document.getElementById('part2-intro-card');
+    if (card) {{
+      card.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
+      // Open the section
+      const el = document.getElementById('part2-section-' + section);
+      if (el && !el.classList.contains('open')) {{
+        el.classList.add('open');
+        // Update button text
+        const btns = card.querySelectorAll('.part2-intro-btn');
+        btns.forEach(b => {{
+          if (section === 'intro' && b.textContent.includes('Introduction')) b.textContent = '▼ Introduction to Part II';
+          if (section === 'practice' && b.textContent.includes('Practice')) b.textContent = '▼ Practice Instructions';
+        }});
+      }}
+    }}
+  }}, 300);
 }}
 
 function jumpToLesson(num, e, fromReviewNum) {{
