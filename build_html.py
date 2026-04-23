@@ -593,6 +593,52 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
 .quote-item-text {{ font-size: 13px; color: var(--text); font-style: italic; line-height: 1.7; white-space: pre-line; margin-bottom: 6px; }}
 .quote-item-source {{ font-size: 10px; letter-spacing: 1px; color: var(--gold-dim); text-transform: uppercase; }}
 
+/* Personal Quotes */
+.personal-quote-item {{
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 14px; padding: 28px 24px; text-align: center;
+  margin-bottom: 20px;
+  border-top: 3px solid var(--gold-dim);
+}}
+.personal-quote-poem {{
+  font-size: 17px; color: var(--text-bright); font-style: italic;
+  line-height: 2; margin-bottom: 20px;
+}}
+.personal-quote-title {{
+  font-size: 13px; letter-spacing: 2px; color: var(--gold);
+  text-transform: uppercase; margin-bottom: 6px;
+}}
+.personal-quote-author {{
+  font-size: 12px; color: var(--text-dim); letter-spacing: 1px;
+}}
+
+/* Dedications Panel */
+.dedications-panel {{ background: var(--bg); padding: 24px 16px; }}
+.dedications-wrap {{
+  max-width: 480px; margin: 0 auto; text-align: center;
+  padding: 20px 0;
+}}
+.dedications-diamonds {{
+  color: var(--gold); font-size: 16px; letter-spacing: 10px;
+  margin-bottom: 32px; opacity: 0.8;
+}}
+.dedications-text {{
+  font-size: 15px; color: var(--text-bright); font-style: italic;
+  line-height: 1.8; margin-bottom: 4px;
+}}
+.dedications-names {{
+  font-size: 13px; color: var(--text-dim); line-height: 1.8;
+}}
+.dedications-highlight {{
+  font-size: 16px; font-style: italic; color: var(--gold);
+  letter-spacing: 0.5px;
+}}
+.dedications-compiled {{
+  font-size: 11px; letter-spacing: 1.5px; color: var(--text-dim);
+  text-transform: uppercase;
+}}
+.dedications-spacer {{ height: 20px; }}
+
 /* ============================================================
    MEDITATIONS PANEL
    ============================================================ */
@@ -1045,12 +1091,8 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   </div>
   <button class="splash-enter" onclick="closeSplash()">Enter ✦</button>
   <div class="splash-dedication">
-    <div class="splash-dedication-text">To the One Self we all share.<br>To each and every soul that I have met along my journey.<br>To those in every corner of the world who have touched my life.<br>And to those who have not yet crossed paths.</div>
-    <div class="splash-dedication-names" style="margin-top:12px">To my brother JP, my grandparents, P.P. &amp; Jens (two angels), my friends at On Purpose, Sandy Levey-Lund&eacute;n, Clearmind, Duane O&rsquo;Kane, and Sharon.</div>
-    <div class="splash-dedication-names" style="margin-top:12px">To the Circle of Atonement, the Foundation for Inner Peace,<br>and to Helen Schucman and Bill Thetford.</div>
-    <div class="splash-dedication-names" style="margin-top:16px;font-style:italic;color:var(--gold)">To Him Who sent me.</div>
-    <div class="splash-dedication-names" style="margin-top:12px">Thank you.</div>
-    <div class="splash-dedication-names" style="margin-top:24px;font-size:10px;letter-spacing:1.5px;color:var(--text-dim)">Compiled with love by Steven Gauvin</div>
+    <div class="splash-dedication-names" style="font-style:italic;color:var(--gold)">To Him Who sent me.</div>
+    <div class="splash-dedication-names" style="margin-top:10px">Thank you.</div>
   </div>
 </div>
 
@@ -1073,11 +1115,13 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
     <div class="companion-overlay" id="companion-overlay" onclick="toggleCompanionMenu()"></div>
     <div class="companion-menu" id="companion-menu">
       <div class="companion-menu-item active" onclick="selectCompanion('cards','Cards')">Cards</div>
-      <div class="companion-menu-item" onclick="selectCompanion('library','WB Library')">WB Library</div>
+      <div class="companion-menu-item" onclick="selectCompanion('library','Workbook Library')">Workbook Library</div>
+      <div class="companion-menu-item" onclick="selectCompanion('acim-quotes','ACIM Quotes')">ACIM Quotes</div>
       <div class="companion-menu-item" onclick="selectCompanion('quotes','Quotes')">Quotes</div>
       <div class="companion-menu-item" onclick="selectCompanion('meditations','Meditations')">Meditations</div>
       <div class="companion-menu-item" onclick="selectCompanion('reference','Reference')">Reference</div>
       <div class="companion-menu-item" onclick="selectCompanion('themes','Study Themes')">Study Themes</div>
+      <div class="companion-menu-item" onclick="selectCompanion('dedications','Dedications')">Dedications</div>
     </div>
   </div>
 
@@ -1164,8 +1208,8 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
 
 
 
-    <!-- QUOTES PANEL -->
-    <div id="panel-quotes" class="panel quotes-panel">
+    <!-- ACIM QUOTES PANEL -->
+    <div id="panel-acim-quotes" class="panel quotes-panel">
       <div class="quotes-daily-card">
         <div class="quotes-daily-label">✦ Quote of the Day</div>
         <div class="quotes-daily-diamonds">✦ ✦ ✦</div>
@@ -1181,6 +1225,16 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
       <div id="quotes-list"></div>
     </div>
 
+    <!-- PERSONAL QUOTES PANEL -->
+    <div id="panel-quotes" class="panel quotes-panel">
+      <div class="quotes-section-title" style="margin-bottom:24px">Favourite Quotes</div>
+      <div class="personal-quote-item">
+        <div class="personal-quote-poem">As swimmers dare<br>to lie face to the sky<br>and water bears them,<br>as hawks rest upon air<br>and air sustains them,<br>so would I learn to attain<br>freefall, and float<br>into Creator Spirit&rsquo;s deep embrace,<br>knowing no effort earns<br>that all-surrounding grace.</div>
+        <div class="personal-quote-title">The Avowal</div>
+        <div class="personal-quote-author">&mdash; Denise Levertov</div>
+      </div>
+    </div>
+
     <!-- MEDITATIONS PANEL -->
     <div id="panel-meditations" class="panel meditations-panel">
       <div id="meditations-list"></div>
@@ -1194,6 +1248,27 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
     <!-- STUDY THEMES PANEL -->
     <div id="panel-themes" class="panel reference-panel">
       <div id="themes-list"></div>
+    </div>
+
+    <!-- DEDICATIONS PANEL -->
+    <div id="panel-dedications" class="panel dedications-panel">
+      <div class="dedications-wrap">
+        <div class="dedications-diamonds">✦ ✦ ✦</div>
+        <div class="dedications-text">To the One Self we all share.</div>
+        <div class="dedications-text">To each and every soul that I have met along my journey.</div>
+        <div class="dedications-text">To those in every corner of the world who have touched my life.</div>
+        <div class="dedications-text">And to those who have not yet crossed paths.</div>
+        <div class="dedications-spacer"></div>
+        <div class="dedications-names">To my brother JP, my grandparents, P.P. &amp; Jens (two angels), my friends at On Purpose, Sandy Levey-Lund&eacute;n, Clearmind, Duane O&rsquo;Kane, and Sharon.</div>
+        <div class="dedications-spacer"></div>
+        <div class="dedications-names">To the Circle of Atonement, the Foundation for Inner Peace,<br>and to Helen Schucman and Bill Thetford.</div>
+        <div class="dedications-spacer"></div>
+        <div class="dedications-highlight">To Him Who sent me.</div>
+        <div class="dedications-spacer"></div>
+        <div class="dedications-names">Thank you.</div>
+        <div class="dedications-spacer"></div>
+        <div class="dedications-compiled">Compiled with love by Steven Gauvin</div>
+      </div>
     </div>
   </div>
   <div class="app-footer">
@@ -1313,7 +1388,7 @@ function switchTab(name) {{
     item.classList.toggle('active', itemName === name);
   }});
   if (name === 'library') {{ renderLibrary(); scrollToTodayLesson(); }}
-  if (name === 'quotes') renderQuotes();
+  if (name === 'acim-quotes') renderQuotes();
   if (name === 'meditations') renderMeditations();
   if (name === 'reference') renderReference();
   if (name === 'themes') renderThemes();
