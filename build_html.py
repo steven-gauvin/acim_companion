@@ -664,7 +664,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   padding-bottom: 4px; border-bottom: 1px solid var(--border);
 }}
 .med-text {{
-  font-size: 14px; color: var(--text); line-height: 1.8;
+  font-size: 14px; color: #d8e4f0; line-height: 1.8;
   white-space: pre-wrap;
 }}
 
