@@ -2,6 +2,20 @@
 
 ## Next Up
 
+### Refine ALWAYS REMEMBER Study Theme
+*Work through this together with Steven — content, quotes, and structure to be shaped collaboratively.*
+- [ ] Review the current content and sections
+- [ ] Add/remove quotes based on Steven's Apple Notes ("Always Remember" topic — 405 words)
+- [ ] Consider adding a personal reflection or framing note from Steven
+
+### Font Colour Consistency Review
+*Meditations text brightened to #d8e4f0 — check if Reference and Study Themes body text should also be updated.*
+- [ ] Review Reference section text readability
+- [ ] Review Study Themes body text readability
+- [ ] Decide whether to apply same colour or keep as-is
+
+---
+
 ### Part II Workbook Integration (Lessons 221-365)
 *Based on the Dee Doyle & Allen Watson commentary PDF.*
 
@@ -76,6 +90,14 @@
 
 ## Completed ✓
 
+- [x] **Splash dedication reduced to 2 lines** — "To Him Who sent me. / Thank you."
+- [x] **New Dedications section** — Full dedication text accessible from Companion menu
+- [x] **WB LIBRARY → WORKBOOK LIBRARY** — Menu label updated
+- [x] **QUOTES → ACIM QUOTES** — Renamed in menu and panel
+- [x] **New QUOTES section** — Personal favourite quotes; first entry is "The Avowal" by Denise Levertov
+- [x] **ALWAYS REMEMBER Study Theme** — Added at top of Study Themes (starting point — to be refined with Steven)
+- [x] **Splash quote label** — Updated to "My Favourite ACIM Daily Quote"
+- [x] **Meditation text colour** — Brightened to #d8e4f0 for easier reading
 - [x] **Breadcrumb "Back to Review" button** — Fixed click handler using delegated event listener
 - [x] **Larger lesson card on Cards tab** — Increased from 420px to 520px, bigger font
 - [x] **Daily Quote on Cards tab** — "My Favourite Daily Quote" section below the deck buttons
