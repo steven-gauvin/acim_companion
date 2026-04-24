@@ -630,7 +630,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   font-size: 13px; color: #d8e4f0; line-height: 1.8;
 }}
 .dedications-highlight {{
-  font-size: 16px; font-style: italic; color: var(--gold);
+  font-size: 13px; font-style: italic; color: var(--gold);
   letter-spacing: 0.5px;
 }}
 .dedications-compiled {{
@@ -1284,10 +1284,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
       </div>
     </div>
   </div>
-  <div class="app-footer">
-    <em>This is for you. Through my darkest days, this material helped me find my way. When I lost faith, it restored it. When I was strong, it made me stronger. When I thought I was alone &mdash; it reminded me that we are not. Years of studying, learning, forgetting, and remembering, distilled into something we can carry in our pocket.</em><br><br><em>I dedicate this to you.</em>
-    <span class="app-footer-name">&mdash; Steven Gauvin, Copenhagen</span>
-  </div>
+
 </div>
 
 <!-- CHARTS MODAL (chart1.html / chart2.html with zoom) -->
@@ -2547,75 +2544,276 @@ function renderThemes() {{
       <div class="ref-header" onclick="toggleRef('ref-study-always-remember')">
         <div>
           <div class="ref-title">Always Remember</div>
-          <div class="ref-subtitle">What the miracle worker must never forget</div>
+          <div class="ref-subtitle">The journey that brought me back</div>
         </div>
         <span class="lesson-expand-icon">&#9660;</span>
       </div>
       <div class="ref-body">
         <div class="study-theme">
-          <div class="st-section-label">The Teaching</div>
-          <p class="st-framing">The sole responsibility of the miracle worker is to accept the Atonement for himself. This is not a burden &mdash; it is a release. Atonement is not punishment or sacrifice. It is the recognition that the separation from God never actually occurred. The world we see is the projection of a belief &mdash; and that belief can be released. Salvation is simply the acceptance of peace, which cannot be withheld, because ideas leave not their source. We cannot be apart from God.</p>
 
-          <div class="st-section-label">The chain of realisation</div>
+          <div class="st-section-label">The Starting Point</div>
           <div class="st-quote">
             <div class="st-quote-text">&ldquo;The sole responsibility of the miracle worker is to accept the Atonement for himself.&rdquo;</div>
-            <div class="st-quote-ref">T 2:3:65</div>
+            <div class="st-quote-ref">T-2.VII.1:3</div>
           </div>
+          <p class="st-framing">This single line sent me on a journey. But before I could accept it, I had to understand it &mdash; and that had me asking two questions:</p>
+          <p class="st-framing"><em>Am I a miracle worker?<br>What is Atonement?</em></p>
+
+          <div class="st-section-label">What is Atonement?</div>
+          <p class="st-framing">Atonement is redemption. Redemption is found in accepting forgiveness from the Holy Spirit.</p>
+          <p class="st-framing">The word <em>Atonement</em> appears 249 times in the Course. The word <em>Redemption</em> appears 38 times. They are the same thing.</p>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;It is the privilege of the forgiven to forgive.&rdquo;</div>
+            <div class="st-quote-ref">T-1.I.33:1</div>
+          </div>
+          <p class="st-framing">What are we forgiving? Nothing. There is no world &mdash; only the belief that we think there is one.</p>
+
+          <div class="st-section-label">Lesson 132 &mdash; The Chain</div>
           <div class="st-quote">
             <div class="st-quote-text">&ldquo;I loose the world from all I thought it was.&rdquo;</div>
-            <div class="st-quote-ref">W Lesson 132</div>
+            <div class="st-quote-ref">W-pI.132</div>
           </div>
-          <div class="st-quote">
-            <div class="st-quote-text">&ldquo;Ideas leave not their source. And this remains forever true.&rdquo;</div>
-            <div class="st-quote-ref">W Lesson 167</div>
-          </div>
-
-          <div class="st-section-label">There is no world</div>
+          <p class="st-framing"><em>Not &lsquo;lose&rsquo; &mdash; but &lsquo;loose&rsquo;: to free from confinement, restraint, or obligation.</em></p>
+          <p class="st-framing">This lesson contains three cornerstone ideas &mdash; and they are not separate. They follow from each other:</p>
+          <p class="st-framing"><strong>Ideas leave not their source.</strong><br>I am an idea of God. I cannot be anywhere but in the Mind of God.</p>
+          <p class="st-framing"><strong>Therefore: There is no world.</strong></p>
           <div class="st-quote">
             <div class="st-quote-text">&ldquo;There is no world! This is the central thought the course attempts to teach.&rdquo;</div>
-            <div class="st-quote-ref">W Lesson 132</div>
+            <div class="st-quote-ref">W-pI.132</div>
           </div>
+          <p class="st-framing"><strong>Therefore: I am as God created me.</strong><br>The separation never happened. I remain exactly as I was created.</p>
+
+          <div class="st-section-label">The Law of Salvation</div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;The world you see is an illusion of a world. God did not create it, for what He creates must be eternal as Himself.&rdquo;</div>
-            <div class="st-quote-ref">C 4:1</div>
+            <div class="st-quote-text">&ldquo;The miracle that you receive, you give. Each one becomes an illustration of the law on which salvation rests &mdash; that justice must be done to all if anyone is to be healed. No one can lose, and everyone must benefit.&rdquo;</div>
+            <div class="st-quote-ref">T-25.X.6:1-4</div>
           </div>
 
-          <div class="st-section-label">I am as God created me</div>
-          <div class="st-quote">
-            <div class="st-quote-text">&ldquo;I am as God created me. His Son can suffer nothing. And I am His Son.&rdquo;</div>
-            <div class="st-quote-ref">W Lesson 248</div>
-          </div>
-          <div class="st-quote">
-            <div class="st-quote-text">&ldquo;You are as God created you. The sounds of this world are still, the sights of this world disappear, and all the thoughts that this world ever held are wiped away forever by this one idea.&rdquo;</div>
-            <div class="st-quote-ref">W Lesson 110</div>
-          </div>
-
-          <div class="st-section-label">He walks with me always</div>
+          <div class="st-section-label">He Walks with Me Always</div>
           <div class="st-quote">
             <div class="st-quote-text">&ldquo;God goes with me wherever I go.&rdquo;</div>
-            <div class="st-quote-ref">W Lesson 41</div>
+            <div class="st-quote-ref">W-pI.41</div>
           </div>
           <div class="st-quote">
             <div class="st-quote-text">&ldquo;I am never alone. God&rsquo;s Voice speaks to me all through the day.&rdquo;</div>
-            <div class="st-quote-ref">W Lesson 49</div>
+            <div class="st-quote-ref">W-pI.49</div>
           </div>
           <div class="st-quote">
             <div class="st-quote-text">&ldquo;Salvation is a collaborative venture. It cannot be undertaken successfully by those who disengage themselves from the Sonship, because they are disengaging themselves from me.&rdquo;</div>
-            <div class="st-quote-ref">T 4:7:8</div>
+            <div class="st-quote-ref">T-4.VII.8:1</div>
           </div>
 
-          <div class="st-section-label">What to always remember</div>
+          <div class="st-section-label">Always Remember &mdash; (2 instances)</div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;Remember always that you cannot be anywhere except in the Mind of God.&rdquo;</div>
-            <div class="st-quote-ref">T 9:8:5</div>
+            <div class="st-quote-text"><strong>8:5 &mdash; The Light of the World</strong><br>&ldquo;I will always remember you, and in my remembrance of you lies your remembrance of yourself. In our remembrance of each other lies our remembrance of God, and in this remembrance lies your freedom, because your freedom is in Him.&rdquo;</div>
+            <div class="st-quote-ref">T-8.5:33</div>
           </div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;Always remember that it is impossible to use one relationship at the expense of another and not suffer guilt.&rdquo;</div>
-            <div class="st-quote-ref">T 15:7:11</div>
+            <div class="st-quote-text"><strong>10:2 &mdash; Projection versus Extension</strong><br>&ldquo;Always remember that what He gives, He holds, so that nothing He gives can contradict Him.&rdquo;</div>
+            <div class="st-quote-ref">T-10.2:15</div>
+          </div>
+
+          <div class="st-section-label">Remember Always &mdash; (7 instances)</div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>6:2 &mdash; The Message of the Crucifixion</strong><br>&ldquo;Remember always that what you believe you will teach.&rdquo;</div>
+            <div class="st-quote-ref">T-6.2:10</div>
           </div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;Remember always that what you believe you will teach. Believe with me, and we will become equal as teachers.&rdquo;</div>
-            <div class="st-quote-ref">T 6:1:7</div>
+            <div class="st-quote-text"><strong>9:3 &mdash; Atonement as a Lesson in Sharing</strong><br>&ldquo;Remember always that your identity is shared and that its sharing is its reality.&rdquo;</div>
+            <div class="st-quote-ref">T-9.3:9</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>9:7 &mdash; Grandeur versus Grandiosity</strong><br>&ldquo;Remember always that you cannot be anywhere except in the Mind of God.&rdquo;</div>
+            <div class="st-quote-ref">T-9.7:52</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>11:8 &mdash; The Guide for Miracles</strong><br>&ldquo;Remember always that you see what you seek, for what you seek you will find.&rdquo;</div>
+            <div class="st-quote-ref">T-11.8:66</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>13:3 &mdash; The Shadow of Guilt</strong><br>&ldquo;Remember always that it is impossible to condemn the Son of God in part.&rdquo;</div>
+            <div class="st-quote-ref">T-13.3:16</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>13:2:8 &mdash; The Decision for Guiltlessness</strong><br>&ldquo;Remember always that mind is one and cause is one.&rdquo;</div>
+            <div class="st-quote-ref">T-13.2:8</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>14:7 &mdash; The Test of Truth</strong><br>&ldquo;Those who remember always that they know nothing, but who have become willing to learn everything, will learn it.&rdquo;</div>
+            <div class="st-quote-ref">T-14.7:72</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-section" id="ref-study-angels">
+      <div class="ref-header" onclick="toggleRef('ref-study-angels')">
+        <div>
+          <div class="ref-title">Angels</div>
+          <div class="ref-subtitle">10 instances in the Course</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>2:2 &mdash; The Reinterpretation of Defenses</strong><br>The Atonement actually began long before the crucifixion. Many Souls offered their efforts on behalf of the separated ones, but they could not withstand the strength of the attack and had to be brought back. <strong>Angels</strong> came, too, but their protection did not suffice because the separated ones were not interested in peace.</div>
+            <div class="st-quote-ref">T-2.2:38</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>19:5 &mdash; The Obstacles to Peace</strong><br>Your newborn purpose is nursed by <strong>angels</strong>, cherished by the Holy Spirit, and protected by God Himself. It needs not your protection; it is yours. For it is deathless, and within it lies the end of death.</div>
+            <div class="st-quote-ref">T-19.5:86</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>25:9 &mdash; The Principle of Salvation</strong><br>What could He be to them except a devil dressed to deceive within an angel&rsquo;s cloak? And what escape has He for them except a door to hell that seems to look like Heaven&rsquo;s gate?</div>
+            <div class="st-quote-ref">T-25.9:69</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>26:10 &mdash; For They Have Come</strong><br>Around you <strong>angels</strong> hover lovingly, to keep away all darkened thoughts of sin and keep the light where it has entered in. Your footprints lighten up the world, for where you walk forgiveness gladly goes with you.</div>
+            <div class="st-quote-ref">T-26.10:83</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-131 &mdash; No one can fail who asks to reach the truth</strong><br><strong>Angels</strong> light the way, so that all darkness vanishes and you are standing in a light so bright and clear that you can understand all things you see.</div>
+            <div class="st-quote-ref">W-131:16</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-161 &mdash; Give me your blessing, holy Son of God</strong><br>This do the body&rsquo;s eyes behold in one whom Heaven cherishes, the <strong>angels</strong> love, and God created perfect.</div>
+            <div class="st-quote-ref">W-161:9</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-183 &mdash; I call upon God&rsquo;s Name and my own</strong><br>Say His Name, and you invite the <strong>angels</strong> to surround the ground on which you stand and sing to you as they spread out their wings to keep you safe and shelter you from every worldly thought that would intrude upon your holiness.</div>
+            <div class="st-quote-ref">W-183:2</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-303 &mdash; The holy Christ is born in my today</strong><br>Watch with me, <strong>angels</strong>; watch with me today. Let all God&rsquo;s holy thoughts surround me and be still with me while Heaven&rsquo;s Son is born.</div>
+            <div class="st-quote-ref">W-303:1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>Epilogue</strong><br>God&rsquo;s <strong>angels</strong> hover close and all about. His Love surrounds you, and of this be sure: that I will never leave you comfortless.</div>
+            <div class="st-quote-ref">W-Epilogue</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-section" id="ref-study-here-is-the-answer">
+      <div class="ref-header" onclick="toggleRef('ref-study-here-is-the-answer')">
+        <div>
+          <div class="ref-title">Here is the Answer</div>
+          <div class="ref-subtitle">7 instances in the Course</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-50.1 &mdash; I am sustained by the Love of God</strong><br>Here is the answer to every problem that confronts you today and tomorrow and throughout time. In this world, you believe you are sustained by everything but God. Your faith is placed in the most trivial and insane symbols &mdash; pills, money, &ldquo;protective&rdquo; clothing, &ldquo;influence,&rdquo; &ldquo;prestige,&rdquo; being liked, knowing the &ldquo;right&rdquo; people, and an endless list of forms of nothingness which you endow with magical powers. All these things are your replacements for the Love of God. They are songs of praise to the ego.</div>
+            <div class="st-quote-ref">W-50.1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-121.1 &mdash; Forgiveness is the key to happiness</strong><br>Here is the answer to your search for peace. Here is the key to meaning in a world which seems to make no sense. Here is the way to safety in apparent dangers which appear to threaten you at every turn and bring uncertainty to all your hopes of ever finding quietness and peace. Here are all questions answered; here the end of all uncertainty ensured at last.</div>
+            <div class="st-quote-ref">W-121.1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-122.5-7 &mdash; Forgiveness offers everything I want</strong><br>Here is the answer! Seek for it no more. You will not find another one instead. God&rsquo;s plan for your salvation cannot change, nor can it fail. Be thankful it remains exactly as He planned it. Changelessly it stands before you, like an open door with warmth and welcome calling from beyond the doorway, bidding you to enter in and make yourself at home where you belong.<br><br>Here is the answer! Would you stand outside while all of Heaven waits for you within? Forgive and be forgiven. As you give, you will receive. There is no plan but this for the salvation of the Son of God.<br><br>Here is the answer! Do not turn away in aimless wandering again. Accept salvation now. It is the gift of God and not the world.</div>
+            <div class="st-quote-ref">W-122.5-7</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-161.1 &mdash; Give me your blessing, Holy Son of God</strong><br>Here is the answer to temptation which can never fail to welcome in the Christ where fear and anger had prevailed before. Here is Atonement made complete, the world passed safely by, and Heaven now restored. Here is the answer of the Voice of God.</div>
+            <div class="st-quote-ref">W-161.1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-section" id="ref-study-never-forget">
+      <div class="ref-header" onclick="toggleRef('ref-study-never-forget')">
+        <div>
+          <div class="ref-title">Never Forget</div>
+          <div class="ref-subtitle">14 instances in the Course</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>4:7 &mdash; The Constant State</strong><br>In learning to escape from the illusions you have made, your great debt to each other is something you must never forget.</div>
+            <div class="st-quote-ref">T-4.7:85</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>5:7 &mdash; The Two Decisions</strong><br>However ridiculous the idea of attacking God may be to the sane mind, never forget that the ego is not sane.</div>
+            <div class="st-quote-ref">T-5.7:62</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>6:4 &mdash; The Relinquishment of Attack</strong><br>&ldquo;Teach only love, for that is what you are.&rdquo; You must never forget that what you teach is teaching you. What you project you believe.</div>
+            <div class="st-quote-ref">T-6.4:41</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>8:4 &mdash; The Holy Encounter</strong><br><em>When you meet anyone, remember it is a holy encounter. As you see him, you will see yourself. As you treat him, you will treat yourself. Never forget this, for in him you will find yourself or lose sight of yourself. Whenever two Sons of God meet, they are given another chance at salvation. Do not leave anyone without giving salvation to him and receiving it yourself, for I am always there with you in remembrance of you.</em></div>
+            <div class="st-quote-ref">T-8.4:19</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>8:11 &mdash; The Answer to Prayer</strong><br>Never forget, then, that you have set the value on what you receive and have priced it by what you give.</div>
+            <div class="st-quote-ref">T-8.11:117</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>10:2 &mdash; Projection versus Extension</strong><br>He is the Voice for God, but never forget that God did not will to be alone.</div>
+            <div class="st-quote-ref">T-10.2:15</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>10:5 &mdash; The Inheritance of God&rsquo;s Son</strong><br>Never forget that the Sonship is your salvation, for the Sonship is your Soul.</div>
+            <div class="st-quote-ref">T-10.5:31</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>10:6 &mdash; The &lsquo;Dynamics&rsquo; of the Ego</strong><br>Never forget that the ego believes that power, understanding, and truth lie in separation, and to establish this belief it must attack.</div>
+            <div class="st-quote-ref">T-10.6:53</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>11:9 &mdash; Reality and Redemption</strong><br>Because of your Father&rsquo;s love you can never forget Him, for no one can forget what God Himself placed in his memory. You can deny it, but you cannot lose it. A Voice will answer every question you ask, and a Vision will correct the perception of everything you see.</div>
+            <div class="st-quote-ref">T-11.9:80</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>13:8 &mdash; The Decision for Guiltlessness</strong><br>Never forget the love of God, Who has remembered you. For it is quite impossible that He could ever let His Son drop from His loving mind wherein he was created and where his abode was fixed in perfect peace forever.</div>
+            <div class="st-quote-ref">T-13.8:79</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>21:2 &mdash; The Imagined World</strong><br>Never forget the world the sightless &ldquo;see&rdquo; must be imagined, for what it really looks like is unknown to them.</div>
+            <div class="st-quote-ref">T-21.2:3</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-187 &mdash; I bless the world because I bless myself</strong><br>Never forget you give but to yourself. Who understands what giving means must laugh at the idea of sacrifice.</div>
+            <div class="st-quote-ref">W-187.6</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>As for the Rest&hellip;</strong><br>Never forget that the Holy Spirit does not depend on your words. He understands the requests of your heart and answers them.</div>
+            <div class="st-quote-ref"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-section" id="ref-study-there-is-no-world">
+      <div class="ref-header" onclick="toggleRef('ref-study-there-is-no-world')">
+        <div>
+          <div class="ref-title">There is no world</div>
+          <div class="ref-subtitle">6 instances in the Course</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>11:4 &mdash; The Investment in Reality</strong><br>He does not realize that he makes this world, for there is no world outside of him.</div>
+            <div class="st-quote-ref">T-11.4:29</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-132 &mdash; I loose the world from all I thought it was</strong><br>There is no world apart from what you wish, and herein lies your ultimate release. Change but your mind on what you want to see, and all the world must change accordingly.<br><br>Ideas leave not their source. This central theme is often stated in the text and must be borne in mind if you would understand the lesson for today.<br><br>There is no world! This is the central thought the course attempts to teach. Not everyone is ready to accept it, and each one must go as far as he can let himself be led along the road to truth.<br><br>But healing is the gift of those who are prepared to learn there is no world and can accept the lesson now.<br><br>There is no world apart from your ideas because ideas leave not their source, and you maintain the world within your mind in thought.<br><br>There is no world because it is a thought apart from God and made to separate the Father and the Son. Can a world which comes from this idea be real? Deny illusions, but accept the truth. Release your mind, and you will look upon a world released.</div>
+            <div class="st-quote-ref">W-132.5-8,11,14</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>M &mdash; What is Death?</strong><br>Without the idea of death, there is no world.</div>
+            <div class="st-quote-ref">M - What is Death?</div>
           </div>
         </div>
       </div>
