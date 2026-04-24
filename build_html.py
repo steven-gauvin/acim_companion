@@ -634,10 +634,13 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   letter-spacing: 0.5px;
 }}
 .dedications-compiled {{
-  font-size: 11px; letter-spacing: 1.5px; color: var(--text-dim);
-  text-transform: uppercase;
+  font-size: 12px; color: var(--text-dim); font-style: italic;
 }}
-.dedications-spacer {{ height: 20px; }}
+.dedications-body {{
+  font-size: 14px; color: var(--text); line-height: 1.9;
+  margin-bottom: 4px;
+}}
+.dedications-spacer {{ height: 16px; }}
 
 /* ============================================================
    MEDITATIONS PANEL
@@ -1255,19 +1258,29 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
       <div class="dedications-wrap">
         <div class="dedications-diamonds">✦ ✦ ✦</div>
         <div class="dedications-text">To the One Self we all share.</div>
-        <div class="dedications-text">To each and every soul that I have met along my journey.</div>
+        <div class="dedications-text">To each and every soul that I have met along the journey.</div>
         <div class="dedications-text">To those in every corner of the world who have touched my life.</div>
         <div class="dedications-text">And to those who have not yet crossed paths.</div>
         <div class="dedications-spacer"></div>
-        <div class="dedications-names">To my brother JP, my grandparents, P.P. &amp; Jens (two angels), my friends at On Purpose, Sandy Levey-Lund&eacute;n, Clearmind, Duane O&rsquo;Kane, and Sharon.</div>
+        <div class="dedications-names">To my brother JP, my grandparents P.P. &amp; Jens &mdash; two angels.</div>
+        <div class="dedications-names">To my friends at On Purpose, Sandy Levey-Lund&eacute;n, Clearmind, and Duane O&rsquo;Kane.</div>
+        <div class="dedications-names">To Sharon.</div>
         <div class="dedications-spacer"></div>
         <div class="dedications-names">To the Circle of Atonement, the Foundation for Inner Peace,<br>and to Helen Schucman and Bill Thetford.</div>
         <div class="dedications-spacer"></div>
         <div class="dedications-highlight">To Him Who sent me.</div>
-        <div class="dedications-spacer"></div>
         <div class="dedications-names">Thank you.</div>
         <div class="dedications-spacer"></div>
-        <div class="dedications-compiled">Compiled with love by Steven Gauvin</div>
+        <div class="dedications-spacer"></div>
+        <div class="dedications-body"><em>This companion was born in one of my darkest places.<br>For me, it is my lantern.</em></div>
+        <div class="dedications-spacer"></div>
+        <div class="dedications-body">When I lost faith, this is how it was restored. When I was strong, it made me stronger. When I thought I was alone, it reminded me that we are not. Years of studying, learning, forgetting, and remembering &mdash; distilled into something we can carry in our pocket.</div>
+        <div class="dedications-spacer"></div>
+        <div class="dedications-body"><em>Slowly, I found my way home again.<br>May you also find yours.<br>May this too help light your way.</em></div>
+        <div class="dedications-spacer"></div>
+        <div class="dedications-body"><em>I dedicate this to you.</em></div>
+        <div class="dedications-spacer"></div>
+        <div class="dedications-compiled">&mdash; Steven Gauvin, Copenhagen</div>
       </div>
     </div>
   </div>
