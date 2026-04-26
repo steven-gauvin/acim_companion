@@ -111,3 +111,33 @@
 - [x] **Transcription of 76-page handwritten notes** — All pages digitized into `steven_acim_study_notes.md`
 - [x] **Card back overflow fix** — Long notes now scroll within the card box
 - [x] **Credit line added** — "Compiled with love by Steven Gauvin" on splash screen
+
+---
+
+## Session Summary — 26 April 2026
+
+**Design rules agreed and applied across the app:**
+- ACIM quote text → light blue `#d8e4f0`, no italic
+- Commentary / narrative / framing text → warm cream `--text-bright` (`#f0ead8`), no italic
+- Italic reserved for intentional emphasis only (e.g. "To Him Who sent me.", *Atonement*, *Redemption* mid-sentence)
+- Working method going forward: agree 1–2 changes at a time, review before push
+
+**Changes made this session:**
+
+- [x] Splash screen — quote font size reduced to 15px to match lesson title; italic removed from daily quote and lesson title text
+- [x] Cards page — top bar (lesson title, idea text, counter, progress bar) removed; Quote of the Day section removed; card face title de-italicised and reduced to 18px; JS fixed after top bar removal caused blank card
+- [x] ACIM Quotes page — featured quote and list items de-italicised
+- [x] Workbook Library — lesson list titles de-italicised
+- [x] Dee Doyle commentary — colour changed from blue-grey to warm cream `--text-bright`
+- [x] Study Themes (Always Remember) — framing/narrative text changed to warm cream; ACIM quotes changed to light blue; italic removed from reflective framing paragraphs ("Am I a miracle worker?", "Not 'lose' — but 'loose'...")
+- [x] Study Themes — "Here is the Answer" moved to position 2 (after Always Remember, before Angels)
+- [x] The Avowal poem (Personal Quotes) — italic removed, font size reduced to 14px
+- [x] Dedications page — italic removed from all text except "To Him Who sent me." (gold, intentional); spacer height reduced from 16px to 10px; double spacer before body text collapsed to single; closing lines updated to: "I found my way; again. / You will too, for this is the way. / May this be a light for you to guide the way."; comma added after "grandparents"
+- [x] Sandy Levey-Lundén quote (Reference / Big T Little t) — italic removed
+- [x] Study Themes body text — `.bigt-quote-text` and `.st-quote-text` italic removed
+
+**Email drafted:** `docs/companion_email.md` — warm personal email to Sandy, Duane, and Katrina sharing the app with a short guide to what's in it and home screen instructions.
+
+**Still outstanding / to revisit:**
+- Meditations section — font sizes, colours, layout (Future / Ideas)
+- Dee Doyle commentary — selective italics for key ACIM phrases, paragraph spacing, bullet spacing (Future / Ideas)
