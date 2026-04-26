@@ -1251,7 +1251,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
         <div class="dedications-text">To those in every corner of the world who have touched my life.</div>
         <div class="dedications-text">And to those who have not yet crossed paths.</div>
         <div class="dedications-spacer"></div>
-        <div class="dedications-names">To my brother JP, my grandparents P.P. &amp; Jens &mdash; two angels.</div>
+        <div class="dedications-names">To my brother JP, my grandparents, P.P. &amp; Jens &mdash; two angels.</div>
         <div class="dedications-names">To my friends at On Purpose, Sandy Levey-Lund&eacute;n, Clearmind, and Duane O&rsquo;Kane.</div>
         <div class="dedications-names">To Sharon.</div>
         <div class="dedications-spacer"></div>
