@@ -601,7 +601,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   border-top: 3px solid var(--gold-dim);
 }}
 .personal-quote-poem {{
-  font-size: 17px; color: var(--text-bright); font-style: italic;
+  font-size: 14px; color: var(--text-bright);
   line-height: 2; margin-bottom: 20px;
 }}
 .personal-quote-title {{
