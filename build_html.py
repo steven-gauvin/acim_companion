@@ -415,7 +415,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   padding-bottom: 4px; border-bottom: 1px solid var(--border);
 }}
 .sg-section-text {{
-  font-size: 13px; color: var(--text-dim); line-height: 1.75;
+  font-size: 13px; color: var(--text-bright); line-height: 1.75;
   white-space: pre-wrap;
 }}
 
@@ -725,7 +725,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   text-align: center;
 }}
 .bigt-quote-text {{
-  font-size: 14px; color: var(--text); font-style: italic; line-height: 1.6;
+  font-size: 14px; color: var(--text); line-height: 1.6;
   margin-bottom: 8px;
 }}
 .bigt-quote-source {{
@@ -749,7 +749,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
   border-radius: 0 6px 6px 0;
 }}
 .st-quote-text {{
-  font-size: 14px; color: var(--text); line-height: 1.65; font-style: italic;
+  font-size: 14px; color: var(--text); line-height: 1.65;
   margin-bottom: 6px;
 }}
 .st-quote-text strong {{
