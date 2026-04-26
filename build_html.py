@@ -1264,7 +1264,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
         <div class="dedications-spacer"></div>
         <div class="dedications-body">When I lost faith, this is how it was restored. When I was strong, it made me stronger. When I thought I was alone, it reminded me that we are not. Years of studying, learning, forgetting, and remembering &mdash; distilled into something we can carry in our pocket.</div>
         <div class="dedications-spacer"></div>
-        <div class="dedications-body">Slowly, I found my way home again.<br>May you also find yours.<br>May this too help light your way.</div>
+        <div class="dedications-body">I found my way; again.<br>You will too, for this is the way.<br>May this be a light for you to guide the way.</div>
         <div class="dedications-spacer"></div>
         <div class="dedications-body">I dedicate this to you.</div>
         <div class="dedications-spacer"></div>
