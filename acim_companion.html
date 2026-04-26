@@ -54,8 +54,8 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 .splash-quote-wrap { max-width: 480px; text-align: center; margin-bottom: 24px; }
 .splash-quote-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 12px; }
 #splash-quote {
-  font-size: 18px; line-height: 1.8; color: var(--text-bright);
-  font-style: italic; white-space: pre-line;
+  font-size: 18px; line-height: 1.8; color: #d8e4f0;
+  white-space: pre-line;
   margin-bottom: 16px;
 }
 #splash-source { font-size: 11px; letter-spacing: 2px; color: var(--gold-dim); text-transform: uppercase; }
@@ -68,7 +68,7 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 }
 .splash-today-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
 .splash-today-lesson { font-size: 13px; letter-spacing: 2px; color: var(--gold); margin-bottom: 4px; }
-.splash-today-title { font-size: 15px; color: var(--text-bright); font-style: italic; }
+.splash-today-title { font-size: 15px; color: #d8e4f0; }
 .splash-enter {
   background: transparent; border: 1px solid var(--gold-dim);
   color: var(--gold); font-size: 12px; letter-spacing: 3px;
@@ -207,7 +207,7 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 .card-face { background: var(--bg2); display: flex; flex-direction: column; }
 .card-back { background: var(--bg3); transform: rotateY(180deg); display: flex; flex-direction: column; overflow: hidden; }
 .card-face-num { font-size: 10px; letter-spacing: 3px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 8px; }
-.card-face-title { font-size: 24px; color: var(--text-bright); line-height: 1.5; font-style: italic; margin-bottom: 24px; }
+.card-face-title { font-size: 24px; color: #d8e4f0; line-height: 1.5; margin-bottom: 24px; }
 .card-face-hint { font-size: 11px; color: var(--text-dim); letter-spacing: 1px; text-align: center; margin-top: auto; padding-top: 20px; }
 .card-back-num { font-size: 10px; letter-spacing: 3px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 4px; flex-shrink: 0; }
 .card-back-title { font-size: 13px; color: var(--text-dim); font-style: italic; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 16px; flex-shrink: 0; }
@@ -394,7 +394,7 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 .quotes-daily-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 12px; }
 .quotes-daily-diamonds { color: var(--gold); font-size: 14px; letter-spacing: 8px; margin-bottom: 20px; opacity: 0.7; }
 .quotes-daily-text {
-  font-size: 16px; color: var(--text-bright); font-style: italic;
+  font-size: 16px; color: #d8e4f0;
   line-height: 1.8; white-space: pre-line; margin-bottom: 16px;
 }
 .quotes-daily-source { font-size: 11px; letter-spacing: 2px; color: var(--gold-dim); text-transform: uppercase; }
@@ -551,7 +551,7 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 }
 .quote-item:hover { border-color: var(--gold-dim); }
 .quote-item.active-quote { border-color: var(--gold); background: var(--bg3); }
-.quote-item-text { font-size: 13px; color: var(--text); font-style: italic; line-height: 1.7; white-space: pre-line; margin-bottom: 6px; }
+.quote-item-text { font-size: 13px; color: var(--text); line-height: 1.7; white-space: pre-line; margin-bottom: 6px; }
 .quote-item-source { font-size: 10px; letter-spacing: 1px; color: var(--gold-dim); text-transform: uppercase; }
 
 /* Personal Quotes */
@@ -1096,15 +1096,6 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 
     <!-- CARDS PANEL -->
     <div id="panel-cards" class="panel cards-panel active">
-      <div class="card-above">
-        <div style="width:44px"></div>
-        <div class="card-above-info">
-          <div class="cf-num" id="cf-num"></div>
-          <div class="cf-title" id="cf-title"></div>
-        </div>
-        <div class="card-counter" id="card-counter"></div>
-      </div>
-      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
       <div class="card-scene" id="card-scene">
         <div class="card-3d" id="card-3d" onclick="flipCard(event)">
           <div class="card-face">
@@ -1140,11 +1131,6 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
         <button class="deck-btn" onclick="shuffleDeck()">Shuffle</button>
         <button class="deck-btn" onclick="resetDeck()">Reset Order</button>
         <button class="deck-btn" onclick="openCurrentInLibrary()">Open in Library</button>
-      </div>
-      <div class="cards-daily-quote" id="cards-daily-quote">
-        <div class="cards-daily-quote-label">✦ Quote of the Day</div>
-        <div class="cards-daily-quote-text" id="cards-quote-text"></div>
-        <div class="cards-daily-quote-source" id="cards-quote-source"></div>
       </div>
     </div>
 
