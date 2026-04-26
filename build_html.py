@@ -2630,6 +2630,36 @@ function renderThemes() {{
       </div>
     </div>
 
+    <div class="ref-section" id="ref-study-here-is-the-answer">
+      <div class="ref-header" onclick="toggleRef('ref-study-here-is-the-answer')">
+        <div>
+          <div class="ref-title">Here is the Answer</div>
+          <div class="ref-subtitle">7 instances in the Course</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-50.1 &mdash; I am sustained by the Love of God</strong><br>Here is the answer to every problem that confronts you today and tomorrow and throughout time. In this world, you believe you are sustained by everything but God. Your faith is placed in the most trivial and insane symbols &mdash; pills, money, &ldquo;protective&rdquo; clothing, &ldquo;influence,&rdquo; &ldquo;prestige,&rdquo; being liked, knowing the &ldquo;right&rdquo; people, and an endless list of forms of nothingness which you endow with magical powers. All these things are your replacements for the Love of God. They are songs of praise to the ego.</div>
+            <div class="st-quote-ref">W-50.1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-121.1 &mdash; Forgiveness is the key to happiness</strong><br>Here is the answer to your search for peace. Here is the key to meaning in a world which seems to make no sense. Here is the way to safety in apparent dangers which appear to threaten you at every turn and bring uncertainty to all your hopes of ever finding quietness and peace. Here are all questions answered; here the end of all uncertainty ensured at last.</div>
+            <div class="st-quote-ref">W-121.1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-122.5-7 &mdash; Forgiveness offers everything I want</strong><br>Here is the answer! Seek for it no more. You will not find another one instead. God&rsquo;s plan for your salvation cannot change, nor can it fail. Be thankful it remains exactly as He planned it. Changelessly it stands before you, like an open door with warmth and welcome calling from beyond the doorway, bidding you to enter in and make yourself at home where you belong.<br><br>Here is the answer! Would you stand outside while all of Heaven waits for you within? Forgive and be forgiven. As you give, you will receive. There is no plan but this for the salvation of the Son of God.<br><br>Here is the answer! Do not turn away in aimless wandering again. Accept salvation now. It is the gift of God and not the world.</div>
+            <div class="st-quote-ref">W-122.5-7</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text"><strong>W-161.1 &mdash; Give me your blessing, Holy Son of God</strong><br>Here is the answer to temptation which can never fail to welcome in the Christ where fear and anger had prevailed before. Here is Atonement made complete, the world passed safely by, and Heaven now restored. Here is the answer of the Voice of God.</div>
+            <div class="st-quote-ref">W-161.1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="ref-section" id="ref-study-angels">
       <div class="ref-header" onclick="toggleRef('ref-study-angels')">
         <div>
@@ -2675,36 +2705,6 @@ function renderThemes() {{
           <div class="st-quote">
             <div class="st-quote-text"><strong>Epilogue</strong><br>God&rsquo;s <strong>angels</strong> hover close and all about. His Love surrounds you, and of this be sure: that I will never leave you comfortless.</div>
             <div class="st-quote-ref">W-Epilogue</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ref-section" id="ref-study-here-is-the-answer">
-      <div class="ref-header" onclick="toggleRef('ref-study-here-is-the-answer')">
-        <div>
-          <div class="ref-title">Here is the Answer</div>
-          <div class="ref-subtitle">7 instances in the Course</div>
-        </div>
-        <span class="lesson-expand-icon">&#9660;</span>
-      </div>
-      <div class="ref-body">
-        <div class="study-theme">
-          <div class="st-quote">
-            <div class="st-quote-text"><strong>W-50.1 &mdash; I am sustained by the Love of God</strong><br>Here is the answer to every problem that confronts you today and tomorrow and throughout time. In this world, you believe you are sustained by everything but God. Your faith is placed in the most trivial and insane symbols &mdash; pills, money, &ldquo;protective&rdquo; clothing, &ldquo;influence,&rdquo; &ldquo;prestige,&rdquo; being liked, knowing the &ldquo;right&rdquo; people, and an endless list of forms of nothingness which you endow with magical powers. All these things are your replacements for the Love of God. They are songs of praise to the ego.</div>
-            <div class="st-quote-ref">W-50.1</div>
-          </div>
-          <div class="st-quote">
-            <div class="st-quote-text"><strong>W-121.1 &mdash; Forgiveness is the key to happiness</strong><br>Here is the answer to your search for peace. Here is the key to meaning in a world which seems to make no sense. Here is the way to safety in apparent dangers which appear to threaten you at every turn and bring uncertainty to all your hopes of ever finding quietness and peace. Here are all questions answered; here the end of all uncertainty ensured at last.</div>
-            <div class="st-quote-ref">W-121.1</div>
-          </div>
-          <div class="st-quote">
-            <div class="st-quote-text"><strong>W-122.5-7 &mdash; Forgiveness offers everything I want</strong><br>Here is the answer! Seek for it no more. You will not find another one instead. God&rsquo;s plan for your salvation cannot change, nor can it fail. Be thankful it remains exactly as He planned it. Changelessly it stands before you, like an open door with warmth and welcome calling from beyond the doorway, bidding you to enter in and make yourself at home where you belong.<br><br>Here is the answer! Would you stand outside while all of Heaven waits for you within? Forgive and be forgiven. As you give, you will receive. There is no plan but this for the salvation of the Son of God.<br><br>Here is the answer! Do not turn away in aimless wandering again. Accept salvation now. It is the gift of God and not the world.</div>
-            <div class="st-quote-ref">W-122.5-7</div>
-          </div>
-          <div class="st-quote">
-            <div class="st-quote-text"><strong>W-161.1 &mdash; Give me your blessing, Holy Son of God</strong><br>Here is the answer to temptation which can never fail to welcome in the Christ where fear and anger had prevailed before. Here is Atonement made complete, the world passed safely by, and Heaven now restored. Here is the answer of the Voice of God.</div>
-            <div class="st-quote-ref">W-161.1</div>
           </div>
         </div>
       </div>
