@@ -246,7 +246,7 @@ html, body {{ height: 100%; overflow: hidden; background: var(--bg); color: var(
 .card-face {{ background: var(--bg2); display: flex; flex-direction: column; }}
 .card-back {{ background: var(--bg3); transform: rotateY(180deg); display: flex; flex-direction: column; overflow: hidden; }}
 .card-face-num {{ font-size: 10px; letter-spacing: 3px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 8px; }}
-.card-face-title {{ font-size: 24px; color: #d8e4f0; line-height: 1.5; margin-bottom: 24px; }}
+.card-face-title {{ font-size: 18px; color: #d8e4f0; line-height: 1.5; margin-bottom: 24px; }}
 .card-face-hint {{ font-size: 11px; color: var(--text-dim); letter-spacing: 1px; text-align: center; margin-top: auto; padding-top: 20px; }}
 .card-back-num {{ font-size: 10px; letter-spacing: 3px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 4px; flex-shrink: 0; }}
 .card-back-title {{ font-size: 13px; color: var(--text-dim); font-style: italic; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 16px; flex-shrink: 0; }}
