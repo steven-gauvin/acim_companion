@@ -1477,8 +1477,6 @@ function renderCard() {
     titleHtml = escHtml(l.title);
   }
 
-  document.getElementById('cf-num').textContent = numLabel;
-  document.getElementById('cf-title').innerHTML = titleHtml;
   document.getElementById('cf-num-card').textContent = numLabel;
   document.getElementById('cf-title-card').innerHTML = titleHtml;
   document.getElementById('cb-num').textContent = numLabel;
@@ -1497,10 +1495,6 @@ function renderCard() {
   // Hide external links for special card
   document.getElementById('cb-link').style.display = isSpecial ? 'none' : '';
   document.getElementById('cb-bla-link').style.display = isSpecial ? 'none' : '';
-  document.getElementById('card-counter').textContent = (currentIdx + 1) + ' / ' + deck.length;
-
-  const fill = ((currentIdx + 1) / deck.length * 100).toFixed(1);
-  document.getElementById('progress-fill').style.width = fill + '%';
   document.getElementById('cb-btn-restore').style.display = isEdited ? 'inline-block' : 'none';
   cancelEditCard(null, true);
 }
