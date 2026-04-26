@@ -84,6 +84,9 @@
 
 ## Future / Ideas
 
+- [ ] **Meditations section** — Revisit font sizes, colours, and layout for consistency with the new design system
+- [ ] **Dee Doyle commentary formatting** — Selective italics for key ACIM phrases (e.g. "This thought I do not want. I choose instead the idea for today"), fix spacing after paragraphs, and tighten bullet point spacing
+
 - [ ] Review overall app polish and consistency across all sections
 - [ ] Consider export/backup functionality for user notes and edits
 - [ ] Add "Compiled with love by Steven Gauvin" to the app's About or Reference section (already on splash)
