@@ -65,7 +65,13 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
   text-align: center; max-width: 380px; width: 100%;
   margin-bottom: 28px;
   border-left: 3px solid var(--gold-dim);
+  cursor: pointer; transition: border-color 0.25s, box-shadow 0.25s;
 }
+.splash-today:hover {
+  border-color: var(--gold-dim);
+  box-shadow: 0 0 12px rgba(201,168,76,0.25);
+}
+.splash-today-hint { font-size: 10px; letter-spacing: 2px; color: var(--gold-dim); margin-top: 10px; opacity: 0.8; }
 .splash-today-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 6px; }
 .splash-today-lesson { font-size: 13px; letter-spacing: 2px; color: var(--gold); margin-bottom: 4px; }
 .splash-today-title { font-size: 15px; color: #d8e4f0; }
@@ -1043,10 +1049,11 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
   <div class="splash-diamonds">✦ ✦ ✦</div>
   <div class="splash-title">A Course in Miracles</div>
   <div class="splash-subtitle">Personal Companion</div>
-  <div class="splash-today">
+  <div class="splash-today" onclick="closeSplash()">
     <div class="splash-today-label">Today's Lesson</div>
     <div class="splash-today-lesson" id="splash-lesson-num"></div>
     <div class="splash-today-title" id="splash-lesson-title"></div>
+    <div class="splash-today-hint">&#8594; Open today's lesson</div>
   </div>
   <div class="splash-quote-wrap">
     <div class="splash-quote-label">✦ My Favourite ACIM Daily Quote</div>
@@ -1084,7 +1091,7 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
       <div class="companion-menu-item active" onclick="selectCompanion('cards','Cards')">Cards</div>
       <div class="companion-menu-item" onclick="selectCompanion('library','Workbook Library')">Workbook Library</div>
       <div class="companion-menu-item" onclick="selectCompanion('acim-quotes','ACIM Quotes')">ACIM Quotes</div>
-      <div class="companion-menu-item" onclick="selectCompanion('quotes','Quotes')">Quotes</div>
+      <div class="companion-menu-item" onclick="selectCompanion('quotes','Other Voices')">Other Voices</div>
       <div class="companion-menu-item" onclick="selectCompanion('meditations','Meditations')">Meditations</div>
       <div class="companion-menu-item" onclick="selectCompanion('reference','Reference')">Reference</div>
       <div class="companion-menu-item" onclick="selectCompanion('themes','Study Themes')">Study Themes</div>
@@ -1180,7 +1187,7 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 
     <!-- PERSONAL QUOTES PANEL -->
     <div id="panel-quotes" class="panel quotes-panel">
-      <div class="quotes-section-title" style="margin-bottom:24px">Favourite Quotes</div>
+      <div class="quotes-section-title" style="margin-bottom:24px">Other Voices</div>
       <div class="personal-quote-item">
         <div class="personal-quote-poem">As swimmers dare<br>to lie face to the sky<br>and water bears them,<br>as hawks rest upon air<br>and air sustains them,<br>so would I learn to attain<br>freefall, and float<br>into Creator Spirit&rsquo;s deep embrace,<br>knowing no effort earns<br>that all-surrounding grace.</div>
         <div class="personal-quote-title">The Avowal</div>
@@ -3234,6 +3241,124 @@ function renderThemes() {
           <div class="st-quote">
             <div class="st-quote-text">&ldquo;If you allow yourselves to have in your minds only what God put there, you are acknowledging your mind as God created it.&rdquo;</div>
             <div class="st-quote-ref">Tx.6.V.89</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ref-section" id="ref-study-body">
+      <div class="ref-header" onclick="toggleRef('ref-study-body')">
+        <div>
+          <div class="ref-title">The Body</div>
+          <div class="ref-subtitle">Symbol &bull; Ego&rsquo;s Tool &bull; Holy Spirit&rsquo;s Use</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-section-label">The Teaching</div>
+          <p class="st-framing">The Course makes a radical distinction: the body is not who you are. It is a symbol &mdash; made by the ego, used by the ego, and ultimately meaningless without the mind that directs it. God did not create the body. The body is destructible, and therefore not of the Kingdom.</p>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The body is the symbol of what you think you are.&rdquo;</div>
+            <div class="st-quote-ref">T-6.V.A.2:1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;God did not make the body, because it is destructible, and therefore not of the Kingdom.&rdquo;</div>
+            <div class="st-quote-ref">T-6.V.A.2:1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The body is the ego&rsquo;s home by its own election. Its vulnerability is its own best argument that you cannot be of God.&rdquo;</div>
+            <div class="st-quote-ref">T-4.VI.3:1&ndash;2</div>
+          </div>
+          <div class="st-section-label">The Mechanism</div>
+          <p class="st-framing">The ego has two uses for the body: attack and defence. Both reinforce the belief that you are a body &mdash; and that belief is the source of all suffering, including sickness.</p>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The ego uses the body for attack, for pleasure and for pride.&rdquo;</div>
+            <div class="st-quote-ref">T-6.V.A.5:1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Sickness is meaningful only if the two basic premises on which the ego&rsquo;s interpretation of the body rests are true: that the body is for attack, and that you are a body. Without these premises, sickness is completely inconceivable.&rdquo;</div>
+            <div class="st-quote-ref">T-8.VIII.5:1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Sickness is a way of demonstrating that you can be hurt.&rdquo;</div>
+            <div class="st-quote-ref">T-8.VIII.6:1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Attack is always physical. When attack in any form enters your mind, you are equating yourself with a body&hellip; When you equate yourself with a body, you will always experience depression.&rdquo;</div>
+            <div class="st-quote-ref">T-8.VII.3:1</div>
+          </div>
+          <div class="st-section-label">The Correction</div>
+          <p class="st-framing">The Holy Spirit does not destroy the body &mdash; He reinterprets it. The body becomes a means of communication rather than attack. Used this way, it points beyond itself and becomes a vehicle for healing.</p>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The Holy Spirit sees the body only as a means of communication, and because communicating is sharing it becomes communion.&rdquo;</div>
+            <div class="st-quote-ref">T-6.V.A.5:2</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Healing is the result of using the body solely for communication. Mind cannot be made physical, but it can be made manifest through the physical if it uses the body to go beyond itself.&rdquo;</div>
+            <div class="st-quote-ref">T-8.VII.2:3&ndash;4</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;You are not limited by the body. Mind can be manifested through the body if it goes beyond it and does not interpret it as limitation.&rdquo;</div>
+            <div class="st-quote-ref">T-8.VII.6:1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;To see a body as anything except a means of pure extension is to limit your mind and hurt yourself.&rdquo;</div>
+            <div class="st-quote-ref">T-8.VII.2:4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ref-section" id="ref-study-death">
+      <div class="ref-header" onclick="toggleRef('ref-study-death')">
+        <div>
+          <div class="ref-title">Death</div>
+          <div class="ref-subtitle">The central dream &bull; The ego&rsquo;s final argument &bull; The answer</div>
+        </div>
+        <span class="lesson-expand-icon">&#9660;</span>
+      </div>
+      <div class="ref-body">
+        <div class="study-theme">
+          <div class="st-section-label">The Teaching</div>
+          <p class="st-framing">The Course makes a claim that overturns everything the world believes: death is not real. It is a thought &mdash; the central thought of the ego&rsquo;s dream &mdash; not an event in the world. Death takes many forms, most of them unrecognised.</p>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Death is a thought that takes on many forms, often unrecognized.&rdquo;</div>
+            <div class="st-quote-ref">W-163.1:1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Death is the central dream from which all illusions stem.&rdquo;</div>
+            <div class="st-quote-ref">M-27.1:1</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Nothing is accomplished through death, because death is nothing. Death is an attempt to resolve conflict by not deciding at all.&rdquo;</div>
+            <div class="st-quote-ref">T-6.V.A.1:2&ndash;3</div>
+          </div>
+          <div class="st-section-label">The Mechanism</div>
+          <p class="st-framing">The world has made a thousand compromises with death &mdash; trying to make it natural, peaceful, or meaningful. The Course refuses every one of them. To accept death in any form is to proclaim that God is dead. And yet the world is not left by death, but by truth.</p>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;If death is real for anything, there is no life. Death denies life, but if there is reality in life, death is denied. No compromise in this is possible.&rdquo;</div>
+            <div class="st-quote-ref">M-27.4:2&ndash;4</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The world attempts a thousand compromises, and will attempt a thousand more. Not one can be acceptable to God&rsquo;s teachers, because not one could be acceptable to God. He did not make death because He did not make fear.&rdquo;</div>
+            <div class="st-quote-ref">M-27.4:7&ndash;9</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;The world is not left by death, but by truth, and truth can be known by all those for whom the Kingdom was created, and for whom it waits.&rdquo;</div>
+            <div class="st-quote-ref">T-3.VII.6:11</div>
+          </div>
+          <div class="st-section-label">The Correction</div>
+          <p class="st-framing">The answer is not to deny what you feel, but to recognise that the feeling is based on a thought &mdash; and the thought is wrong. Life cannot be threatened. Death does not exist. Everything is accomplished through life.</p>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;There is no death, and we renounce it now in every form&hellip; God made not death. Whatever form it takes must therefore be illusion.&rdquo;</div>
+            <div class="st-quote-ref">W-163.8:5&ndash;7</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;There is no death. The Son of God is free.&rdquo;</div>
+            <div class="st-quote-ref">W-163 (lesson title)</div>
+          </div>
+          <div class="st-quote">
+            <div class="st-quote-text">&ldquo;Everything is accomplished through life, and life is of the mind and in the mind.&rdquo;</div>
+            <div class="st-quote-ref">T-6.V.A.1:3</div>
           </div>
         </div>
       </div>
