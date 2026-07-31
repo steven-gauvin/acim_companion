@@ -50,3 +50,10 @@ Voilà!
 Boil 2 liters of water and put in the sugar and the berries/herbs/… Let it sit for at least 24 hours for optimal flavour. Stir often to crush berries. Because of letting it sit for 24 hours, it should be back at room temp or colder. Strain it. Now add the remaining water. Now add lemon juice until you like the balance of sweetness and freshness.
 
 Voilà!
+
+---
+
+### Steven's Notes — Lemonade (July 2026)
+
+- **Sugar:** The original 1 kilo is way too much — fruit already has plenty of natural sugar. Plan to reduce significantly (exact amount TBD after first attempt).
+- **First experiment: Watermelon** — trying watermelon saft. Watermelon is naturally very sweet, so go easy on the added sugar. Results to follow.
