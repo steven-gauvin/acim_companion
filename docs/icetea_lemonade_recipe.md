@@ -57,3 +57,14 @@ Voilà!
 
 - **Sugar:** The original 1 kilo is way too much — fruit already has plenty of natural sugar. Plan to reduce significantly (exact amount TBD after first attempt).
 - **First experiment: Watermelon** — trying watermelon saft. Watermelon is naturally very sweet, so go easy on the added sugar. Results to follow.
+
+---
+
+### Natural Sweetener Alternative
+
+Refined white sugar can be swapped out for a natural sweetener — the two best options are:
+
+- **Honey** — the most natural swap. Dissolves easily in warm (not boiling) water. Has a mild floral note that pairs well with fruit, especially watermelon. Use roughly the same weight as sugar, or slightly less as honey is a touch sweeter. Avoid hard boiling — just warm water and stir gently to preserve the flavour and natural enzymes.
+- **Maple syrup** — also works, but has a stronger, more distinctive taste. Better suited to bold fruits like blackberries or citrus. May compete with lighter fruits like watermelon.
+
+Both honey and maple syrup are naturally occurring, unprocessed sweeteners. Unlike refined white sugar, they retain trace minerals, enzymes, and antioxidants. While they are still composed of fructose and glucose, they are a healthier and more natural alternative for those avoiding processed sugar.
