@@ -20,9 +20,9 @@
 
 ### Font Colour Consistency Review
 *Meditations text brightened to #d8e4f0 — check if Reference and Study Themes body text should also be updated.*
-- [ ] Review Reference section text readability
-- [ ] Review Study Themes body text readability
-- [ ] Decide whether to apply same colour or keep as-is
+- [x] Review Reference section text readability (8 Oct 2026: Rules for Decision + Principles to light blue, italic removed; Cause & Effect left as is, diagram has its own rules)
+- [x] Review Study Themes body text readability (8 Oct 2026: already follows the April rules)
+- [x] Decide whether to apply same colour or keep as-is
 
 ---
 
