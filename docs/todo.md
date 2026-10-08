@@ -13,6 +13,11 @@
 - [ ] Decide how the Text and Manual should appear in the app (links out, reading cards, study themes, or a mix)
 - [ ] christmind.info addresses: Text/Manual live under https://christmind.info/room/acim/read/oe/en/ (e.g. `manual/intro`, `manual/chap01`)
 
+### Export My Notes
+*Suggested 8 October 2026. Notes written with "Edit Notes" (and stars) live only in the browser's local storage on one device.*
+- [ ] Add an "Export my notes" button that saves edited notes and stars to a file Steven can keep
+- [ ] Later: decide whether they should also be imported back, or saved in the repo
+
 ### Font Colour Consistency Review
 *Meditations text brightened to #d8e4f0 — check if Reference and Study Themes body text should also be updated.*
 - [ ] Review Reference section text readability
