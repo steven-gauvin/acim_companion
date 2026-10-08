@@ -758,13 +758,13 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
   display: flex; align-items: center; justify-content: center;
   font-size: 11px; color: var(--gold-dim); flex-shrink: 0;
 }
-.principle-text { font-size: 13px; color: var(--text); line-height: 1.7; }
+.principle-text { font-size: 13px; color: #d8e4f0; line-height: 1.7; }
 /* Rules */
 .rule-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
 .rule-item:last-child { border-bottom: none; }
 .rule-num { font-size: 10px; letter-spacing: 2px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 6px; }
 .rule-phrase {
-  font-size: 15px; color: var(--gold-light); font-style: italic;
+  font-size: 15px; color: var(--gold-light); font-style: normal;
   margin-bottom: 8px; line-height: 1.5;
 }
 .rule-text { font-size: 13px; color: var(--text-dim); line-height: 1.7; }
@@ -790,7 +790,7 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 .rfd-summary { flex: 1; }
 .rfd-label { font-size: 11px; color: var(--text-dim); margin-bottom: 3px; }
 .rfd-phrase {
-  font-size: 14px; color: var(--gold-light); font-style: italic; line-height: 1.5;
+  font-size: 14px; color: var(--gold-light); font-style: normal; line-height: 1.5;
 }
 .rfd-icon {
   font-size: 10px; color: var(--text-dim); margin-top: 6px; flex-shrink: 0;
@@ -798,7 +798,7 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 }
 .rfd-body {
   display: none; padding: 0 4px 14px 40px;
-  font-size: 13px; color: var(--text-dim); line-height: 1.75;
+  font-size: 13px; color: #d8e4f0; line-height: 1.75;
 }
 .rfd-body p { margin: 0 0 10px; }
 .rfd-body p:last-child { margin-bottom: 0; }
@@ -2177,7 +2177,7 @@ function renderReference() {
   <div style="font-size:13px;color:var(--text-main);line-height:1.7">
 
     <!-- Opening paragraph -->
-    <div style="background:rgba(201,168,76,0.07);border-left:3px solid var(--gold);padding:12px 14px;border-radius:0 8px 8px 0;margin-bottom:18px;font-style:italic;color:var(--text-dim)">
+    <div style="background:rgba(201,168,76,0.07);border-left:3px solid var(--gold);padding:12px 14px;border-radius:0 8px 8px 0;margin-bottom:18px;color:#d8e4f0">
       Decisions are continuous. You do not always know when you are making them. But with a little practice
       with the ones you recognize, a set begins to form which sees you through the rest. It is not wise to let
       yourself become preoccupied with every step you take. The proper set, adopted consciously each time you
