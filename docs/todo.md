@@ -8,6 +8,11 @@
 - [ ] Add/remove quotes based on Steven's Apple Notes ("Always Remember" topic — 405 words)
 - [ ] Consider adding a personal reflection or framing note from Steven
 
+### Add the Text and Manual for Teachers
+*Steven's idea, 8 October 2026. The app covers only the Workbook today.*
+- [ ] Decide how the Text and Manual should appear in the app (links out, reading cards, study themes, or a mix)
+- [ ] christmind.info addresses: Text/Manual live under https://christmind.info/room/acim/read/oe/en/ (e.g. `manual/intro`, `manual/chap01`)
+
 ### Font Colour Consistency Review
 *Meditations text brightened to #d8e4f0 — check if Reference and Study Themes body text should also be updated.*
 - [ ] Review Reference section text readability
