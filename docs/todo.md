@@ -15,7 +15,7 @@
 
 ### Export My Notes
 *Suggested 8 October 2026. Notes written with "Edit Notes" (and stars) live only in the browser's local storage on one device.*
-- [ ] Add an "Export my notes" button that saves edited notes and stars to a file Steven can keep
+- [x] Add an "Export my notes" button that saves edited notes and stars to a file Steven can keep (live 8 Oct 2026, Workbook Library)
 - [ ] Later: decide whether they should also be imported back, or saved in the repo
 
 ### Font Colour Consistency Review
