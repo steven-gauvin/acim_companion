@@ -322,6 +322,13 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 }
 .filter-btn.active { background: var(--gold); border-color: var(--gold); color: var(--bg); }
 .results-count { font-size: 11px; color: var(--text-dim); padding: 6px 16px; }
+.results-row { display: flex; align-items: center; justify-content: space-between; padding-right: 16px; }
+.export-notes-btn {
+  background: none; border: 1px solid var(--border); color: var(--text-dim);
+  font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border-radius: 20px;
+  cursor: pointer; font-family: inherit; transition: all 0.2s;
+}
+.export-notes-btn:hover { color: var(--gold); border-color: var(--gold-dim); }
 .lesson-item { border-bottom: 1px solid var(--border); }
 .lesson-header {
   display: flex; align-items: center; padding: 14px 16px;
@@ -1175,7 +1182,10 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
           <button class="filter-btn" onclick="setFilter('starred', this)">&#9733; Starred</button>
         </div>
       </div>
-      <div class="results-count" id="results-count"></div>
+      <div class="results-row">
+        <div class="results-count" id="results-count"></div>
+        <button class="export-notes-btn" onclick="exportMyNotes()">&#8615; Export my notes</button>
+      </div>
       <div id="library-list"></div>
     </div>
 
@@ -1352,6 +1362,35 @@ function deleteNoteForLesson(num) {
   const notes = loadNotes();
   delete notes[num];
   saveNotes(notes);
+}
+
+// Save the notes written with "Edit Notes" and the starred lessons to a text file.
+// They otherwise live only in this browser's local storage.
+function exportMyNotes() {
+  const notes = loadNotes();
+  const stars = loadStars();
+  const noteNums = Object.keys(notes).map(Number).sort((a, b) => a - b);
+  const starNums = Object.keys(stars).map(Number).sort((a, b) => a - b);
+  if (noteNums.length === 0 && starNums.length === 0) {
+    showToast('No edited notes or stars to export yet');
+    return;
+  }
+  const title = (n) => (LESSONS.find(l => l.num === n) || {}).title || '';
+  const today = new Date().toISOString().slice(0, 10);
+  let out = 'A Course in Miracles — Personal Companion\nMy notes, exported ' + today + '\n\n';
+  out += '== EDITED NOTES (' + noteNums.length + ') ==\n\n';
+  noteNums.forEach(n => { out += 'Lesson ' + n + ' — ' + title(n) + '\n' + notes[n] + '\n\n'; });
+  out += '== STARRED LESSONS (' + starNums.length + ') ==\n\n';
+  starNums.forEach(n => { out += 'Lesson ' + n + ' — ' + title(n) + '\n'; });
+  out += '\n== DATA (for restoring later) ==\n' + JSON.stringify({ notes: notes, stars: stars }) + '\n';
+  const blob = new Blob([out], { type: 'text/plain;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'acim-my-notes-' + today + '.txt';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  showToast('Notes exported');
 }
 
 function loadStars() {
