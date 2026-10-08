@@ -26,20 +26,6 @@
 
 ---
 
-### Part II Workbook Integration (Lessons 221-365)
-*Based on the Dee Doyle & Allen Watson commentary PDF.*
-
-- [ ] **Extract Part II Content** — Pull the following from the PDF:
-  - "The Introduction to Part II" (pages 9-10)
-  - "Practice Instructions Part II" (pages 11-12)
-  - The 14 "Commentary on What Is...?" sections (starting page 13)
-  - Practice instructions for lessons 361-365 (page 263)
-- [ ] **Design Part II UI** — Figure out how to display this content in the app:
-  - A dedicated "Part II Introduction" card/entry
-  - Clickable links for the general practice instructions (replacing "See complete instructions on page 19")
-  - Section headers or links for the "What Is...?" commentaries
-- [ ] **Implement Part II Links** — Update `build_html.py` to render the new Part II structure and clickable links.
-
 ### Apple Notes Research — Systematic Review
 *Review each of Steven's 30 Apple Notes topics to identify material for Study Themes or Quotes.*
 
@@ -98,11 +84,14 @@
 - [ ] **Dee Doyle commentary formatting** — Selective italics for key ACIM phrases (e.g. "This thought I do not want. I choose instead the idea for today"), fix spacing after paragraphs, and tighten bullet point spacing
 
 - [ ] Review overall app polish and consistency across all sections
-- [ ] Consider export/backup functionality for user notes and edits
 - [ ] Add "Compiled with love by Steven Gauvin" to the app's About or Reference section (already on splash)
 
 ## Completed ✓
 
+- [x] **Part II Workbook Integration** — Introduction, Practice Instructions and the 14 "What Is" commentaries are in the app; lessons 361–365 have practice instructions (confirmed 8 Oct 2026)
+- [x] **christmind.info links updated** — All 365 lessons point to the new /room/ addresses (8 Oct 2026)
+- [x] **"What Is" banners in Workbook Library** — Blue banner over the first lesson of each Part II section, plus Final Lessons (8 Oct 2026)
+- [x] **Other Voices** — Added Wayne Dyer, Louise Hay, Eckhart Tolle; text colour changed from cream to the app's soft blue (8 Oct 2026)
 - [x] **Splash dedication reduced to 2 lines** — "To Him Who sent me. / Thank you."
 - [x] **New Dedications section** — Full dedication text accessible from Companion menu
 - [x] **WB LIBRARY → WORKBOOK LIBRARY** — Menu label updated
