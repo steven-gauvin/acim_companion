@@ -1697,9 +1697,11 @@ function renderLibrary() {
       </div>
       ${part2IntroCardHtml}` : '';
     // "What Is" banner over the first visible lesson of each Part II section
-    const banKey = (l.num >= 221 && l.num <= 360) ? PART2.lesson_to_whatis[l.num] : null;
-    const prevBanKey = prevLesson && prevLesson.num >= 221 && prevLesson.num <= 360 ? PART2.lesson_to_whatis[prevLesson.num] : null;
-    const banSec = banKey && banKey !== prevBanKey ? PART2.whatis_sections[banKey] : null;
+    const FINAL_SECTION = { title: 'Final Lessons', lessons: [361, 362, 363, 364, 365] };
+    const sectionKey = (n) => n >= 361 && n <= 365 ? 'final' : (n >= 221 && n <= 360 ? PART2.lesson_to_whatis[n] : null);
+    const banKey = sectionKey(l.num);
+    const prevBanKey = prevLesson ? sectionKey(prevLesson.num) : null;
+    const banSec = banKey && banKey !== prevBanKey ? (banKey === 'final' ? FINAL_SECTION : PART2.whatis_sections[banKey]) : null;
     const whatIsBannerHtml = banSec ? `
       <div class="whatis-banner">
         <span class="whatis-banner-title">✦ ${escHtml(banSec.title)}</span>
