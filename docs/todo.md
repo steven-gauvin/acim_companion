@@ -2,12 +2,6 @@
 
 ## Next Up
 
-### Refine ALWAYS REMEMBER Study Theme
-*Work through this together with Steven — content, quotes, and structure to be shaped collaboratively.*
-- [ ] Review the current content and sections
-- [ ] Add/remove quotes based on Steven's Apple Notes ("Always Remember" topic — 405 words)
-- [ ] Consider adding a personal reflection or framing note from Steven
-
 ### Add the Text and Manual for Teachers
 *Steven's idea, 8 October 2026. The app covers only the Workbook today.*
 - [ ] Decide how the Text and Manual should appear in the app (links out, reading cards, study themes, or a mix)
@@ -52,7 +46,7 @@
 - [ ] Here is the Answer (532 words)
 - [ ] There is no world (520 words)
 - [ ] Happy Dream (454 words)
-- [ ] Always Remember (405 words)
+- [x] Always Remember (405 words)
 - [ ] Goal - What is the goal of this course? (332 words)
 - [ ] A healed mind (239 words)
 - [ ] Keynote of ACIM (220 words)
@@ -88,6 +82,7 @@
 
 ## Completed ✓
 
+- [x] **Always Remember Study Theme complete** — Atonement and Lesson 132 chain backed by verified quotes; ends with a gold "Always remember, remember always." panel holding its 9 quotes (10 Oct 2026)
 - [x] **Part II Workbook Integration** — Introduction, Practice Instructions and the 14 "What Is" commentaries are in the app; lessons 361–365 have practice instructions (confirmed 8 Oct 2026)
 - [x] **christmind.info links updated** — All 365 lessons point to the new /room/ addresses (8 Oct 2026)
 - [x] **"What Is" banners in Workbook Library** — Blue banner over the first lesson of each Part II section, plus Final Lessons (8 Oct 2026)
