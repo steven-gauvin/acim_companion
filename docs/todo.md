@@ -36,7 +36,7 @@
 - [ ] Review III (Lessons 91 – 110) (969 words)
 - [ ] Review II (61 - 80) (881 words)
 - [x] Angels (873 words)
-- [ ] Never forget (847 words)
+- [x] Never forget (847 words)
 - [ ] A course (842 words)
 - [ ] There is no order of difficulty (774 words)
 - [ ] Brain (733 words)
@@ -82,6 +82,7 @@
 
 ## Completed ✓
 
+- [x] **Never Forget Study Theme complete** — new format, all 14 instances (T-8.4:6 added), christmind paragraph numbers, M-29.6 identified, T-6.4:3 quoted unbroken (10 Oct 2026)
 - [x] **Angels Study Theme complete** — new format; Lesson 316 added (all 10 instances); Text refs now christmind paragraph numbers (10 Oct 2026)
 - [x] **Here is the Answer Study Theme complete** — Always Remember format (quote first, phrase in gold, reference with lesson name below); references accepted by Steven (10 Oct 2026)
 - [x] **Always Remember Study Theme complete** — Atonement and Lesson 132 chain backed by verified quotes; ends with a gold "Always remember, remember always." panel holding its 9 quotes (10 Oct 2026)
