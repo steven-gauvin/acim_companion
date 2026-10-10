@@ -83,6 +83,12 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
   transition: all 0.3s;
 }
 .splash-enter:hover { background: var(--gold); color: var(--bg); border-color: var(--gold); }
+.splash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-width: 380px; width: 100%; margin-bottom: 28px; }
+.splash-tile { display: flex; align-items: center; justify-content: center; line-height: 1.5; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 6px; font-family: inherit; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim); text-align: center; text-decoration: none; cursor: pointer; transition: border-color 0.25s, color 0.25s; }
+.splash-tile:hover { border-color: var(--gold-dim); color: var(--gold); }
+.splash-tile.wide { grid-column: 1 / -1; }
+.splash-tile.course { border-color: var(--gold-dim); color: var(--gold); }
+.splash-tile.course:hover { border-color: var(--gold); }
 .splash-dedication {
   max-width: 420px; text-align: center; margin-top: 20px;
   padding-top: 16px; border-top: 1px solid var(--border);
@@ -1093,6 +1099,17 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
     <div class="splash-today-title" id="splash-lesson-title"></div>
     <div class="splash-today-hint">&#8594; Open today's lesson</div>
   </div>
+  <div class="splash-grid">
+    <a class="splash-tile course" href="https://christmind.info/room/acim/read/oe/en/text" target="_blank" rel="noopener">Text &#8599;</a>
+    <a class="splash-tile course" href="https://christmind.info/room/acim/read/oe/en/manual" target="_blank" rel="noopener">Manual for Teachers &#8599;</a>
+    <button class="splash-tile" onclick="splashGoTo('library','Workbook Library')">Workbook Library</button>
+    <button class="splash-tile" onclick="splashGoTo('acim-quotes','ACIM Quotes')">ACIM Quotes</button>
+    <button class="splash-tile" onclick="splashGoTo('quotes','Other Voices')">Other Voices</button>
+    <button class="splash-tile" onclick="splashGoTo('meditations','Meditations')">Meditations</button>
+    <button class="splash-tile" onclick="splashGoTo('reference','Reference')">Reference</button>
+    <button class="splash-tile" onclick="splashGoTo('themes','Study Themes')">Study Themes</button>
+    <button class="splash-tile wide" onclick="splashGoTo('dedications','Dedications')">Dedications</button>
+  </div>
   <div class="splash-quote-wrap">
     <div class="splash-quote-label">✦ My Favourite ACIM Daily Quote</div>
     <div id="splash-quote"></div>
@@ -1517,6 +1534,15 @@ function showSplash() {
   const splash = document.getElementById('splash');
   splash.style.display = 'flex';
   splash.classList.remove('hidden');
+}
+function splashGoTo(name, label) {
+  const splash = document.getElementById('splash');
+  splash.classList.add('hidden');
+  setTimeout(() => {
+    splash.style.display = 'none';
+    document.getElementById('companion-current').textContent = label;
+    switchTab(name);
+  }, 850);
 }
 function closeSplash() {
   const splash = document.getElementById('splash');
