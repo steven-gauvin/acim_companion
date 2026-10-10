@@ -35,7 +35,7 @@
 - [ ] I am as God created me (1,031 words)
 - [ ] Review III (Lessons 91 – 110) (969 words)
 - [ ] Review II (61 - 80) (881 words)
-- [ ] Angels (873 words)
+- [x] Angels (873 words)
 - [ ] Never forget (847 words)
 - [ ] A course (842 words)
 - [ ] There is no order of difficulty (774 words)
@@ -82,6 +82,7 @@
 
 ## Completed ✓
 
+- [x] **Angels Study Theme complete** — new format; Lesson 316 added (all 10 instances); Text refs now christmind paragraph numbers (10 Oct 2026)
 - [x] **Here is the Answer Study Theme complete** — Always Remember format (quote first, phrase in gold, reference with lesson name below); references accepted by Steven (10 Oct 2026)
 - [x] **Always Remember Study Theme complete** — Atonement and Lesson 132 chain backed by verified quotes; ends with a gold "Always remember, remember always." panel holding its 9 quotes (10 Oct 2026)
 - [x] **Part II Workbook Integration** — Introduction, Practice Instructions and the 14 "What Is" commentaries are in the app; lessons 361–365 have practice instructions (confirmed 8 Oct 2026)
