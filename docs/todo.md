@@ -79,6 +79,7 @@
 
 - [ ] Review overall app polish and consistency across all sections
 - [ ] Add "Compiled with love by Steven Gauvin" to the app's About or Reference section (already on splash)
+- [ ] **Possible Study Theme: "perfectly clear" / "Do only that!"** — Steven noticed 18 matches for "perfectly clear" (e.g. T-6.5:15 The Only Answer: "Do only that!"). Parked 10 Oct 2026, after the current themes are done.
 
 ## Completed ✓
 
