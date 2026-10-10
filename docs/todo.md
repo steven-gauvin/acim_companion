@@ -84,6 +84,7 @@
 
 - [x] **The Holy Spirit Study Theme complete** — own headings (What He is / What He does / Where He leads); all quotes checked against the Original Edition; 'bridge' quote moved to ACIM Quotes; 'Teach only love' left to Message of the Crucifixion (10 Oct 2026)
 - [x] **Forgiveness Study Theme complete** — rebuilt to start from everyday annoyance (Where it starts / What it is / In the moment / What it gives); all quotes checked against the Original Edition; 'prayer for forgiveness', 'unforgiving mind' and 'my innocence' moved to ACIM Quotes (10 Oct 2026)
+- [x] **Healing Study Theme complete** — own headings (What it is / How it happens / Not healed alone); all quotes checked against the Original Edition; W-136 and W-137 added; 'Healing is of God' moved to ACIM Quotes; 'I am not a body' (W-201) to go into The Body theme (10 Oct 2026)
 - [x] **Perception Study Theme complete** — own headings (What it is / How it works / True perception); all 9 quotes checked against the Original Edition, 4 wording fixes (M-4.3, T-21.1:1 full passage); Original Edition note added at top of Study Themes (10 Oct 2026)
 - [x] **Atonement Study Theme complete** — template dropped for its own headings (What it is / How it works / My part); word in gold; Teaching text in quote blue; all 8 references checked on christmind (10 Oct 2026)
 - [x] **There is no world Study Theme complete** — new format, 7 instances confirmed, christmind references (T-11.4:6, W-132, M-27.6) (10 Oct 2026)
