@@ -732,6 +732,7 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
   margin: 0 0 8px; font-style: normal;
 }
 .st-framing.st-teaching { font-size: 14px; color: #d8e4f0; }
+.st-edition-note { font-size: 12px; color: var(--text); text-align: center; margin: 4px 16px 14px; line-height: 1.5; opacity: 0.85; }
 .st-quote {
   margin-bottom: 14px; padding: 12px 14px;
   background: rgba(201,168,76,0.04); border-left: 2px solid rgba(201,168,76,0.3);
@@ -2581,6 +2582,7 @@ function renderThemes() {
   const list = document.getElementById('themes-list');
   if (list.innerHTML) return;
   list.innerHTML = `
+    <p class="st-edition-note">Quotes and references follow the Original Edition of <em>A Course in Miracles</em>, as published on christmind.info.</p>
     <div class="ref-section" id="ref-study-always-remember">
       <div class="ref-header" onclick="toggleRef('ref-study-always-remember')">
         <div>
