@@ -23,7 +23,7 @@
 ### Apple Notes Research — Systematic Review
 *Review each of Steven's 30 Apple Notes topics to identify material for Study Themes or Quotes.*
 
-- [ ] Atonement (15,837 words)
+- [x] Atonement (15,837 words) — Study Theme reworked 10 Oct 2026
 - [ ] Law(s) (15,414 words)
 - [ ] ! Exclamation Mark ! (11,071 words)
 - [ ] This course (6,089 words)
@@ -82,6 +82,7 @@
 
 ## Completed ✓
 
+- [x] **Atonement Study Theme complete** — template dropped for its own headings (What it is / How it works / My part); word in gold; Teaching text in quote blue; all 8 references checked on christmind (10 Oct 2026)
 - [x] **There is no world Study Theme complete** — new format, 7 instances confirmed, christmind references (T-11.4:6, W-132, M-27.6) (10 Oct 2026)
 - [x] **Never Forget Study Theme complete** — new format, all 14 instances (T-8.4:6 added), christmind paragraph numbers, M-29.6 identified, T-6.4:3 quoted unbroken (10 Oct 2026)
 - [x] **Angels Study Theme complete** — new format; Lesson 316 added (all 10 instances); Text refs now christmind paragraph numbers (10 Oct 2026)
