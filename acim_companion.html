@@ -746,6 +746,21 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
 .st-quote-ref {
   font-size: 11px; color: var(--gold-dim); letter-spacing: 0.5px;
 }
+/* "Always remember, remember always" motto panel in the Always Remember theme */
+.st-motto {
+  margin: 26px 0 8px; padding: 18px 14px 6px;
+  border: 1px solid rgba(201,168,76,0.35); border-radius: var(--radius);
+  background: rgba(201,168,76,0.05);
+}
+.st-motto-head { text-align: center; margin-bottom: 6px; }
+.st-motto-ornament { color: var(--gold); font-size: 12px; letter-spacing: 6px; opacity: 0.8; }
+.st-motto-title {
+  font-style: italic; font-size: 19px; line-height: 1.5;
+  color: var(--gold-light); margin: 6px 0 4px;
+}
+.st-motto-sub { font-size: 11px; color: var(--gold-dim); letter-spacing: 1px; }
+.st-motto .st-section-label { margin-top: 18px; }
+.st-motto-phrase { color: var(--gold-light); }
 /* Principles */
 .principle-item {
   padding: 12px 0; border-bottom: 1px solid var(--border);
@@ -2668,44 +2683,51 @@ function renderThemes() {
             <div class="st-quote-ref">T-4.VII.8:1</div>
           </div>
 
+          <div class="st-motto">
+          <div class="st-motto-head">
+            <div class="st-motto-ornament">&#10022; &#10022; &#10022;</div>
+            <div class="st-motto-title">Always remember,<br>remember always.</div>
+            <div class="st-motto-sub">9 times in the Course</div>
+          </div>
           <div class="st-section-label">Always Remember &mdash; (2 instances)</div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;I will always remember you, and in my remembrance of you lies your remembrance of yourself. In our remembrance of each other lies our remembrance of God, and in this remembrance lies your freedom, because your freedom is in Him.&rdquo;</div>
+            <div class="st-quote-text">&ldquo;I will <span class="st-motto-phrase">always remember</span> you, and in my remembrance of you lies your remembrance of yourself. In our remembrance of each other lies our remembrance of God, and in this remembrance lies your freedom, because your freedom is in Him.&rdquo;</div>
             <div class="st-quote-ref">T-8.5:33 &mdash; The Light of the World</div>
           </div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;Always remember that what He gives, He holds, so that nothing He gives can contradict Him.&rdquo;</div>
+            <div class="st-quote-text">&ldquo;<span class="st-motto-phrase">Always remember</span> that what He gives, He holds, so that nothing He gives can contradict Him.&rdquo;</div>
             <div class="st-quote-ref">T-10.2:15 &mdash; Projection versus Extension</div>
           </div>
 
           <div class="st-section-label">Remember Always &mdash; (7 instances)</div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;Remember always that what you believe you will teach.&rdquo;</div>
+            <div class="st-quote-text">&ldquo;<span class="st-motto-phrase">Remember always</span> that what you believe you will teach.&rdquo;</div>
             <div class="st-quote-ref">T-6.2:10 &mdash; The Message of the Crucifixion</div>
           </div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;Remember always that your identity is shared and that its sharing is its reality.&rdquo;</div>
+            <div class="st-quote-text">&ldquo;<span class="st-motto-phrase">Remember always</span> that your identity is shared and that its sharing is its reality.&rdquo;</div>
             <div class="st-quote-ref">T-9.3:9 &mdash; Atonement as a Lesson in Sharing</div>
           </div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;Remember always that you cannot be anywhere except in the Mind of God.&rdquo;</div>
+            <div class="st-quote-text">&ldquo;<span class="st-motto-phrase">Remember always</span> that you cannot be anywhere except in the Mind of God.&rdquo;</div>
             <div class="st-quote-ref">T-9.7:52 &mdash; Grandeur versus Grandiosity</div>
           </div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;Remember always that you see what you seek, for what you seek you will find.&rdquo;</div>
+            <div class="st-quote-text">&ldquo;<span class="st-motto-phrase">Remember always</span> that you see what you seek, for what you seek you will find.&rdquo;</div>
             <div class="st-quote-ref">T-11.8:66 &mdash; The Guide for Miracles</div>
           </div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;Remember always that mind is one and cause is one.&rdquo;</div>
+            <div class="st-quote-text">&ldquo;<span class="st-motto-phrase">Remember always</span> that mind is one and cause is one.&rdquo;</div>
             <div class="st-quote-ref">T-13.2:8 &mdash; The Decision for Guiltlessness</div>
           </div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;Remember always that it is impossible to condemn the Son of God in part.&rdquo;</div>
+            <div class="st-quote-text">&ldquo;<span class="st-motto-phrase">Remember always</span> that it is impossible to condemn the Son of God in part.&rdquo;</div>
             <div class="st-quote-ref">T-13.3:16 &mdash; The Shadow of Guilt</div>
           </div>
           <div class="st-quote">
-            <div class="st-quote-text">&ldquo;Those who remember always that they know nothing, but who have become willing to learn everything, will learn it.&rdquo;</div>
+            <div class="st-quote-text">&ldquo;Those who <span class="st-motto-phrase">remember always</span> that they know nothing, but who have become willing to learn everything, will learn it.&rdquo;</div>
             <div class="st-quote-ref">T-14.7:72 &mdash; The Test of Truth</div>
+          </div>
           </div>
 
         </div>
