@@ -36,9 +36,9 @@
 - [x] Redemption — 🍎 Apple Note "Redemption" (Steven: done, 12 Oct 2026)
 - [x] Perception — ✍️ Handwritten
 - [x] The Holy Spirit, Forgiveness, Healing, Miracle, Message of the Crucifixion, Lessons of the Holy Spirit
+- [x] The Body — own headings (What it is not / What the ego uses it for / What the Holy Spirit uses it for / The core idea); all quotes checked against the Original Edition; closes on Lesson 199 (12 Oct 2026)
 
 **In the app, still to rework in the new format**
-- [ ] The Body (add W-201 "I am not a body")
 - [ ] Death
 
 **From the Apple Notes**
