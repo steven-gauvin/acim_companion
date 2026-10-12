@@ -20,39 +20,52 @@
 
 ---
 
-### Apple Notes Research — Systematic Review
-*Review each of Steven's 30 Apple Notes topics to identify material for Study Themes or Quotes.*
+### Study Themes — Checklist
+*Updated 12 October 2026. Each theme says where its material comes from, so we know where to look:*
+- *🍎 Apple Note = one of Steven's Apple Notes, saved as text in `apple_notes_text/`*
+- *✍️ Handwritten = Steven's handwritten study notes, transcribed in `steven_acim_study_notes.md`*
 
-- [ ] Atonement (15,837 words)
-- [ ] Law(s) (15,414 words)
-- [ ] ! Exclamation Mark ! (11,071 words)
-- [ ] This course (6,089 words)
-- [ ] Redemption (3,626 words)
-- [ ] Lessons 91 - 110 (3,271 words)
-- [ ] The power of decision (2,727 words)
-- [ ] Mission (1,400 words)
-- [ ] Review I ( 1 - 50) (1,276 words)
-- [ ] I am as God created me (1,031 words)
-- [ ] Review III (Lessons 91 – 110) (969 words)
-- [ ] Review II (61 - 80) (881 words)
-- [x] Angels (873 words)
-- [x] Never forget (847 words)
-- [ ] A course (842 words)
-- [ ] There is no order of difficulty (774 words)
-- [ ] Brain (733 words)
-- [ ] Ideas leave not their source (680 words)
-- [ ] Lessons 1 - 50 (680 words)
-- [ ] Lessons 61 - 80 (608 words)
-- [x] Here is the Answer (532 words)
-- [x] There is no world (520 words)
-- [ ] Happy Dream (454 words)
-- [x] Always Remember (405 words)
-- [ ] Goal - What is the goal of this course? (332 words)
-- [ ] A healed mind (239 words)
-- [ ] Keynote of ACIM (220 words)
-- [ ] Let us not forget (191 words)
-- [ ] Noteworthy Texts: (88 words)
-- [ ] In progress (69 words)
+**Done (in the app)**
+- [x] Always Remember — 🍎 Apple Note "Always Remember" (includes "Ideas leave not their source")
+- [x] Here is the Answer — 🍎 Apple Note "Here is the Answer"
+- [x] Angels — 🍎 Apple Note "Angels"
+- [x] Never Forget — 🍎 Apple Note "Never forget"
+- [x] There is no world — 🍎 Apple Note "There is no world"
+- [x] Atonement — 🍎 Apple Note "Atonement"
+- [x] Redemption — 🍎 Apple Note "Redemption" (Steven: done, 12 Oct 2026)
+- [x] Perception — ✍️ Handwritten
+- [x] The Holy Spirit, Forgiveness, Healing, Miracle, Message of the Crucifixion, Lessons of the Holy Spirit
+
+**In the app, still to rework in the new format**
+- [ ] The Body (add W-201 "I am not a body")
+- [ ] Death
+
+**From the Apple Notes**
+- [ ] Law(s) — 🍎 Apple Note "Law(s)" (15,414 words)
+- [ ] ! Exclamation Mark ! — 🍎 Apple Note "! Exclamation Mark !" (11,071 words)
+- [ ] This course — 🍎 Apple Note "This course" (6,089 words)
+- [ ] The power of decision — 🍎 Apple Note "The power of decision" (2,727 words)
+- [ ] Mission — 🍎 Apple Note "Mission" (1,400 words)
+- [ ] I am as God created me — 🍎 Apple Note "I am as God created me" (1,031 words)
+- [ ] There is no order of difficulty — 🍎 Apple Note "There is no order of difficulty" (774 words)
+- [ ] Brain — 🍎 Apple Note "Brain" (733 words)
+- [ ] Happy Dream — 🍎 Apple Note "Happy Dream" (454 words)
+- [ ] Goal — 🍎 Apple Note "Goal - What is the goal of this course?" (332 words)
+- [ ] A healed mind — 🍎 Apple Note "A healed mind" (239 words)
+- [ ] Keynote of ACIM — 🍎 Apple Note "Keynote of ACIM" (220 words)
+- [ ] Let us not forget — 🍎 Apple Note "Let us not forget" (191 words)
+- [ ] Noteworthy Texts — 🍎 Apple Note "Noteworthy Texts:" (88 words)
+- [ ] In progress — 🍎 Apple Note "In progress" (69 words)
+
+**From the handwritten notes**
+- [ ] Ego — ✍️ Handwritten
+- [ ] The Separation — ✍️ Handwritten
+- [ ] Fear as Lack of Love — ✍️ Handwritten
+- [ ] The Illusion of Separation — ✍️ Handwritten
+- [ ] The Correction for Lack of Love — ✍️ Handwritten
+- [ ] More from the handwritten notes, about 20 in all (pick as we go)
+
+*Removed 12 Oct 2026 at Steven's request: the Lessons and Reviews notes (Lessons 1–50, 61–80, 91–110; Reviews I–III) and "A course".*
 
 ---
 
@@ -64,7 +77,6 @@
   2. The **most direct/clean expression** — short, unambiguous, quotable
   3. An **arc**: definition → mechanism → correction (not just a pile of quotes, but a progression)
   - *Why this works:* The Course has consistent internal logic. Certain passages crystallise a concept with unusual precision. Training on commentaries, study guides, and discussions gives weight to those passages. The arc turns a theme into a teaching tool, not just a reference list.
-- [ ] **Study Themes section** — Add ~20 thematic categories (Perception, Ego, The Separation, Fear as Lack of Love, The Illusion of Separation, The Correction for Lack of Love, etc.) with curated quotes from Steven's handwritten notes. Based on transcribed `steven_acim_study_notes.md`.
 - [ ] **Interactive Diagrams** — Build visual versions of the 3 hand-drawn diagrams:
   - Map of the Mind (1:1 — Principles of Miracles)
   - Miracle Principle #53 (true/accord → higher-level creation vs. false/discord/fear)
