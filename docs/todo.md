@@ -66,6 +66,9 @@
 - [ ] The Correction for Lack of Love — ✍️ Handwritten
 - [ ] More from the handwritten notes, about 20 in all (pick as we go)
 
+**Ideas that came up along the way**
+- [ ] Depression — came up while reworking The Body (T-8.7:1, "When you equate yourself with a body, you will *always* experience depression"). The word appears 38 times in the Course (Steven's count, 12 Oct 2026).
+
 *Removed 12 Oct 2026 at Steven's request: the Lessons and Reviews notes (Lessons 1–50, 61–80, 91–110; Reviews I–III) and "A course".*
 
 ---
