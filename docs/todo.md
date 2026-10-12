@@ -3,8 +3,9 @@
 ## Next Up
 
 ### Add the Text and Manual for Teachers
-*Steven's idea, 8 October 2026. The app covers only the Workbook today.*
-- [ ] Decide how the Text and Manual should appear in the app (links out, reading cards, study themes, or a mix)
+*Steven's idea, 8 October 2026. The app covers only the Workbook today. Decided 12 October 2026: a card on the splash screen.*
+- [ ] Add a card on the splash screen that opens the Text and the Manual for Teachers
+- [ ] Show a table of contents (chapters and sections), each linking to christmind.info
 - [ ] christmind.info addresses: Text/Manual live under https://christmind.info/room/acim/read/oe/en/ (e.g. `manual/intro`, `manual/chap01`)
 
 ### Export My Notes
@@ -91,7 +92,6 @@
 
 - [ ] Review overall app polish and consistency across all sections
 - [ ] Add "Compiled with love by Steven Gauvin" to the app's About or Reference section (already on splash)
-- [ ] **Possible Study Theme: "perfectly clear" / "Do only that!"** — Steven noticed 18 matches for "perfectly clear" (e.g. T-6.5:15 The Only Answer: "Do only that!"). Parked 10 Oct 2026, after the current themes are done.
 
 ## Completed ✓
 
