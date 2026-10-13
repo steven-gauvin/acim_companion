@@ -37,9 +37,9 @@
 - [x] Perception — ✍️ Handwritten
 - [x] The Holy Spirit, Forgiveness, Healing, Miracle, Message of the Crucifixion, Lessons of the Holy Spirit
 - [x] The Body — own headings (What it is not / What the ego uses it for / What the Holy Spirit uses it for / The core idea); all quotes checked against the Original Edition; closes on Lesson 199 (12 Oct 2026)
+- [x] Death — follows M-27 "What is Death?" with Lesson 163 and T-3.9:11; all quotes checked against the Original Edition; links to M-27 and Lesson 163 (13 Oct 2026)
+- [x] Study Themes introduction ("Why these themes") in Steven's words; Original Edition note moved to the bottom (13 Oct 2026)
 
-**In the app, still to rework in the new format**
-- [ ] Death
 
 **From the Apple Notes**
 - [ ] Law(s) — 🍎 Apple Note "Law(s)" (15,414 words)
