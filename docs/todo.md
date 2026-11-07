@@ -68,6 +68,7 @@
 
 **Ideas that came up along the way**
 - [ ] Depression — came up while reworking The Body (T-8.7:1, "When you equate yourself with a body, you will *always* experience depression"). The word appears 38 times in the Course (Steven's count, 12 Oct 2026).
+- [ ] Judgement — Steven's idea, 7 Nov 2026. Centre it on Lesson 311, "I judge all things as I would have them be", which he finds especially profound, then search the Course for passages on judging the world (the app already has W-243, W-347, W-352 and T-4.IV.8:6 "the right use of judgment" to start from). Not from the handwritten notes: the old "Judgement" page there was invented by Manus (p.55 is really "Jesus Christ").
 
 *Removed 12 Oct 2026 at Steven's request: the Lessons and Reviews notes (Lessons 1–50, 61–80, 91–110; Reviews I–III) and "A course".*
 
